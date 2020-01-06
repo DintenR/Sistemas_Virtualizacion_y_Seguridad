@@ -1,0 +1,1894 @@
+runspec started at Mon Oct 14 18:39:56 2019 on "debian"
+runspec is: /home/ricardo/SPECcpu2006/bin/runspec
+runspec: runspec --config=ricardo-linux.cfg --action=build --tune=base dealII
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/home/ricardo/SPECcpu2006/config/ricardo-linux.cfg'
+Loading "http://www.spec.org/auto/cpu2006/current_version" for version check: OK
+
+NOTICE: There is a newer version of the suite available from SPEC.
+  Version 1.200 was released on Wed Aug 17 03:10:33 2011
+
+                       ----------------------------------
+                       The run will continue in 5 seconds
+                       ----------------------------------
+Verbosity = 5
+Action    = build
+Tune      = base
+Ext       = amd64-m64-gcc42-nn
+Size      = ref
+Machine   = default
+benchmarks= 447.dealII
+outputs   = raw,flags,ASCII,PDF,Screen
+username  = ricardo
+Benchmarks selected: 447.dealII
+Compiling Binaries
+
+------------------------------------------------------------------------
+When checking options for /home/ricardo/SPECcpu2006/benchspec/CPU2006/447.dealII/exe/dealII_base.amd64-m64-gcc42-nn, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  Building 447.dealII ref base amd64-m64-gcc42-nn default: (build_base_amd64-m64-gcc42-nn.0000)
+Wrote to makefile '/home/ricardo/SPECcpu2006/benchspec/CPU2006/447.dealII/run/build_base_amd64-m64-gcc42-nn.0000/Makefile.deps':
+
+# These are the build dependencies
+
+# End dependencies
+Wrote to makefile '/home/ricardo/SPECcpu2006/benchspec/CPU2006/447.dealII/run/build_base_amd64-m64-gcc42-nn.0000/Makefile.spec':
+TUNE=base
+EXT=amd64-m64-gcc42-nn
+NUMBER=447
+NAME=dealII
+SOURCES= auto_derivative_function.cc block_sparse_matrix.cc \
+	 block_sparse_matrix_ez.cc block_sparsity_pattern.cc block_vector.cc \
+	 compressed_sparsity_pattern.cc data_out.cc data_out_base.cc \
+	 data_out_faces.cc data_out_rotation.cc data_out_stack.cc \
+	 derivative_approximation.cc dof_accessor.cc dof_constraints.cc \
+	 dof_handler.cc dof_levels.cc dof_renumbering.cc dof_tools.cc \
+	 error_estimator.cc exceptions.cc fe.cc fe_data.cc fe_dgp.cc fe_dgp_1d.cc \
+	 fe_dgp_2d.cc fe_dgp_3d.cc fe_dgp_nonparametric.cc fe_dgq.cc fe_dgq_1d.cc \
+	 fe_dgq_2d.cc fe_dgq_3d.cc fe_nedelec.cc fe_nedelec_1d.cc \
+	 fe_nedelec_2d.cc fe_nedelec_3d.cc fe_q.cc fe_q_1d.cc fe_q_2d.cc \
+	 fe_q_3d.cc fe_q_hierarchical.cc fe_raviart_thomas.cc fe_system.cc \
+	 fe_tools.cc fe_values.cc filtered_matrix.cc full_matrix.double.cc \
+	 full_matrix.float.cc function.cc function_derivative.cc function_lib.cc \
+	 function_lib_cutoff.cc function_time.cc geometry_info.cc \
+	 grid_generator.cc grid_in.cc grid_out.all_dimensions.cc grid_out.cc \
+	 grid_refinement.cc grid_reordering.cc histogram.cc intergrid_map.cc \
+	 job_identifier.cc log.cc mapping.cc mapping_c1.cc mapping_cartesian.cc \
+	 mapping_q.cc mapping_q1.cc mapping_q1_eulerian.cc \
+	 matrices.all_dimensions.cc matrices.cc matrix_lib.cc matrix_out.cc \
+	 memory_consumption.cc mg_base.cc mg_dof_accessor.cc mg_dof_handler.cc \
+	 mg_dof_tools.cc mg_smoother.cc mg_transfer_block.cc \
+	 mg_transfer_prebuilt.cc mg_transfer_block.all_dimensions.cc \
+	 multigrid.all_dimensions.cc multithread_info.cc parameter_handler.cc \
+	 persistent_tria.cc polynomial.cc polynomial_space.cc programid.cc \
+	 quadrature.cc quadrature_lib.cc solution_transfer.cc solver_control.cc \
+	 sparse_matrix.double.cc sparse_matrix.float.cc \
+	 sparse_matrix_ez.double.cc sparse_matrix_ez.float.cc sparsity_pattern.cc \
+	 step-14.cc subscriptor.cc swappable_vector.cc tensor.cc \
+	 tensor_product_polynomials.cc tria.all_dimensions.cc tria.cc \
+	 tria_accessor.cc tria_boundary.cc tria_boundary_lib.cc vector.cc \
+	 vector.long_double.cc vectors.all_dimensions.cc fe_dgp_monomial.cc \
+	 fe_poly.cc polynomials_bdm.cc polynomials_p.cc fe_dgp_monomial.cc \
+	 fe_poly.cc polynomials_bdm.cc polynomials_p.cc vectors.cc
+EXEBASE=dealII
+NEED_MATH=
+BENCHLANG=CXX
+ONESTEP=
+CXXONESTEP=
+
+BENCH_CXXFLAGS   = -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3
+CC               = /usr/bin/gcc
+COPTIMIZE        = -O3 -march=native
+CXX              = /usr/bin/g++
+CXXOPTIMIZE      = -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations
+CXXPORTABILITY   = -include cstring
+FC               = /usr/bin/gfortran
+FOPTIMIZE        = -O3 -march=native -std=legacy
+FPBASE           = yes
+OS               = unix
+PORTABILITY      = -DSPEC_CPU_LP64
+abstol           = 1e-07
+action           = build
+allow_extension_override = 0
+backup_config    = 1
+baseexe          = dealII
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 447.dealII
+binary           = 
+bindir           = exe
+calctol          = 0
+changedmd5       = 0
+check_integrity  = 1
+check_md5        = 1
+check_version    = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = dealII_base.amd64-m64-gcc42-nn
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = /home/ricardo/SPECcpu2006/config/ricardo-linux.cfg
+copies           = 1
+datadir          = data
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 12345678
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+expid            = 
+ext              = amd64-m64-gcc42-nn
+fake             = 0
+feedback         = 1
+flag_url_base    = http://www.spec.org/auto/cpu2006/flags/
+floatcompare     = 
+help             = 0
+http_proxy       = 
+http_timeout     = 30
+hw_avail         = Dec-9999
+hw_cpu_char      = 
+hw_cpu_mhz       = 3000
+hw_cpu_name      = AMD Opteron 256
+hw_disk          = SATA
+hw_fpu           = Integrated
+hw_memory        = 2 GB (2 x 1GB DDR333 CL2.5)
+hw_model         = Tyan Thunder KKQS Pro (S4882)
+hw_nchips        = 1
+hw_ncores        = 1
+hw_ncoresperchip = 1
+hw_ncpuorder     = 1 chip
+hw_nthreadspercore = 1
+hw_ocache        = None
+hw_pcache        = 64 KB I + 64 KB D on chip per chip
+hw_scache        = 1 MB I+D on chip per chip
+hw_tcache        = None
+hw_vendor        = Tyan
+ignore_errors    = yes
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+iteration        = -1
+iterations       = 3
+license_num      = 9999
+line_width       = 0
+locking          = 1
+log              = CPU2006
+log_line_width   = 0
+logname          = /home/ricardo/SPECcpu2006/result/CPU2006.012.log
+lognum           = 012
+mach             = default
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = dealII
+nc               = 0
+need_math        = 
+no_input_handler = close
+no_monitor       = 
+notes0100        =  C base flags: -O3 -march=native
+notes0110        =  C++ base flags: -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations
+notes0120        =  Fortran base flags: -O3 -march=native -std=legacy
+notes25          =  PORTABILITY=-DSPEC_CPU_LP64 is applied to all benchmarks in base.
+notes_wrap_columns = 0
+notes_wrap_indent =     
+num              = 447
+obiwan           = 
+os_exe_ext       = 
+output           = asc
+output_format    = asc, pdf, Screen
+output_root      = 
+outputdir        = output
+path             = /home/ricardo/SPECcpu2006/benchspec/CPU2006/447.dealII
+plain_train      = 1
+prefix           = 
+prepared_by      = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+realuser         = your name here
+rebuild          = 0
+reftime          = reftime
+reportable       = 1
+resultdir        = result
+review           = 0
+run              = all
+runspec          = /home/ricardo/SPECcpu2006/bin/runspec --config=ricardo-linux.cfg --action=build --tune=base dealII
+safe_eval        = 1
+section_specifier_fatal = 1
+sendmail         = /usr/sbin/sendmail
+setpgrp_enabled  = 1
+setprocgroup     = 1
+shrate           = 0
+sigint           = 2
+size             = ref
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specmake         = Makefile.YYYtArGeTYYYspec
+specrun          = specinvoke
+speed            = 0
+srcalt           = 
+srcdir           = src
+stagger          = 10
+strict_rundir_verify = 1
+subworkdir       = work
+sw_auto_parallel = No
+sw_avail         = Dec-9999
+sw_base_ptrsize  = 64-bit
+sw_compiler      = gcc , g++ & gfortran 4.2.0325 (for AMD64)
+sw_file          = ext3
+sw_os            = SUSE SLES9 (for AMD64)
+sw_other         = None
+sw_peak_ptrsize  = Not Applicable
+sw_state         = runlevel 3
+sysinfo_program  = 
+table            = 1
+teeout           = yes
+teerunout        = yes
+test_date        = Dec-9999
+test_sponsor     = Turbo Computers
+tester           = 
+top              = /home/ricardo/SPECcpu2006
+tune             = base
+uid              = 1001
+unbuffer         = 1
+update-flags     = 0
+use_submit_for_speed = 0
+username         = ricardo
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+version_url      = http://www.spec.org/auto/cpu2006/current_version
+workdir          = run
+worklist         = list
+  Compile for '447.dealII' started at: Mon Oct 14 18:40:05 2019 (1571071205)
+Issuing make.clean command 'specmake clean'
+Start make.clean command: Mon Oct 14 18:40:05 2019 (1571071205)
+rm -rf dealII dealII.exe *.o  *.fppized.f*
+find . \( -name \*.o -o -name '*.fppized.f*' \) -print | xargs rm -rf
+rm -rf core 
+Stop make.clean command: Mon Oct 14 18:40:06 2019 (1571071206)
+Elapsed time for make.clean command: 00:00:01 (1)
+Issuing make command 'specmake build'
+Start make command: Mon Oct 14 18:40:06 2019 (1571071206)
+/usr/bin/g++ -c -o auto_derivative_function.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      auto_derivative_function.cc
+/usr/bin/g++ -c -o block_sparse_matrix.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      block_sparse_matrix.cc
+/usr/bin/g++ -c -o block_sparse_matrix_ez.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      block_sparse_matrix_ez.cc
+/usr/bin/g++ -c -o block_sparsity_pattern.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      block_sparsity_pattern.cc
+/usr/bin/g++ -c -o block_vector.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      block_vector.cc
+In file included from include/lac/block_vector.templates.h:19,
+                 from block_vector.cc:14:
+include/lac/block_vector.h: In member function 'internal::BlockVectorIterators::Iterator<number, constness>::value_type& internal::BlockVectorIterators::Iterator<number, constness>::operator*() const [with number = double; bool constness = true]':
+include/lac/block_vector.h:1470:14: warning: function returns address of local variable [-Wreturn-local-addr]
+       return p;
+              ^
+include/lac/block_vector.h:1469:49: note: declared here
+       reference p = parent->block(current_block)(index_within_block);
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+include/lac/block_vector.h: In member function 'internal::BlockVectorIterators::Iterator<number, constness>::value_type* internal::BlockVectorIterators::Iterator<number, constness>::operator->() const [with number = double; bool constness = true]':
+include/lac/block_vector.h:1486:15: warning: function returns address of local variable [-Wreturn-local-addr]
+       return &p;
+               ^
+include/lac/block_vector.h:1485:49: note: declared here
+       reference p = parent->block(current_block)(index_within_block);
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+In member function 'internal::BlockVectorIterators::Iterator<number, constness>::value_type& internal::BlockVectorIterators::Iterator<number, constness>::operator[](internal::BlockVectorIterators::Iterator<number, constness>::difference_type) const [with number = double; bool constness = true]':
+cc1plus: warning: function may return address of local variable [-Wreturn-local-addr]
+include/lac/block_vector.h:1504:53: note: declared here
+           reference p = parent->block(current_block)(index_within_block + d);
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+cc1plus: warning: function may return address of local variable [-Wreturn-local-addr]
+include/lac/block_vector.h:1516:30: note: declared here
+       reference p = (*parent)(global_index+d);
+                     ~~~~~~~~~^~~~~~~~~~~~~~~~
+cc1plus: warning: function may return address of local variable [-Wreturn-local-addr]
+include/lac/block_vector.h:1516:30: note: declared here
+include/lac/block_vector.h: In member function 'internal::BlockVectorIterators::Iterator<number, constness>::value_type& internal::BlockVectorIterators::Iterator<number, constness>::operator*() const [with number = float; bool constness = true]':
+include/lac/block_vector.h:1470:14: warning: function returns address of local variable [-Wreturn-local-addr]
+       return p;
+              ^
+include/lac/block_vector.h:1469:49: note: declared here
+       reference p = parent->block(current_block)(index_within_block);
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+include/lac/block_vector.h: In member function 'internal::BlockVectorIterators::Iterator<number, constness>::value_type* internal::BlockVectorIterators::Iterator<number, constness>::operator->() const [with number = float; bool constness = true]':
+include/lac/block_vector.h:1486:15: warning: function returns address of local variable [-Wreturn-local-addr]
+       return &p;
+               ^
+include/lac/block_vector.h:1485:49: note: declared here
+       reference p = parent->block(current_block)(index_within_block);
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+In member function 'internal::BlockVectorIterators::Iterator<number, constness>::value_type& internal::BlockVectorIterators::Iterator<number, constness>::operator[](internal::BlockVectorIterators::Iterator<number, constness>::difference_type) const [with number = float; bool constness = true]':
+cc1plus: warning: function may return address of local variable [-Wreturn-local-addr]
+include/lac/block_vector.h:1504:53: note: declared here
+           reference p = parent->block(current_block)(index_within_block + d);
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+cc1plus: warning: function may return address of local variable [-Wreturn-local-addr]
+include/lac/block_vector.h:1516:30: note: declared here
+       reference p = (*parent)(global_index+d);
+                     ~~~~~~~~~^~~~~~~~~~~~~~~~
+cc1plus: warning: function may return address of local variable [-Wreturn-local-addr]
+include/lac/block_vector.h:1516:30: note: declared here
+/usr/bin/g++ -c -o compressed_sparsity_pattern.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      compressed_sparsity_pattern.cc
+/usr/bin/g++ -c -o data_out.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      data_out.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from data_out.cc:17:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from data_out.cc:17:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from data_out.cc:17:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from data_out.cc:17:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from data_out.cc:17:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from data_out.cc:17:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o data_out_base.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      data_out_base.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from data_out_base.cc:17:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from data_out_base.cc:17:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from data_out_base.cc:17:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from data_out_base.cc:17:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from data_out_base.cc:17:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from data_out_base.cc:17:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o data_out_faces.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      data_out_faces.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from data_out_faces.cc:16:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from data_out_faces.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from data_out_faces.cc:16:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from data_out_faces.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from data_out_faces.cc:16:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from data_out_faces.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o data_out_rotation.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      data_out_rotation.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from data_out_rotation.cc:16:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from data_out_rotation.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from data_out_rotation.cc:16:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from data_out_rotation.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from data_out_rotation.cc:16:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from data_out_rotation.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o data_out_stack.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      data_out_stack.cc
+/usr/bin/g++ -c -o derivative_approximation.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      derivative_approximation.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from derivative_approximation.cc:16:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from derivative_approximation.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from derivative_approximation.cc:16:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from derivative_approximation.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from derivative_approximation.cc:16:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from derivative_approximation.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o dof_accessor.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      dof_accessor.cc
+/usr/bin/g++ -c -o dof_constraints.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      dof_constraints.cc
+/usr/bin/g++ -c -o dof_handler.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      dof_handler.cc
+/usr/bin/g++ -c -o dof_levels.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      dof_levels.cc
+/usr/bin/g++ -c -o dof_renumbering.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      dof_renumbering.cc
+dof_renumbering.cc:63:5: warning: access declarations are deprecated in favour of using-declarations; suggestion: add the 'using' keyword [-Wdeprecated]
+     T::operator->;
+     ^
+dof_renumbering.cc:64:5: warning: access declarations are deprecated in favour of using-declarations; suggestion: add the 'using' keyword [-Wdeprecated]
+     T::operator++;
+     ^
+dof_renumbering.cc:65:5: warning: access declarations are deprecated in favour of using-declarations; suggestion: add the 'using' keyword [-Wdeprecated]
+     T::operator==;
+     ^
+dof_renumbering.cc:82:5: warning: access declarations are deprecated in favour of using-declarations; suggestion: add the 'using' keyword [-Wdeprecated]
+     T::operator->;
+     ^
+dof_renumbering.cc:83:5: warning: access declarations are deprecated in favour of using-declarations; suggestion: add the 'using' keyword [-Wdeprecated]
+     T::operator++;
+     ^
+dof_renumbering.cc:84:5: warning: access declarations are deprecated in favour of using-declarations; suggestion: add the 'using' keyword [-Wdeprecated]
+     T::operator==;
+     ^
+/usr/bin/g++ -c -o dof_tools.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      dof_tools.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from dof_tools.cc:16:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from dof_tools.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from dof_tools.cc:16:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from dof_tools.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from dof_tools.cc:16:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from dof_tools.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o error_estimator.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      error_estimator.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from error_estimator.cc:15:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from error_estimator.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from error_estimator.cc:15:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from error_estimator.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from error_estimator.cc:15:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from error_estimator.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o exceptions.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      exceptions.cc
+/usr/bin/g++ -c -o fe.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe.cc
+/usr/bin/g++ -c -o fe_data.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_data.cc
+/usr/bin/g++ -c -o fe_dgp.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_dgp.cc
+/usr/bin/g++ -c -o fe_dgp_1d.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_dgp_1d.cc
+/usr/bin/g++ -c -o fe_dgp_2d.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_dgp_2d.cc
+/usr/bin/g++ -c -o fe_dgp_3d.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_dgp_3d.cc
+/usr/bin/g++ -c -o fe_dgp_nonparametric.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_dgp_nonparametric.cc
+/usr/bin/g++ -c -o fe_dgq.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_dgq.cc
+/usr/bin/g++ -c -o fe_dgq_1d.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_dgq_1d.cc
+/usr/bin/g++ -c -o fe_dgq_2d.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_dgq_2d.cc
+/usr/bin/g++ -c -o fe_dgq_3d.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_dgq_3d.cc
+/usr/bin/g++ -c -o fe_nedelec.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_nedelec.cc
+/usr/bin/g++ -c -o fe_nedelec_1d.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_nedelec_1d.cc
+/usr/bin/g++ -c -o fe_nedelec_2d.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_nedelec_2d.cc
+/usr/bin/g++ -c -o fe_nedelec_3d.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_nedelec_3d.cc
+/usr/bin/g++ -c -o fe_q.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_q.cc
+/usr/bin/g++ -c -o fe_q_1d.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_q_1d.cc
+/usr/bin/g++ -c -o fe_q_2d.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_q_2d.cc
+/usr/bin/g++ -c -o fe_q_3d.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_q_3d.cc
+/usr/bin/g++ -c -o fe_q_hierarchical.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_q_hierarchical.cc
+/usr/bin/g++ -c -o fe_raviart_thomas.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_raviart_thomas.cc
+/usr/bin/g++ -c -o fe_system.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_system.cc
+/usr/bin/g++ -c -o fe_tools.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_tools.cc
+/usr/bin/g++ -c -o fe_values.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_values.cc
+/usr/bin/g++ -c -o filtered_matrix.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      filtered_matrix.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/lac/filtered_matrix.h:20,
+                 from include/lac/filtered_matrix.templates.h:19,
+                 from filtered_matrix.cc:15:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/lac/filtered_matrix.h:20,
+                 from include/lac/filtered_matrix.templates.h:19,
+                 from filtered_matrix.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from include/lac/filtered_matrix.h:20,
+                 from include/lac/filtered_matrix.templates.h:19,
+                 from filtered_matrix.cc:15:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/lac/filtered_matrix.h:20,
+                 from include/lac/filtered_matrix.templates.h:19,
+                 from filtered_matrix.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from include/lac/filtered_matrix.h:20,
+                 from include/lac/filtered_matrix.templates.h:19,
+                 from filtered_matrix.cc:15:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/lac/filtered_matrix.h:20,
+                 from include/lac/filtered_matrix.templates.h:19,
+                 from filtered_matrix.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o full_matrix.double.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      full_matrix.double.cc
+/usr/bin/g++ -c -o full_matrix.float.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      full_matrix.float.cc
+/usr/bin/g++ -c -o function.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      function.cc
+/usr/bin/g++ -c -o function_derivative.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      function_derivative.cc
+/usr/bin/g++ -c -o function_lib.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      function_lib.cc
+/usr/bin/g++ -c -o function_lib_cutoff.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      function_lib_cutoff.cc
+/usr/bin/g++ -c -o function_time.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      function_time.cc
+/usr/bin/g++ -c -o geometry_info.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      geometry_info.cc
+/usr/bin/g++ -c -o grid_generator.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      grid_generator.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from grid_generator.cc:16:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from grid_generator.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from grid_generator.cc:16:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from grid_generator.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from grid_generator.cc:16:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from grid_generator.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o grid_in.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      grid_in.cc
+/usr/bin/g++ -c -o grid_out.all_dimensions.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      grid_out.all_dimensions.cc
+/usr/bin/g++ -c -o grid_out.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      grid_out.cc
+/usr/bin/g++ -c -o grid_refinement.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      grid_refinement.cc
+/usr/bin/g++ -c -o grid_reordering.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      grid_reordering.cc
+/usr/bin/g++ -c -o histogram.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      histogram.cc
+/usr/bin/g++ -c -o intergrid_map.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      intergrid_map.cc
+/usr/bin/g++ -c -o job_identifier.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      job_identifier.cc
+/usr/bin/g++ -c -o log.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      log.cc
+/usr/bin/g++ -c -o mapping.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      mapping.cc
+/usr/bin/g++ -c -o mapping_c1.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      mapping_c1.cc
+/usr/bin/g++ -c -o mapping_cartesian.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      mapping_cartesian.cc
+/usr/bin/g++ -c -o mapping_q.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      mapping_q.cc
+mapping_q.cc: In member function 'virtual Point<dim> MappingQ<dim>::transform_unit_to_real_cell(const typename Triangulation<dim>::cell_iterator&, const Point<dim>&) const':
+mapping_q.cc:1274:8: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+   std::auto_ptr<InternalData>
+        ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from mapping_q.cc:28:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+mapping_q.cc: In member function 'virtual Point<dim> MappingQ<dim>::transform_real_to_unit_cell(const typename Triangulation<dim>::cell_iterator&, const Point<dim>&) const':
+mapping_q.cc:1309:12: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+       std::auto_ptr<InternalData>
+            ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from mapping_q.cc:28:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o mapping_q1.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      mapping_q1.cc
+mapping_q1.cc: In member function 'virtual Point<dim> MappingQ1<dim>::transform_unit_to_real_cell(const typename Triangulation<dim>::cell_iterator&, const Point<dim>&) const':
+mapping_q1.cc:907:8: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+   std::auto_ptr<InternalData>
+        ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from mapping_q1.cc:26:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+mapping_q1.cc: In member function 'virtual Point<dim> MappingQ1<dim>::transform_real_to_unit_cell(const typename Triangulation<dim>::cell_iterator&, const Point<dim>&) const':
+mapping_q1.cc:959:8: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+   std::auto_ptr<InternalData>
+        ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from mapping_q1.cc:26:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o mapping_q1_eulerian.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      mapping_q1_eulerian.cc
+/usr/bin/g++ -c -o matrices.all_dimensions.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      matrices.all_dimensions.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/numerics/matrices.h:19,
+                 from matrices.all_dimensions.cc:15:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/numerics/matrices.h:19,
+                 from matrices.all_dimensions.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from include/numerics/matrices.h:19,
+                 from matrices.all_dimensions.cc:15:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/numerics/matrices.h:19,
+                 from matrices.all_dimensions.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from include/numerics/matrices.h:19,
+                 from matrices.all_dimensions.cc:15:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/numerics/matrices.h:19,
+                 from matrices.all_dimensions.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o matrices.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      matrices.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from matrices.cc:16:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from matrices.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from matrices.cc:16:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from matrices.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from matrices.cc:16:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from matrices.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o matrix_lib.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      matrix_lib.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/lac/vector_memory.h:20,
+                 from include/lac/matrix_lib.h:7,
+                 from include/lac/matrix_lib.templates.h:16,
+                 from matrix_lib.cc:15:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/lac/vector_memory.h:20,
+                 from include/lac/matrix_lib.h:7,
+                 from include/lac/matrix_lib.templates.h:16,
+                 from matrix_lib.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from include/lac/vector_memory.h:20,
+                 from include/lac/matrix_lib.h:7,
+                 from include/lac/matrix_lib.templates.h:16,
+                 from matrix_lib.cc:15:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/lac/vector_memory.h:20,
+                 from include/lac/matrix_lib.h:7,
+                 from include/lac/matrix_lib.templates.h:16,
+                 from matrix_lib.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from include/lac/vector_memory.h:20,
+                 from include/lac/matrix_lib.h:7,
+                 from include/lac/matrix_lib.templates.h:16,
+                 from matrix_lib.cc:15:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/lac/vector_memory.h:20,
+                 from include/lac/matrix_lib.h:7,
+                 from include/lac/matrix_lib.templates.h:16,
+                 from matrix_lib.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o matrix_out.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      matrix_out.cc
+/usr/bin/g++ -c -o memory_consumption.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      memory_consumption.cc
+/usr/bin/g++ -c -o mg_base.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      mg_base.cc
+/usr/bin/g++ -c -o mg_dof_accessor.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      mg_dof_accessor.cc
+/usr/bin/g++ -c -o mg_dof_handler.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      mg_dof_handler.cc
+/usr/bin/g++ -c -o mg_dof_tools.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      mg_dof_tools.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from mg_dof_tools.cc:16:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from mg_dof_tools.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from mg_dof_tools.cc:16:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from mg_dof_tools.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from mg_dof_tools.cc:16:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from mg_dof_tools.cc:16:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o mg_smoother.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      mg_smoother.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/lac/vector_memory.h:20,
+                 from include/lac/pointer_matrix.h:8,
+                 from include/multigrid/mg_smoother.h:19,
+                 from mg_smoother.cc:21:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/lac/vector_memory.h:20,
+                 from include/lac/pointer_matrix.h:8,
+                 from include/multigrid/mg_smoother.h:19,
+                 from mg_smoother.cc:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from include/lac/vector_memory.h:20,
+                 from include/lac/pointer_matrix.h:8,
+                 from include/multigrid/mg_smoother.h:19,
+                 from mg_smoother.cc:21:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/lac/vector_memory.h:20,
+                 from include/lac/pointer_matrix.h:8,
+                 from include/multigrid/mg_smoother.h:19,
+                 from mg_smoother.cc:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from include/lac/vector_memory.h:20,
+                 from include/lac/pointer_matrix.h:8,
+                 from include/multigrid/mg_smoother.h:19,
+                 from mg_smoother.cc:21:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/lac/vector_memory.h:20,
+                 from include/lac/pointer_matrix.h:8,
+                 from include/multigrid/mg_smoother.h:19,
+                 from mg_smoother.cc:21:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o mg_transfer_block.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      mg_transfer_block.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from mg_transfer_block.cc:26:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from mg_transfer_block.cc:26:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from mg_transfer_block.cc:26:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from mg_transfer_block.cc:26:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from mg_transfer_block.cc:26:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from mg_transfer_block.cc:26:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from mg_transfer_block.cc:26:
+include/multigrid/mg_transfer.h:497:5: warning: access declarations are deprecated in favour of using-declarations; suggestion: add the 'using' keyword [-Wdeprecated]
+     MGTransferBlockBase::memory_consumption;
+     ^~~~~~~~~~~~~~~~~~~
+/usr/bin/g++ -c -o mg_transfer_prebuilt.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      mg_transfer_prebuilt.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from mg_transfer_prebuilt.cc:27:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from mg_transfer_prebuilt.cc:27:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from mg_transfer_prebuilt.cc:27:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from mg_transfer_prebuilt.cc:27:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from mg_transfer_prebuilt.cc:27:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from mg_transfer_prebuilt.cc:27:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from mg_transfer_prebuilt.cc:27:
+include/multigrid/mg_transfer.h:497:5: warning: access declarations are deprecated in favour of using-declarations; suggestion: add the 'using' keyword [-Wdeprecated]
+     MGTransferBlockBase::memory_consumption;
+     ^~~~~~~~~~~~~~~~~~~
+/usr/bin/g++ -c -o mg_transfer_block.all_dimensions.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      mg_transfer_block.all_dimensions.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from mg_transfer_block.all_dimensions.cc:26:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from mg_transfer_block.all_dimensions.cc:26:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from mg_transfer_block.all_dimensions.cc:26:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from mg_transfer_block.all_dimensions.cc:26:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from mg_transfer_block.all_dimensions.cc:26:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from mg_transfer_block.all_dimensions.cc:26:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from mg_transfer_block.all_dimensions.cc:26:
+include/multigrid/mg_transfer.h:497:5: warning: access declarations are deprecated in favour of using-declarations; suggestion: add the 'using' keyword [-Wdeprecated]
+     MGTransferBlockBase::memory_consumption;
+     ^~~~~~~~~~~~~~~~~~~
+/usr/bin/g++ -c -o multigrid.all_dimensions.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      multigrid.all_dimensions.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from multigrid.all_dimensions.cc:19:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from multigrid.all_dimensions.cc:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from multigrid.all_dimensions.cc:19:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from multigrid.all_dimensions.cc:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from multigrid.all_dimensions.cc:19:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/multigrid/mg_level_object.h:20,
+                 from include/multigrid/mg_transfer.h:27,
+                 from multigrid.all_dimensions.cc:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from multigrid.all_dimensions.cc:19:
+include/multigrid/mg_transfer.h:497:5: warning: access declarations are deprecated in favour of using-declarations; suggestion: add the 'using' keyword [-Wdeprecated]
+     MGTransferBlockBase::memory_consumption;
+     ^~~~~~~~~~~~~~~~~~~
+/usr/bin/g++ -c -o multithread_info.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      multithread_info.cc
+/usr/bin/g++ -c -o parameter_handler.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      parameter_handler.cc
+In file included from include/base/parameter_handler.h:18,
+                 from parameter_handler.cc:14:
+parameter_handler.cc: In member function 'long int ParameterHandler::get_integer(const string&) const':
+parameter_handler.cc:763:28: warning: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+   AssertThrow ((s.c_str()!='\0') || (*endptr == '\0'),
+                            ^~~~
+include/base/exceptions.h:596:15: note: in definition of macro 'AssertThrow'
+         if (!(cond))                                                 \
+               ^~~~
+parameter_handler.cc: In member function 'double ParameterHandler::get_double(const string&) const':
+parameter_handler.cc:777:28: warning: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+   AssertThrow ((s.c_str()!='\0') || (*endptr == '\0'),
+                            ^~~~
+include/base/exceptions.h:596:15: note: in definition of macro 'AssertThrow'
+         if (!(cond))                                                 \
+               ^~~~
+/usr/bin/g++ -c -o persistent_tria.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      persistent_tria.cc
+/usr/bin/g++ -c -o polynomial.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      polynomial.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from polynomial.cc:17:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from polynomial.cc:17:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from polynomial.cc:17:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from polynomial.cc:17:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from polynomial.cc:17:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from polynomial.cc:17:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o polynomial_space.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      polynomial_space.cc
+/usr/bin/g++ -c -o programid.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      programid.cc
+/usr/bin/g++ -c -o quadrature.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      quadrature.cc
+/usr/bin/g++ -c -o quadrature_lib.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      quadrature_lib.cc
+/usr/bin/g++ -c -o solution_transfer.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      solution_transfer.cc
+/usr/bin/g++ -c -o solver_control.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      solver_control.cc
+/usr/bin/g++ -c -o sparse_matrix.double.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      sparse_matrix.double.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/lac/sparse_matrix.templates.h:38,
+                 from sparse_matrix.double.cc:15:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/bits/locale_conv.h:41,
+                 from /usr/include/c++/8/locale:43,
+                 from /usr/include/c++/8/iomanip:43,
+                 from include/lac/sparse_matrix.templates.h:30,
+                 from sparse_matrix.double.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from include/lac/sparse_matrix.templates.h:38,
+                 from sparse_matrix.double.cc:15:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/bits/locale_conv.h:41,
+                 from /usr/include/c++/8/locale:43,
+                 from /usr/include/c++/8/iomanip:43,
+                 from include/lac/sparse_matrix.templates.h:30,
+                 from sparse_matrix.double.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from include/lac/sparse_matrix.templates.h:38,
+                 from sparse_matrix.double.cc:15:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/bits/locale_conv.h:41,
+                 from /usr/include/c++/8/locale:43,
+                 from /usr/include/c++/8/iomanip:43,
+                 from include/lac/sparse_matrix.templates.h:30,
+                 from sparse_matrix.double.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o sparse_matrix.float.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      sparse_matrix.float.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/lac/sparse_matrix.templates.h:38,
+                 from sparse_matrix.float.cc:15:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/bits/locale_conv.h:41,
+                 from /usr/include/c++/8/locale:43,
+                 from /usr/include/c++/8/iomanip:43,
+                 from include/lac/sparse_matrix.templates.h:30,
+                 from sparse_matrix.float.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from include/lac/sparse_matrix.templates.h:38,
+                 from sparse_matrix.float.cc:15:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/bits/locale_conv.h:41,
+                 from /usr/include/c++/8/locale:43,
+                 from /usr/include/c++/8/iomanip:43,
+                 from include/lac/sparse_matrix.templates.h:30,
+                 from sparse_matrix.float.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from include/lac/sparse_matrix.templates.h:38,
+                 from sparse_matrix.float.cc:15:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/bits/locale_conv.h:41,
+                 from /usr/include/c++/8/locale:43,
+                 from /usr/include/c++/8/iomanip:43,
+                 from include/lac/sparse_matrix.templates.h:30,
+                 from sparse_matrix.float.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o sparse_matrix_ez.double.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      sparse_matrix_ez.double.cc
+/usr/bin/g++ -c -o sparse_matrix_ez.float.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      sparse_matrix_ez.float.cc
+/usr/bin/g++ -c -o sparsity_pattern.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      sparsity_pattern.cc
+/usr/bin/g++ -c -o step-14.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      step-14.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from step-14.cc:19:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from step-14.cc:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from step-14.cc:19:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from step-14.cc:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from step-14.cc:19:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from step-14.cc:19:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o subscriptor.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      subscriptor.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from subscriptor.cc:15:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from subscriptor.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from subscriptor.cc:15:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from subscriptor.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from subscriptor.cc:15:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from subscriptor.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o swappable_vector.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      swappable_vector.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/lac/swappable_vector.h:18,
+                 from include/lac/swappable_vector.templates.h:18,
+                 from swappable_vector.cc:15:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/lac/swappable_vector.h:18,
+                 from include/lac/swappable_vector.templates.h:18,
+                 from swappable_vector.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from include/lac/swappable_vector.h:18,
+                 from include/lac/swappable_vector.templates.h:18,
+                 from swappable_vector.cc:15:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/lac/swappable_vector.h:18,
+                 from include/lac/swappable_vector.templates.h:18,
+                 from swappable_vector.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from include/lac/swappable_vector.h:18,
+                 from include/lac/swappable_vector.templates.h:18,
+                 from swappable_vector.cc:15:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/lac/swappable_vector.h:18,
+                 from include/lac/swappable_vector.templates.h:18,
+                 from swappable_vector.cc:15:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++ -c -o tensor.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      tensor.cc
+/usr/bin/g++ -c -o tensor_product_polynomials.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      tensor_product_polynomials.cc
+/usr/bin/g++ -c -o tria.all_dimensions.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      tria.all_dimensions.cc
+tria.all_dimensions.cc: In member function 'void CellData<dim>::rotate(unsigned int) [with int dim = 3]':
+tria.all_dimensions.cc:107:19: warning: narrowing conversion of '((CellData<3>*)this)->CellData<3>::vertices[0]' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     = { vertices[0], vertices[1], vertices[2], vertices[3],
+         ~~~~~~~~~~^
+tria.all_dimensions.cc:107:32: warning: narrowing conversion of '((CellData<3>*)this)->CellData<3>::vertices[1]' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     = { vertices[0], vertices[1], vertices[2], vertices[3],
+                      ~~~~~~~~~~^
+tria.all_dimensions.cc:107:45: warning: narrowing conversion of '((CellData<3>*)this)->CellData<3>::vertices[2]' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     = { vertices[0], vertices[1], vertices[2], vertices[3],
+                                   ~~~~~~~~~~^
+tria.all_dimensions.cc:107:58: warning: narrowing conversion of '((CellData<3>*)this)->CellData<3>::vertices[3]' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     = { vertices[0], vertices[1], vertices[2], vertices[3],
+                                                ~~~~~~~~~~^
+tria.all_dimensions.cc:108:12: warning: narrowing conversion of '((CellData<3>*)this)->CellData<3>::vertices[4]' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+  vertices[4], vertices[5], vertices[6], vertices[7]  };
+  ~~~~~~~~~~^
+tria.all_dimensions.cc:108:25: warning: narrowing conversion of '((CellData<3>*)this)->CellData<3>::vertices[5]' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+  vertices[4], vertices[5], vertices[6], vertices[7]  };
+               ~~~~~~~~~~^
+tria.all_dimensions.cc:108:38: warning: narrowing conversion of '((CellData<3>*)this)->CellData<3>::vertices[6]' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+  vertices[4], vertices[5], vertices[6], vertices[7]  };
+                            ~~~~~~~~~~^
+tria.all_dimensions.cc:108:51: warning: narrowing conversion of '((CellData<3>*)this)->CellData<3>::vertices[7]' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+  vertices[4], vertices[5], vertices[6], vertices[7]  };
+                                         ~~~~~~~~~~^
+/usr/bin/g++ -c -o tria.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      tria.cc
+tria.cc: In member function 'void Triangulation<dim>::execute_refinement() [with int dim = 3]':
+tria.cc:5539:49: warning: narrowing conversion of 'TriaObjectAccessor<1, dim>::child(unsigned int) const [with int dim = 3](((unsigned int)0)).TriaIterator<3, TriaObjectAccessor<1, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::vertex_index(((unsigned int)1))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+        = { quad->line(0)->child(0)->vertex_index(1),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:5540:42: warning: narrowing conversion of 'TriaObjectAccessor<1, dim>::child(unsigned int) const [with int dim = 3](((unsigned int)0)).TriaIterator<3, TriaObjectAccessor<1, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::vertex_index(((unsigned int)1))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     quad->line(1)->child(0)->vertex_index(1),
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:5541:42: warning: narrowing conversion of 'TriaObjectAccessor<1, dim>::child(unsigned int) const [with int dim = 3](((unsigned int)0)).TriaIterator<3, TriaObjectAccessor<1, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::vertex_index(((unsigned int)1))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     quad->line(2)->child(0)->vertex_index(1),
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:5542:42: warning: narrowing conversion of 'TriaObjectAccessor<1, dim>::child(unsigned int) const [with int dim = 3](((unsigned int)0)).TriaIterator<3, TriaObjectAccessor<1, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::vertex_index(((unsigned int)1))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     quad->line(3)->child(0)->vertex_index(1),
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:5573:42: warning: narrowing conversion of 'TriaObjectAccessor<1, dim>::child(unsigned int) const [with int dim = 3](((unsigned int)0)).TriaIterator<3, TriaObjectAccessor<1, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+        = { quad->line(0)->child(0)->index(),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+tria.cc:5574:35: warning: narrowing conversion of 'TriaObjectAccessor<1, dim>::child(unsigned int) const [with int dim = 3](((unsigned int)1)).TriaIterator<3, TriaObjectAccessor<1, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     quad->line(0)->child(1)->index(),
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+tria.cc:5575:35: warning: narrowing conversion of 'TriaObjectAccessor<1, dim>::child(unsigned int) const [with int dim = 3](((unsigned int)0)).TriaIterator<3, TriaObjectAccessor<1, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     quad->line(1)->child(0)->index(),
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+tria.cc:5576:35: warning: narrowing conversion of 'TriaObjectAccessor<1, dim>::child(unsigned int) const [with int dim = 3](((unsigned int)1)).TriaIterator<3, TriaObjectAccessor<1, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     quad->line(1)->child(1)->index(),
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+tria.cc:5577:35: warning: narrowing conversion of 'TriaObjectAccessor<1, dim>::child(unsigned int) const [with int dim = 3](((unsigned int)1)).TriaIterator<3, TriaObjectAccessor<1, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     quad->line(2)->child(1)->index(),
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+tria.cc:5578:35: warning: narrowing conversion of 'TriaObjectAccessor<1, dim>::child(unsigned int) const [with int dim = 3](((unsigned int)0)).TriaIterator<3, TriaObjectAccessor<1, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     quad->line(2)->child(0)->index(),
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+tria.cc:5579:35: warning: narrowing conversion of 'TriaObjectAccessor<1, dim>::child(unsigned int) const [with int dim = 3](((unsigned int)1)).TriaIterator<3, TriaObjectAccessor<1, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     quad->line(3)->child(1)->index(),
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+tria.cc:5580:35: warning: narrowing conversion of 'TriaObjectAccessor<1, dim>::child(unsigned int) const [with int dim = 3](((unsigned int)0)).TriaIterator<3, TriaObjectAccessor<1, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     quad->line(3)->child(0)->index(),
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+tria.cc:5581:24: warning: narrowing conversion of 'new_lines[0].TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     new_lines[0]->index(),
+     ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:5582:24: warning: narrowing conversion of 'new_lines[1].TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     new_lines[1]->index(),
+     ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:5583:24: warning: narrowing conversion of 'new_lines[2].TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     new_lines[2]->index(),
+     ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:5584:24: warning: narrowing conversion of 'new_lines[3].TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     new_lines[3]->index()
+     ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:5791:48: warning: narrowing conversion of 'TriaObjectAccessor<2, dim>::child(unsigned int) const [with int dim = 3](((unsigned int)0)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::vertex_index(((unsigned int)2))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+        = { hex->face(0)->child(0)->vertex_index(2),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:5792:41: warning: narrowing conversion of 'TriaObjectAccessor<2, dim>::child(unsigned int) const [with int dim = 3](((unsigned int)0)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::vertex_index(((unsigned int)2))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     hex->face(3)->child(0)->vertex_index(2),
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:5793:41: warning: narrowing conversion of 'TriaObjectAccessor<2, dim>::child(unsigned int) const [with int dim = 3](((unsigned int)0)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::vertex_index(((unsigned int)2))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     hex->face(1)->child(0)->vertex_index(2),
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:5794:41: warning: narrowing conversion of 'TriaObjectAccessor<2, dim>::child(unsigned int) const [with int dim = 3](((unsigned int)0)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::vertex_index(((unsigned int)2))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     hex->face(5)->child(0)->vertex_index(2),
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:5795:41: warning: narrowing conversion of 'TriaObjectAccessor<2, dim>::child(unsigned int) const [with int dim = 3](((unsigned int)0)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::vertex_index(((unsigned int)2))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     hex->face(2)->child(0)->vertex_index(2),
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:5796:41: warning: narrowing conversion of 'TriaObjectAccessor<2, dim>::child(unsigned int) const [with int dim = 3](((unsigned int)0)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::vertex_index(((unsigned int)2))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+     hex->face(4)->child(0)->vertex_index(2),
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:5933:26: warning: narrowing conversion of 'new_lines[4].TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       new_lines[4]->index(),                   //12
+       ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:5934:26: warning: narrowing conversion of 'new_lines[1].TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       new_lines[1]->index(),                   //13
+       ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:5935:26: warning: narrowing conversion of 'new_lines[5].TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       new_lines[5]->index(),                   //14
+       ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:5936:26: warning: narrowing conversion of 'new_lines[3].TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       new_lines[3]->index(),                   //15
+       ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:5956:26: warning: narrowing conversion of 'new_lines[0].TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       new_lines[0]->index(),                   //24
+       ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:5957:26: warning: narrowing conversion of 'new_lines[2].TriaRawIterator<3, TriaObjectAccessor<1, 3> >::operator->()->TriaObjectAccessor<1, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       new_lines[2]->index(),                   //25
+       ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:6148:26: warning: narrowing conversion of 'new_quads[0].TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       new_quads[0]->index(),     //0
+       ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:6149:26: warning: narrowing conversion of 'new_quads[1].TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       new_quads[1]->index(),
+       ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:6150:26: warning: narrowing conversion of 'new_quads[2].TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       new_quads[2]->index(),
+       ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:6151:26: warning: narrowing conversion of 'new_quads[3].TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       new_quads[3]->index(),
+       ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:6152:26: warning: narrowing conversion of 'new_quads[4].TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       new_quads[4]->index(),
+       ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:6153:26: warning: narrowing conversion of 'new_quads[5].TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       new_quads[5]->index(),
+       ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:6154:26: warning: narrowing conversion of 'new_quads[6].TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       new_quads[6]->index(),
+       ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:6155:26: warning: narrowing conversion of 'new_quads[7].TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       new_quads[7]->index(),
+       ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:6156:26: warning: narrowing conversion of 'new_quads[8].TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       new_quads[8]->index(),
+       ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:6157:26: warning: narrowing conversion of 'new_quads[9].TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       new_quads[9]->index(),
+       ~~~~~~~~~~~~~~~~~~~^~
+tria.cc:6158:27: warning: narrowing conversion of 'new_quads[10].TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       new_quads[10]->index(),
+       ~~~~~~~~~~~~~~~~~~~~^~
+tria.cc:6159:27: warning: narrowing conversion of 'new_quads[11].TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::<anonymous>.TriaAccessor<3>::index()' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       new_quads[11]->index(),    //11
+       ~~~~~~~~~~~~~~~~~~~~^~
+tria.cc:6161:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)0)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)0))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(0)->child_index(0),  //12
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:6162:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)0)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)(((bool)face_orientation[0]) ? 1 : 3)))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(0)->child_index(face_orientation[0] ? 1 : 3),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tria.cc:6163:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)0)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)2))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(0)->child_index(2),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:6164:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)0)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)(((bool)face_orientation[0]) ? 3 : 1)))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(0)->child_index(face_orientation[0] ? 3 : 1),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tria.cc:6166:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)1)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)0))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(1)->child_index(0),  //16
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:6167:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)1)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)(((bool)face_orientation[1]) ? 1 : 3)))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(1)->child_index(face_orientation[1] ? 1 : 3),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tria.cc:6168:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)1)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)2))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(1)->child_index(2),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:6169:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)1)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)(((bool)face_orientation[1]) ? 3 : 1)))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(1)->child_index(face_orientation[1] ? 3 : 1),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tria.cc:6171:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)2)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)0))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(2)->child_index(0),  //20
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:6172:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)2)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)(((bool)face_orientation[2]) ? 1 : 3)))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(2)->child_index(face_orientation[2] ? 1 : 3),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tria.cc:6173:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)2)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)2))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(2)->child_index(2),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:6174:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)2)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)(((bool)face_orientation[2]) ? 3 : 1)))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(2)->child_index(face_orientation[2] ? 3 : 1),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tria.cc:6176:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)3)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)0))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(3)->child_index(0),  //24
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:6177:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)3)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)(((bool)face_orientation[3]) ? 1 : 3)))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(3)->child_index(face_orientation[3] ? 1 : 3),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tria.cc:6178:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)3)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)2))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(3)->child_index(2),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:6179:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)3)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)(((bool)face_orientation[3]) ? 3 : 1)))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(3)->child_index(face_orientation[3] ? 3 : 1),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tria.cc:6181:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)4)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)0))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(4)->child_index(0),  //28
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:6182:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)4)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)(((bool)face_orientation[4]) ? 1 : 3)))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(4)->child_index(face_orientation[4] ? 1 : 3),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tria.cc:6183:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)4)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)2))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(4)->child_index(2),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:6184:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)4)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)(((bool)face_orientation[4]) ? 3 : 1)))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(4)->child_index(face_orientation[4] ? 3 : 1),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tria.cc:6186:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)5)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)0))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(5)->child_index(0),  //32
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:6187:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)5)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)(((bool)face_orientation[5]) ? 1 : 3)))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(5)->child_index(face_orientation[5] ? 1 : 3),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tria.cc:6188:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)5)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)2))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(5)->child_index(2),
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+tria.cc:6189:32: warning: narrowing conversion of 'CellAccessor<dim>::face(unsigned int) const [with int dim = 3](((unsigned int)5)).TriaIterator<3, TriaObjectAccessor<2, 3> >::<anonymous>.TriaRawIterator<3, TriaObjectAccessor<2, 3> >::operator->()->TriaObjectAccessor<2, 3>::child_index(((unsigned int)(((bool)face_orientation[5]) ? 3 : 1)))' from 'int' to 'unsigned int' inside { } [-Wnarrowing]
+       hex->face(5)->child_index(face_orientation[5] ? 3 : 1)
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/bin/g++ -c -o tria_accessor.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      tria_accessor.cc
+/usr/bin/g++ -c -o tria_boundary.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      tria_boundary.cc
+/usr/bin/g++ -c -o tria_boundary_lib.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      tria_boundary_lib.cc
+/usr/bin/g++ -c -o vector.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      vector.cc
+/usr/bin/g++ -c -o vector.long_double.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      vector.long_double.cc
+/usr/bin/g++ -c -o vectors.all_dimensions.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      vectors.all_dimensions.cc
+/usr/bin/g++ -c -o fe_dgp_monomial.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_dgp_monomial.cc
+/usr/bin/g++ -c -o fe_poly.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      fe_poly.cc
+/usr/bin/g++ -c -o polynomials_bdm.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      polynomials_bdm.cc
+/usr/bin/g++ -c -o polynomials_p.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      polynomials_p.cc
+/usr/bin/g++ -c -o vectors.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      vectors.cc
+In file included from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/numerics/matrices.h:19,
+                 from vectors.cc:25:
+include/boost/detail/shared_count.hpp:366:32: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_count(std::auto_ptr<Y> & r): pi_(new sp_counted_base_impl< Y *, checked_deleter<Y> >(r.get(), checked_deleter<Y>()))
+                                ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/numerics/matrices.h:19,
+                 from vectors.cc:25:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from include/numerics/matrices.h:19,
+                 from vectors.cc:25:
+include/boost/shared_ptr.hpp:182:30: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     explicit shared_ptr(std::auto_ptr<Y> & r): px(r.get()), pn()
+                              ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/numerics/matrices.h:19,
+                 from vectors.cc:25:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+In file included from include/base/thread_management.h:27,
+                 from include/numerics/matrices.h:19,
+                 from vectors.cc:25:
+include/boost/shared_ptr.hpp:206:33: warning: 'template<class> class std::auto_ptr' is deprecated [-Wdeprecated-declarations]
+     shared_ptr & operator=(std::auto_ptr<Y> & r)
+                                 ^~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from include/boost/detail/shared_count.hpp:33,
+                 from include/boost/shared_ptr.hpp:27,
+                 from include/base/thread_management.h:27,
+                 from include/numerics/matrices.h:19,
+                 from vectors.cc:25:
+/usr/include/c++/8/bits/unique_ptr.h:53:28: note: declared here
+   template<typename> class auto_ptr;
+                            ^~~~~~~~
+/usr/bin/g++   -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations  -DSPEC_CPU_LP64 -include cstring       auto_derivative_function.o block_sparse_matrix.o block_sparse_matrix_ez.o block_sparsity_pattern.o block_vector.o compressed_sparsity_pattern.o data_out.o data_out_base.o data_out_faces.o data_out_rotation.o data_out_stack.o derivative_approximation.o dof_accessor.o dof_constraints.o dof_handler.o dof_levels.o dof_renumbering.o dof_tools.o error_estimator.o exceptions.o fe.o fe_data.o fe_dgp.o fe_dgp_1d.o fe_dgp_2d.o fe_dgp_3d.o fe_dgp_nonparametric.o fe_dgq.o fe_dgq_1d.o fe_dgq_2d.o fe_dgq_3d.o fe_nedelec.o fe_nedelec_1d.o fe_nedelec_2d.o fe_nedelec_3d.o fe_q.o fe_q_1d.o fe_q_2d.o fe_q_3d.o fe_q_hierarchical.o fe_raviart_thomas.o fe_system.o fe_tools.o fe_values.o filtered_matrix.o full_matrix.double.o full_matrix.float.o function.o function_derivative.o function_lib.o function_lib_cutoff.o function_time.o geometry_info.o grid_generator.o grid_in.o grid_out.all_dimensions.o grid_out.o grid_refinement.o grid_reordering.o histogram.o intergrid_map.o job_identifier.o log.o mapping.o mapping_c1.o mapping_cartesian.o mapping_q.o mapping_q1.o mapping_q1_eulerian.o matrices.all_dimensions.o matrices.o matrix_lib.o matrix_out.o memory_consumption.o mg_base.o mg_dof_accessor.o mg_dof_handler.o mg_dof_tools.o mg_smoother.o mg_transfer_block.o mg_transfer_prebuilt.o mg_transfer_block.all_dimensions.o multigrid.all_dimensions.o multithread_info.o parameter_handler.o persistent_tria.o polynomial.o polynomial_space.o programid.o quadrature.o quadrature_lib.o solution_transfer.o solver_control.o sparse_matrix.double.o sparse_matrix.float.o sparse_matrix_ez.double.o sparse_matrix_ez.float.o sparsity_pattern.o step-14.o subscriptor.o swappable_vector.o tensor.o tensor_product_polynomials.o tria.all_dimensions.o tria.o tria_accessor.o tria_boundary.o tria_boundary_lib.o vector.o vector.long_double.o vectors.all_dimensions.o fe_dgp_monomial.o fe_poly.o polynomials_bdm.o polynomials_p.o vectors.o                     -o dealII
+Stop make command: Mon Oct 14 18:41:48 2019 (1571071308)
+Elapsed time for make command: 00:01:42 (102)
+Issuing options command 'specmake options'
+Start options command: Mon Oct 14 18:41:48 2019 (1571071308)
+COMP: /usr/bin/g++ -c -o options.o -DSPEC_CPU -DNDEBUG  -Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3  -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -include cstring      <source>
+C: CXXC="/usr/bin/g++"
+C: CXXOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CXXFLAGS="-Iinclude -DBOOST_DISABLE_THREADS -Ddeal_II_dimension=3"
+O: OPTIMIZE=""
+O: CXXOPTIMIZE="-O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+P: CXXPORTABILITY="-include cstring"
+O: EXTRA_CXXFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_CXXOPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CXXPORTABILITY=""
+LINK: /usr/bin/g++   -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations  -DSPEC_CPU_LP64 -include cstring       <objects>           -o options
+C: LD="/usr/bin/g++"
+O: CXXOPTIMIZE="-O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+P: CXXPORTABILITY="-include cstring"
+C: LDOUT="-o options"
+Stop options command: Mon Oct 14 18:41:49 2019 (1571071309)
+Elapsed time for options command: 00:00:01 (1)
+  Compile for '447.dealII' ended at: Mon Oct 14 18:41:49 2019 (1571071309)
+  Elapsed compile for '447.dealII': 00:01:44 (104)
+
+Build successes: 447.dealII(base)
+
+Build Complete
+
+The log for this run is in /home/ricardo/SPECcpu2006/result/CPU2006.012.log
+
+runspec finished at Mon Oct 14 18:41:49 2019; 113 total seconds elapsed

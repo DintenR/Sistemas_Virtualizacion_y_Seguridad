@@ -1,0 +1,573 @@
+runspec started at Mon Oct 14 18:50:38 2019 on "debian"
+runspec is: /home/ricardo/SPECcpu2006/bin/runspec
+runspec: runspec --config=ricardo-linux.cfg --action=build --tune=base soplex
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/home/ricardo/SPECcpu2006/config/ricardo-linux.cfg'
+Loading "http://www.spec.org/auto/cpu2006/current_version" for version check: OK
+
+NOTICE: There is a newer version of the suite available from SPEC.
+  Version 1.200 was released on Wed Aug 17 03:10:33 2011
+
+                       ----------------------------------
+                       The run will continue in 5 seconds
+                       ----------------------------------
+Verbosity = 5
+Action    = build
+Tune      = base
+Ext       = amd64-m64-gcc42-nn
+Size      = ref
+Machine   = default
+benchmarks= 450.soplex
+outputs   = raw,flags,ASCII,PDF,Screen
+username  = ricardo
+Benchmarks selected: 450.soplex
+Compiling Binaries
+
+------------------------------------------------------------------------
+When checking options for /home/ricardo/SPECcpu2006/benchspec/CPU2006/450.soplex/exe/soplex_base.amd64-m64-gcc42-nn, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  Building 450.soplex ref base amd64-m64-gcc42-nn default: (build_base_amd64-m64-gcc42-nn.0000)
+Wrote to makefile '/home/ricardo/SPECcpu2006/benchspec/CPU2006/450.soplex/run/build_base_amd64-m64-gcc42-nn.0000/Makefile.deps':
+
+# These are the build dependencies
+
+# End dependencies
+Wrote to makefile '/home/ricardo/SPECcpu2006/benchspec/CPU2006/450.soplex/run/build_base_amd64-m64-gcc42-nn.0000/Makefile.spec':
+TUNE=base
+EXT=amd64-m64-gcc42-nn
+NUMBER=450
+NAME=soplex
+SOURCES= changesoplex.cc didxset.cc dsvector.cc dvector.cc enter.cc \
+	 example.cc factor.cc forest.cc idxset.cc leave.cc lpcolset.cc lprow.cc \
+	 lprowset.cc message.cc mpsinput.cc nameset.cc slufactor.cc solve.cc \
+	 soplex.cc spxaggregatesm.cc spxbasis.cc spxbounds.cc spxchangebasis.cc \
+	 spxdefaultpr.cc spxdefaultrt.cc spxdefines.cc spxdesc.cc spxdevexpr.cc \
+	 spxequilisc.cc spxfastrt.cc spxgeneralsm.cc spxharrisrt.cc \
+	 spxhybridpr.cc spxid.cc spxio.cc spxlp.cc spxlpfread.cc spxmpsread.cc \
+	 spxmpswrite.cc spxparmultpr.cc spxquality.cc spxredundantsm.cc \
+	 spxrem1sm.cc spxscaler.cc spxshift.cc spxsolve.cc spxsolver.cc \
+	 spxstarter.cc spxsteeppr.cc spxsumst.cc spxvecs.cc spxvectorst.cc \
+	 spxweightpr.cc spxweightst.cc ssvector.cc svector.cc svset.cc timer.cc \
+	 unitvector.cc update.cc updatevector.cc vector.cc vsolve.cc
+EXEBASE=soplex
+NEED_MATH=yes
+BENCHLANG=CXX
+ONESTEP=
+CXXONESTEP=
+
+CC               = /usr/bin/gcc
+COPTIMIZE        = -O3 -march=native
+CXX              = /usr/bin/g++
+CXXOPTIMIZE      = -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations
+CXXPORTABILITY   = -std=c++11
+FC               = /usr/bin/gfortran
+FOPTIMIZE        = -O3 -march=native -std=legacy
+FPBASE           = yes
+OS               = unix
+PORTABILITY      = -DSPEC_CPU_LP64
+action           = build
+allow_extension_override = 0
+backup_config    = 1
+baseexe          = soplex
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 450.soplex
+binary           = 
+bindir           = exe
+calctol          = 0
+changedmd5       = 0
+check_integrity  = 1
+check_md5        = 1
+check_version    = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = soplex_base.amd64-m64-gcc42-nn
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = /home/ricardo/SPECcpu2006/config/ricardo-linux.cfg
+copies           = 1
+datadir          = data
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 12345678
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+expid            = 
+ext              = amd64-m64-gcc42-nn
+fake             = 0
+feedback         = 1
+flag_url_base    = http://www.spec.org/auto/cpu2006/flags/
+floatcompare     = 
+help             = 0
+http_proxy       = 
+http_timeout     = 30
+hw_avail         = Dec-9999
+hw_cpu_char      = 
+hw_cpu_mhz       = 3000
+hw_cpu_name      = AMD Opteron 256
+hw_disk          = SATA
+hw_fpu           = Integrated
+hw_memory        = 2 GB (2 x 1GB DDR333 CL2.5)
+hw_model         = Tyan Thunder KKQS Pro (S4882)
+hw_nchips        = 1
+hw_ncores        = 1
+hw_ncoresperchip = 1
+hw_ncpuorder     = 1 chip
+hw_nthreadspercore = 1
+hw_ocache        = None
+hw_pcache        = 64 KB I + 64 KB D on chip per chip
+hw_scache        = 1 MB I+D on chip per chip
+hw_tcache        = None
+hw_vendor        = Tyan
+ignore_errors    = yes
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+iteration        = -1
+iterations       = 3
+license_num      = 9999
+line_width       = 0
+locking          = 1
+log              = CPU2006
+log_line_width   = 0
+logname          = /home/ricardo/SPECcpu2006/result/CPU2006.013.log
+lognum           = 013
+mach             = default
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = soplex
+nc               = 0
+need_math        = yes
+no_input_handler = close
+no_monitor       = 
+notes0100        =  C base flags: -O3 -march=native
+notes0110        =  C++ base flags: -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations
+notes0120        =  Fortran base flags: -O3 -march=native -std=legacy
+notes25          =  PORTABILITY=-DSPEC_CPU_LP64 is applied to all benchmarks in base.
+notes_wrap_columns = 0
+notes_wrap_indent =     
+num              = 450
+obiwan           = 1
+os_exe_ext       = 
+output           = asc
+output_format    = asc, pdf, Screen
+output_root      = 
+outputdir        = output
+path             = /home/ricardo/SPECcpu2006/benchspec/CPU2006/450.soplex
+plain_train      = 1
+prefix           = 
+prepared_by      = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+realuser         = your name here
+rebuild          = 0
+reftime          = reftime
+reportable       = 1
+resultdir        = result
+review           = 0
+run              = all
+runspec          = /home/ricardo/SPECcpu2006/bin/runspec --config=ricardo-linux.cfg --action=build --tune=base soplex
+safe_eval        = 1
+section_specifier_fatal = 1
+sendmail         = /usr/sbin/sendmail
+setpgrp_enabled  = 1
+setprocgroup     = 1
+shrate           = 0
+sigint           = 2
+size             = ref
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specmake         = Makefile.YYYtArGeTYYYspec
+specrun          = specinvoke
+speed            = 0
+srcalt           = 
+srcdir           = src
+stagger          = 10
+strict_rundir_verify = 1
+subworkdir       = work
+sw_auto_parallel = No
+sw_avail         = Dec-9999
+sw_base_ptrsize  = 64-bit
+sw_compiler      = gcc , g++ & gfortran 4.2.0325 (for AMD64)
+sw_file          = ext3
+sw_os            = SUSE SLES9 (for AMD64)
+sw_other         = None
+sw_peak_ptrsize  = Not Applicable
+sw_state         = runlevel 3
+sysinfo_program  = 
+table            = 1
+teeout           = yes
+teerunout        = yes
+test_date        = Dec-9999
+test_sponsor     = Turbo Computers
+tester           = 
+top              = /home/ricardo/SPECcpu2006
+tune             = base
+uid              = 1001
+unbuffer         = 1
+update-flags     = 0
+use_submit_for_speed = 0
+username         = ricardo
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+version_url      = http://www.spec.org/auto/cpu2006/current_version
+workdir          = run
+worklist         = list
+  Compile for '450.soplex' started at: Mon Oct 14 18:50:47 2019 (1571071847)
+Issuing make.clean command 'specmake clean'
+Start make.clean command: Mon Oct 14 18:50:47 2019 (1571071847)
+rm -rf soplex soplex.exe *.o  *.fppized.f*
+find . \( -name \*.o -o -name '*.fppized.f*' \) -print | xargs rm -rf
+rm -rf core 
+Stop make.clean command: Mon Oct 14 18:50:48 2019 (1571071848)
+Elapsed time for make.clean command: 00:00:01 (1)
+Issuing make command 'specmake build'
+Start make command: Mon Oct 14 18:50:48 2019 (1571071848)
+/usr/bin/g++ -c -o changesoplex.o -DSPEC_CPU -DNDEBUG    -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -std=c++11      changesoplex.cc
+/usr/bin/g++ -c -o didxset.o -DSPEC_CPU -DNDEBUG    -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -std=c++11      didxset.cc
+/usr/bin/g++ -c -o dsvector.o -DSPEC_CPU -DNDEBUG    -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -std=c++11      dsvector.cc
+/usr/bin/g++ -c -o dvector.o -DSPEC_CPU -DNDEBUG    -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -std=c++11      dvector.cc
+/usr/bin/g++ -c -o enter.o -DSPEC_CPU -DNDEBUG    -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -std=c++11      enter.cc
+/usr/bin/g++ -c -o example.o -DSPEC_CPU -DNDEBUG    -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -std=c++11      example.cc
+/usr/bin/g++ -c -o factor.o -DSPEC_CPU -DNDEBUG    -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -std=c++11      factor.cc
+/usr/bin/g++ -c -o forest.o -DSPEC_CPU -DNDEBUG    -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -std=c++11      forest.cc
+/usr/bin/g++ -c -o idxset.o -DSPEC_CPU -DNDEBUG    -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -std=c++11      idxset.cc
+/usr/bin/g++ -c -o leave.o -DSPEC_CPU -DNDEBUG    -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -std=c++11      leave.cc
+/usr/bin/g++ -c -o lpcolset.o -DSPEC_CPU -DNDEBUG    -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -std=c++11      lpcolset.cc
+/usr/bin/g++ -c -o lprow.o -DSPEC_CPU -DNDEBUG    -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -std=c++11      lprow.cc
+/usr/bin/g++ -c -o lprowset.o -DSPEC_CPU -DNDEBUG    -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -std=c++11      lprowset.cc
+/usr/bin/g++ -c -o message.o -DSPEC_CPU -DNDEBUG    -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -std=c++11      message.cc
+/usr/bin/g++ -c -o mpsinput.o -DSPEC_CPU -DNDEBUG    -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations   -DSPEC_CPU_LP64 -std=c++11      mpsinput.cc
+mpsinput.cc: In member function 'bool soplex::MPSInput::readLine()':
+mpsinput.cc:75:52: error: no match for 'operator==' (operand types are 'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} and 'int')
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+mpsinput.cc:75:52: note: candidate: 'operator==(int, int)' <built-in>
+mpsinput.cc:75:52: note:   no known conversion for argument 1 from 'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} to 'int'
+In file included from /usr/include/c++/8/iosfwd:40,
+                 from /usr/include/c++/8/ios:38,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from mpsinput.h:23,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/bits/postypes.h:216:5: note: candidate: 'template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)'
+     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^~~~~~~~
+/usr/include/c++/8/bits/postypes.h:216:5: note:   template argument deduction/substitution failed:
+mpsinput.cc:75:55: note:   'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} is not derived from 'const std::fpos<_StateT>'
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+                                                       ^
+In file included from /usr/include/c++/8/bits/stl_algobase.h:64,
+                 from /usr/include/c++/8/bits/char_traits.h:39,
+                 from /usr/include/c++/8/ios:40,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from mpsinput.h:23,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/bits/stl_pair.h:448:5: note: candidate: 'template<class _T1, class _T2> constexpr bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)'
+     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^~~~~~~~
+/usr/include/c++/8/bits/stl_pair.h:448:5: note:   template argument deduction/substitution failed:
+mpsinput.cc:75:55: note:   'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} is not derived from 'const std::pair<_T1, _T2>'
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+                                                       ^
+In file included from /usr/include/c++/8/bits/stl_algobase.h:67,
+                 from /usr/include/c++/8/bits/char_traits.h:39,
+                 from /usr/include/c++/8/ios:40,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from mpsinput.h:23,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/bits/stl_iterator.h:302:5: note: candidate: 'template<class _Iterator> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)'
+     operator==(const reverse_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/include/c++/8/bits/stl_iterator.h:302:5: note:   template argument deduction/substitution failed:
+mpsinput.cc:75:55: note:   'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} is not derived from 'const std::reverse_iterator<_Iterator>'
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+                                                       ^
+In file included from /usr/include/c++/8/bits/stl_algobase.h:67,
+                 from /usr/include/c++/8/bits/char_traits.h:39,
+                 from /usr/include/c++/8/ios:40,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from mpsinput.h:23,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/bits/stl_iterator.h:340:5: note: candidate: 'template<class _IteratorL, class _IteratorR> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)'
+     operator==(const reverse_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+/usr/include/c++/8/bits/stl_iterator.h:340:5: note:   template argument deduction/substitution failed:
+mpsinput.cc:75:55: note:   'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} is not derived from 'const std::reverse_iterator<_Iterator>'
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+                                                       ^
+In file included from /usr/include/c++/8/bits/stl_algobase.h:67,
+                 from /usr/include/c++/8/bits/char_traits.h:39,
+                 from /usr/include/c++/8/ios:40,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from mpsinput.h:23,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/bits/stl_iterator.h:1115:5: note: candidate: 'template<class _IteratorL, class _IteratorR> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)'
+     operator==(const move_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+/usr/include/c++/8/bits/stl_iterator.h:1115:5: note:   template argument deduction/substitution failed:
+mpsinput.cc:75:55: note:   'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} is not derived from 'const std::move_iterator<_IteratorL>'
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+                                                       ^
+In file included from /usr/include/c++/8/bits/stl_algobase.h:67,
+                 from /usr/include/c++/8/bits/char_traits.h:39,
+                 from /usr/include/c++/8/ios:40,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from mpsinput.h:23,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/bits/stl_iterator.h:1121:5: note: candidate: 'template<class _Iterator> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)'
+     operator==(const move_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/include/c++/8/bits/stl_iterator.h:1121:5: note:   template argument deduction/substitution failed:
+mpsinput.cc:75:55: note:   'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} is not derived from 'const std::move_iterator<_IteratorL>'
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+                                                       ^
+In file included from /usr/include/c++/8/string:41,
+                 from /usr/include/c++/8/bits/locale_classes.h:40,
+                 from /usr/include/c++/8/bits/ios_base.h:41,
+                 from /usr/include/c++/8/ios:42,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from mpsinput.h:23,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/bits/allocator.h:146:5: note: candidate: 'template<class _T1, class _T2> bool std::operator==(const std::allocator<_CharT>&, const std::allocator<_T2>&)'
+     operator==(const allocator<_T1>&, const allocator<_T2>&)
+     ^~~~~~~~
+/usr/include/c++/8/bits/allocator.h:146:5: note:   template argument deduction/substitution failed:
+mpsinput.cc:75:55: note:   'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} is not derived from 'const std::allocator<_CharT>'
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+                                                       ^
+In file included from /usr/include/c++/8/string:41,
+                 from /usr/include/c++/8/bits/locale_classes.h:40,
+                 from /usr/include/c++/8/bits/ios_base.h:41,
+                 from /usr/include/c++/8/ios:42,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from mpsinput.h:23,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/bits/allocator.h:152:5: note: candidate: 'template<class _Tp> bool std::operator==(const std::allocator<_CharT>&, const std::allocator<_CharT>&)'
+     operator==(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^~~~~~~~
+/usr/include/c++/8/bits/allocator.h:152:5: note:   template argument deduction/substitution failed:
+mpsinput.cc:75:55: note:   'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} is not derived from 'const std::allocator<_CharT>'
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+                                                       ^
+In file included from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/bits/locale_classes.h:40,
+                 from /usr/include/c++/8/bits/ios_base.h:41,
+                 from /usr/include/c++/8/ios:42,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from mpsinput.h:23,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/bits/basic_string.h:6048:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)'
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/8/bits/basic_string.h:6048:5: note:   template argument deduction/substitution failed:
+mpsinput.cc:75:55: note:   'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+                                                       ^
+In file included from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/bits/locale_classes.h:40,
+                 from /usr/include/c++/8/bits/ios_base.h:41,
+                 from /usr/include/c++/8/ios:42,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from mpsinput.h:23,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/bits/basic_string.h:6056:5: note: candidate: 'template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::__cxx11::basic_string<_CharT>&, const std::__cxx11::basic_string<_CharT>&)'
+     operator==(const basic_string<_CharT>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/8/bits/basic_string.h:6056:5: note:   template argument deduction/substitution failed:
+mpsinput.cc:75:55: note:   'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} is not derived from 'const std::__cxx11::basic_string<_CharT>'
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+                                                       ^
+In file included from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/bits/locale_classes.h:40,
+                 from /usr/include/c++/8/bits/ios_base.h:41,
+                 from /usr/include/c++/8/ios:42,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from mpsinput.h:23,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/bits/basic_string.h:6070:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)'
+     operator==(const _CharT* __lhs,
+     ^~~~~~~~
+/usr/include/c++/8/bits/basic_string.h:6070:5: note:   template argument deduction/substitution failed:
+mpsinput.cc:75:55: note:   mismatched types 'const _CharT*' and 'std::basic_istream<char>'
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+                                                       ^
+In file included from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/bits/locale_classes.h:40,
+                 from /usr/include/c++/8/bits/ios_base.h:41,
+                 from /usr/include/c++/8/ios:42,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from mpsinput.h:23,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/bits/basic_string.h:6082:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)'
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/8/bits/basic_string.h:6082:5: note:   template argument deduction/substitution failed:
+mpsinput.cc:75:55: note:   'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+                                                       ^
+In file included from /usr/include/c++/8/bits/ios_base.h:46,
+                 from /usr/include/c++/8/ios:42,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from mpsinput.h:23,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/system_error:292:3: note: candidate: 'bool std::operator==(const std::error_code&, const std::error_code&)'
+   operator==(const error_code& __lhs, const error_code& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/8/system_error:292:3: note:   no known conversion for argument 1 from 'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} to 'const std::error_code&'
+/usr/include/c++/8/system_error:297:3: note: candidate: 'bool std::operator==(const std::error_code&, const std::error_condition&)'
+   operator==(const error_code& __lhs, const error_condition& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/8/system_error:297:3: note:   no known conversion for argument 1 from 'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} to 'const std::error_code&'
+/usr/include/c++/8/system_error:304:3: note: candidate: 'bool std::operator==(const std::error_condition&, const std::error_code&)'
+   operator==(const error_condition& __lhs, const error_code& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/8/system_error:304:3: note:   no known conversion for argument 1 from 'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} to 'const std::error_condition&'
+/usr/include/c++/8/system_error:311:3: note: candidate: 'bool std::operator==(const std::error_condition&, const std::error_condition&)'
+   operator==(const error_condition& __lhs,
+   ^~~~~~~~
+/usr/include/c++/8/system_error:311:3: note:   no known conversion for argument 1 from 'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} to 'const std::error_condition&'
+In file included from /usr/include/c++/8/bits/locale_facets.h:48,
+                 from /usr/include/c++/8/bits/basic_ios.h:37,
+                 from /usr/include/c++/8/ios:44,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from mpsinput.h:23,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/bits/streambuf_iterator.h:203:5: note: candidate: 'template<class _CharT, class _Traits> bool std::operator==(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)'
+     operator==(const istreambuf_iterator<_CharT, _Traits>& __a,
+     ^~~~~~~~
+/usr/include/c++/8/bits/streambuf_iterator.h:203:5: note:   template argument deduction/substitution failed:
+mpsinput.cc:75:55: note:   'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} is not derived from 'const std::istreambuf_iterator<_CharT, _Traits>'
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+                                                       ^
+In file included from /usr/include/c++/8/tuple:39,
+                 from /usr/include/c++/8/bits/unique_ptr.h:37,
+                 from /usr/include/c++/8/bits/locale_conv.h:41,
+                 from /usr/include/c++/8/locale:43,
+                 from /usr/include/c++/8/iomanip:43,
+                 from spxlp.h:28,
+                 from mpsinput.h:25,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/array:252:5: note: candidate: 'template<class _Tp, long unsigned int _Nm> bool std::operator==(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)'
+     operator==(const array<_Tp, _Nm>& __one, const array<_Tp, _Nm>& __two)
+     ^~~~~~~~
+/usr/include/c++/8/array:252:5: note:   template argument deduction/substitution failed:
+mpsinput.cc:75:55: note:   'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} is not derived from 'const std::array<_Tp, _Nm>'
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+                                                       ^
+In file included from /usr/include/c++/8/bits/unique_ptr.h:37,
+                 from /usr/include/c++/8/bits/locale_conv.h:41,
+                 from /usr/include/c++/8/locale:43,
+                 from /usr/include/c++/8/iomanip:43,
+                 from spxlp.h:28,
+                 from mpsinput.h:25,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/tuple:1413:5: note: candidate: 'template<class ... _TElements, class ... _UElements> constexpr bool std::operator==(const std::tuple<_Tps ...>&, const std::tuple<_Elements ...>&)'
+     operator==(const tuple<_TElements...>& __t,
+     ^~~~~~~~
+/usr/include/c++/8/tuple:1413:5: note:   template argument deduction/substitution failed:
+mpsinput.cc:75:55: note:   'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} is not derived from 'const std::tuple<_Tps ...>'
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+                                                       ^
+In file included from /usr/include/c++/8/bits/locale_conv.h:41,
+                 from /usr/include/c++/8/locale:43,
+                 from /usr/include/c++/8/iomanip:43,
+                 from spxlp.h:28,
+                 from mpsinput.h:25,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/bits/unique_ptr.h:689:5: note: candidate: 'template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator==(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)'
+     operator==(const unique_ptr<_Tp, _Dp>& __x,
+     ^~~~~~~~
+/usr/include/c++/8/bits/unique_ptr.h:689:5: note:   template argument deduction/substitution failed:
+mpsinput.cc:75:55: note:   'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+                                                       ^
+In file included from /usr/include/c++/8/bits/locale_conv.h:41,
+                 from /usr/include/c++/8/locale:43,
+                 from /usr/include/c++/8/iomanip:43,
+                 from spxlp.h:28,
+                 from mpsinput.h:25,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/bits/unique_ptr.h:695:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator==(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)'
+     operator==(const unique_ptr<_Tp, _Dp>& __x, nullptr_t) noexcept
+     ^~~~~~~~
+/usr/include/c++/8/bits/unique_ptr.h:695:5: note:   template argument deduction/substitution failed:
+mpsinput.cc:75:55: note:   'std::basic_istream<char>::__istream_type' {aka 'std::basic_istream<char>'} is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+                                                       ^
+In file included from /usr/include/c++/8/bits/locale_conv.h:41,
+                 from /usr/include/c++/8/locale:43,
+                 from /usr/include/c++/8/iomanip:43,
+                 from spxlp.h:28,
+                 from mpsinput.h:25,
+                 from mpsinput.cc:29:
+/usr/include/c++/8/bits/unique_ptr.h:700:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator==(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)'
+     operator==(nullptr_t, const unique_ptr<_Tp, _Dp>& __x) noexcept
+     ^~~~~~~~
+/usr/include/c++/8/bits/unique_ptr.h:700:5: note:   template argument deduction/substitution failed:
+mpsinput.cc:75:55: note:   mismatched types 'const std::unique_ptr<_Tp, _Dp>' and 'int'
+          if (m_input.getline(m_buf, sizeof(m_buf)) == 0)
+                                                       ^
+specmake: *** [mpsinput.o] Error 1
+Stop make command: Mon Oct 14 18:50:52 2019 (1571071852)
+Elapsed time for make command: 00:00:04 (4)
+Error with make 'specmake build': check file '/home/ricardo/SPECcpu2006/benchspec/CPU2006/450.soplex/run/build_base_amd64-m64-gcc42-nn.0000/make.err'
+  Error with make!
+  Compile for '450.soplex' ended at: Mon Oct 14 18:50:52 2019 (1571071852)
+  Elapsed compile for '450.soplex': 00:00:05 (5)
+*** Error building 450.soplex
+
+Build errors: 450.soplex(base)
+
+Build Complete
+
+The log for this run is in /home/ricardo/SPECcpu2006/result/CPU2006.013.log
+
+runspec finished at Mon Oct 14 18:50:52 2019; 14 total seconds elapsed

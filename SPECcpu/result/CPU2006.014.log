@@ -1,0 +1,966 @@
+runspec started at Mon Oct 14 19:15:10 2019 on "debian"
+runspec is: /home/ricardo/SPECcpu2006/bin/runspec
+runspec: runspec --config=ricardo-linux.cfg --action=run size=test --noreportable --tune=base --iterations=1 wrf
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/home/ricardo/SPECcpu2006/config/ricardo-linux.cfg'
+Can't find benchmark 'size=test'
+Can't parse 'size=test' into a benchmark
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = amd64-m64-gcc42-nn
+Size      = ref
+Machine   = default
+benchmarks= 481.wrf
+outputs   = raw,flags,ASCII,PDF,Screen
+username  = ricardo
+Benchmarks selected: 481.wrf
+Compiling Binaries
+
+------------------------------------------------------------------------
+MD5 mismatch for options (stored: a9e473d59dc3a044418dea68e74bd070)
+  Building 481.wrf ref base amd64-m64-gcc42-nn default: (build_base_amd64-m64-gcc42-nn.0000)
+Wrote to makefile '/home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/build_base_amd64-m64-gcc42-nn.0000/Makefile.deps':
+
+# These are the build dependencies
+
+$(addsuffix $(OBJ), module_sf_noahlsm.fppized): module_sf_noahlsm.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_model_constants.fppized)
+$(addsuffix $(OBJ), start_em.fppized): start_em.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_physics_init.fppized module_date_time.fppized module_configure.fppized module_bc_em.fppized module_bc.fppized module_model_constants.fppized module_state_description.fppized module_domain.fppized)
+$(addsuffix $(OBJ), ESMF_BaseTime.fppized): ESMF_BaseTime.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Base.fppized)
+$(addsuffix $(OBJ), wrf_histin.fppized): wrf_histin.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_bc_time_utilities.fppized module_date_time.fppized module_io_wrf.fppized module_io.fppized module_configure.fppized module_state_description.fppized module_domain.fppized)
+$(addsuffix $(OBJ), mediation_integrate.fppized): mediation_integrate.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_bc_time_utilities.fppized module_dm_stubs.fppized module_io_domain.fppized module_timing.fppized ESMF_Mod.fppized module_date_time.fppized module_configure.fppized module_domain.fppized)
+$(addsuffix $(OBJ), wrf_auxinput1out.fppized): wrf_auxinput1out.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_configure.fppized module_state_description.fppized module_domain.fppized module_io_wrf.fppized module_wrf_error.fppized module_io.fppized)
+$(addsuffix $(OBJ), wrf_auxhist1in.fppized): wrf_auxhist1in.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_bc_time_utilities.fppized module_date_time.fppized module_io_wrf.fppized module_io.fppized module_configure.fppized module_state_description.fppized module_domain.fppized)
+$(addsuffix $(OBJ), interp_domain_em.fppized): interp_domain_em.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_configure.fppized module_domain.fppized)
+$(addsuffix $(OBJ), $(basename netcdf/netcdf.f90)): netcdf/netcdf.f90 $(addsuffix $(OBJ),$(basename netcdf/typeSizes.f90) )
+$(addsuffix $(OBJ), module_sf_ruclsm.fppized): module_sf_ruclsm.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_wrf_error.fppized)
+$(addsuffix $(OBJ), wrf_restartin.fppized): wrf_restartin.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_bc_time_utilities.fppized module_date_time.fppized module_io_wrf.fppized module_io.fppized module_configure.fppized module_state_description.fppized module_domain.fppized)
+$(addsuffix $(OBJ), module_microphysics_driver.fppized): module_microphysics_driver.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_mp_etanew.fppized module_mp_wsm6.fppized module_mp_wsm5.fppized module_mp_wsm3.fppized module_mp_ncloud5.fppized module_mp_ncloud3.fppized module_mp_lin.fppized module_mp_kessler.fppized module_wrf_error.fppized module_model_constants.fppized module_bc.fppized module_state_description.fppized)
+$(addsuffix $(OBJ), module_em.fppized): module_em.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_state_description.fppized module_big_step_utilities_em.fppized module_advect_em.fppized module_model_constants.fppized)
+$(addsuffix $(OBJ), module_bc_em.fppized): module_bc_em.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_wrf_error.fppized module_configure.fppized module_bc.fppized)
+$(addsuffix $(OBJ), mediation_interp_domain.fppized): mediation_interp_domain.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_timing.fppized module_configure.fppized module_domain.fppized)
+$(addsuffix $(OBJ), module_small_step_em.fppized): module_small_step_em.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_model_constants.fppized module_configure.fppized)
+$(addsuffix $(OBJ), wrf_auxinput5in.fppized): wrf_auxinput5in.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_bc_time_utilities.fppized module_date_time.fppized module_io_wrf.fppized module_io.fppized module_configure.fppized module_state_description.fppized module_domain.fppized)
+$(addsuffix $(OBJ), nest_init_utils.fppized): nest_init_utils.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_domain.fppized)
+$(addsuffix $(OBJ), wrf_inputout.fppized): wrf_inputout.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_configure.fppized module_state_description.fppized module_domain.fppized module_io_wrf.fppized module_wrf_error.fppized module_io.fppized)
+$(addsuffix $(OBJ), wrf_auxhist5in.fppized): wrf_auxhist5in.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_bc_time_utilities.fppized module_date_time.fppized module_io_wrf.fppized module_io.fppized module_configure.fppized module_state_description.fppized module_domain.fppized)
+$(addsuffix $(OBJ), wrf_auxhist1out.fppized): wrf_auxhist1out.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_configure.fppized module_state_description.fppized module_domain.fppized module_io_wrf.fppized module_wrf_error.fppized module_io.fppized)
+$(addsuffix $(OBJ), wrf_bdyout.fppized): wrf_bdyout.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_configure.fppized module_state_description.fppized module_domain.fppized module_io_wrf.fppized module_wrf_error.fppized module_io.fppized)
+$(addsuffix $(OBJ), module_sf_myjsfc.fppized): module_sf_myjsfc.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_model_constants.fppized)
+$(addsuffix $(OBJ), interp_fcn.fppized): interp_fcn.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_state_description.fppized module_wrf_error.fppized module_timing.fppized)
+$(addsuffix $(OBJ), wrf_bdyin.fppized): wrf_bdyin.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_bc_time_utilities.fppized module_date_time.fppized module_io_wrf.fppized module_io.fppized module_configure.fppized module_state_description.fppized module_domain.fppized)
+$(addsuffix $(OBJ), ESMF_Calendar.fppized): ESMF_Calendar.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_BaseTime.fppized ESMF_Base.fppized)
+$(addsuffix $(OBJ), module_domain.fppized): module_domain.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_configure.fppized ESMF_Mod.fppized module_wrf_error.fppized module_state_description.fppized module_machine.fppized module_driver_constants.fppized)
+$(addsuffix $(OBJ), init_modules.fppized): init_modules.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_io.fppized module_io_wrf.fppized module_tiles.fppized module_timing.fppized module_nesting.fppized module_machine.fppized module_domain.fppized module_model_constants.fppized module_driver_constants.fppized module_configure.fppized module_bc.fppized)
+$(addsuffix $(OBJ), module_soil_pre.fppized): module_soil_pre.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_date_time.fppized)
+$(addsuffix $(OBJ), module_bc.fppized): module_bc.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_state_description.fppized module_wrf_error.fppized module_configure.fppized)
+$(addsuffix $(OBJ), module_physics_addtendc.fppized): module_physics_addtendc.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_cu_kfeta.fppized module_cu_kf.fppized module_bc.fppized module_configure.fppized module_state_description.fppized)
+$(addsuffix $(OBJ), couple_or_uncouple_em.fppized): couple_or_uncouple_em.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_state_description.fppized module_dm_stubs.fppized module_tiles.fppized module_machine.fppized module_driver_constants.fppized module_configure.fppized module_domain.fppized)
+$(addsuffix $(OBJ), module_io_wrf.fppized): module_io_wrf.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_timing.fppized module_bc_time_utilities.fppized ESMF_Mod.fppized module_configure.fppized module_state_description.fppized module_domain.fppized module_io.fppized module_date_time.fppized module_wrf_error.fppized)
+$(addsuffix $(OBJ), module_physics_init.fppized): module_physics_init.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_mp_etanew.fppized module_mp_wsm6.fppized module_mp_wsm5.fppized module_mp_wsm3.fppized module_mp_ncloud5.fppized module_mp_ncloud3.fppized module_cu_gd.fppized module_cu_bmj.fppized module_cu_kfeta.fppized module_cu_kf.fppized module_bl_myjpbl.fppized module_sf_ruclsm.fppized module_sf_noahlsm.fppized module_sf_myjsfc.fppized module_bl_mrf.fppized module_bl_ysu.fppized module_sf_slab.fppized module_sf_sfclay.fppized module_ra_gfdleta.fppized module_ra_gsfcsw.fppized module_ra_sw.fppized module_ra_rrtm.fppized module_wrf_error.fppized module_date_time.fppized module_configure.fppized module_bc.fppized module_model_constants.fppized module_state_description.fppized module_domain.fppized)
+$(addsuffix $(OBJ), module_diffusion_em.fppized): module_diffusion_em.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_wrf_error.fppized module_model_constants.fppized module_big_step_utilities_em.fppized module_state_description.fppized module_bc.fppized module_configure.fppized)
+$(addsuffix $(OBJ), wrf_auxinput2in.fppized): wrf_auxinput2in.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_bc_time_utilities.fppized module_date_time.fppized module_io_wrf.fppized module_io.fppized module_configure.fppized module_state_description.fppized module_domain.fppized)
+$(addsuffix $(OBJ), wrf_auxhist2in.fppized): wrf_auxhist2in.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_bc_time_utilities.fppized module_date_time.fppized module_io_wrf.fppized module_io.fppized module_configure.fppized module_state_description.fppized module_domain.fppized)
+$(addsuffix $(OBJ), wrf_auxinput5out.fppized): wrf_auxinput5out.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_configure.fppized module_state_description.fppized module_domain.fppized module_io_wrf.fppized module_wrf_error.fppized module_io.fppized)
+$(addsuffix $(OBJ), module_optional_si_input.fppized): module_optional_si_input.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_io_domain.fppized module_io_wrf.fppized module_configure.fppized module_domain.fppized)
+$(addsuffix $(OBJ), module_big_step_utilities_em.fppized): module_big_step_utilities_em.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_configure.fppized module_state_description.fppized module_model_constants.fppized module_domain.fppized)
+$(addsuffix $(OBJ), module_configure.fppized): module_configure.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_wrf_error.fppized module_state_description.fppized module_driver_constants.fppized)
+$(addsuffix $(OBJ), start_domain.fppized): start_domain.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_domain.fppized)
+$(addsuffix $(OBJ), set_timekeeping.fppized): set_timekeeping.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_configure.fppized module_domain.fppized)
+$(addsuffix $(OBJ), module_ra_rrtm.fppized): module_ra_rrtm.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_dm_stubs.fppized module_wrf_error.fppized)
+$(addsuffix $(OBJ), wrf_auxinput1in.fppized): wrf_auxinput1in.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_bc_time_utilities.fppized module_date_time.fppized module_io_wrf.fppized module_io.fppized module_configure.fppized module_state_description.fppized module_domain.fppized)
+$(addsuffix $(OBJ), module_io_quilt.fppized): module_io_quilt.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_quilt_outbuf_ops.fppized module_state_description.fppized)
+$(addsuffix $(OBJ), Meat.fppized): Meat.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Time.fppized ESMF_TimeInterval.fppized ESMF_Fraction.fppized ESMF_Clock.fppized ESMF_Calendar.fppized ESMF_BaseTime.fppized ESMF_Base.fppized ESMF_Alarm.fppized)
+$(addsuffix $(OBJ), module_machine.fppized): module_machine.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_driver_constants.fppized)
+$(addsuffix $(OBJ), io_int.fppized): io_int.fppized.f90 $(addsuffix $(OBJ),$(basename ) )
+$(addsuffix $(OBJ), ESMF_Clock.fppized): ESMF_Clock.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Alarm.fppized ESMF_Time.fppized ESMF_TimeInterval.fppized ESMF_Base.fppized)
+$(addsuffix $(OBJ), ESMF_TimeInterval.fppized): ESMF_TimeInterval.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Calendar.fppized ESMF_Fraction.fppized ESMF_BaseTime.fppized ESMF_Base.fppized)
+$(addsuffix $(OBJ), module_ra_gfdleta.fppized): module_ra_gfdleta.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_dm_stubs.fppized)
+$(addsuffix $(OBJ), module_nesting.fppized): module_nesting.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_domain.fppized module_driver_constants.fppized module_machine.fppized)
+$(addsuffix $(OBJ), module_advect_em.fppized): module_advect_em.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_wrf_error.fppized module_model_constants.fppized module_bc.fppized)
+$(addsuffix $(OBJ), wrf_auxhist3in.fppized): wrf_auxhist3in.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_bc_time_utilities.fppized module_date_time.fppized module_io_wrf.fppized module_io.fppized module_configure.fppized module_state_description.fppized module_domain.fppized)
+$(addsuffix $(OBJ), wrf_auxinput3in.fppized): wrf_auxinput3in.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_bc_time_utilities.fppized module_date_time.fppized module_io_wrf.fppized module_io.fppized module_configure.fppized module_state_description.fppized module_domain.fppized)
+$(addsuffix $(OBJ), solve_em.fppized): solve_em.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_pbl_driver.fppized module_microphysics_driver.fppized module_cumulus_driver.fppized module_surface_driver.fppized module_radiation_driver.fppized module_state_description.fppized module_diffusion_em.fppized module_physics_addtendc.fppized module_solvedebug_em.fppized module_bc_em.fppized module_bc.fppized module_big_step_utilities_em.fppized module_em.fppized module_small_step_em.fppized module_model_constants.fppized module_dm_stubs.fppized module_tiles.fppized module_machine.fppized module_driver_constants.fppized module_configure.fppized module_domain.fppized)
+$(addsuffix $(OBJ), module_quilt_outbuf_ops.fppized): module_quilt_outbuf_ops.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_state_description.fppized)
+$(addsuffix $(OBJ), module_io_domain.fppized): module_io_domain.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_state_description.fppized module_configure.fppized module_domain.fppized module_date_time.fppized module_wrf_error.fppized module_io_wrf.fppized module_io.fppized)
+$(addsuffix $(OBJ), $(basename field_routines.f90)): field_routines.f90 $(addsuffix $(OBJ),$(basename wrf_io.f90 wrf_io.f90) )
+$(addsuffix $(OBJ), ESMF_Mod.fppized): ESMF_Mod.fppized.f90 $(addsuffix $(OBJ),$(basename ) Meat.fppized ESMF_Time.fppized ESMF_TimeInterval.fppized ESMF_Fraction.fppized ESMF_Clock.fppized ESMF_Calendar.fppized ESMF_BaseTime.fppized ESMF_Base.fppized ESMF_Alarm.fppized)
+$(addsuffix $(OBJ), wrf.fppized): wrf.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_wrf_error.fppized module_timing.fppized module_configure.fppized module_driver_constants.fppized module_integrate.fppized module_domain.fppized module_machine.fppized)
+$(addsuffix $(OBJ), solve_interface.fppized): solve_interface.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_wrf_error.fppized module_configure.fppized module_driver_constants.fppized module_timing.fppized module_domain.fppized)
+$(addsuffix $(OBJ), ESMF_Time.fppized): ESMF_Time.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Calendar.fppized ESMF_TimeInterval.fppized ESMF_BaseTime.fppized ESMF_Base.fppized)
+$(addsuffix $(OBJ), wrf_auxinput2out.fppized): wrf_auxinput2out.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_configure.fppized module_state_description.fppized module_domain.fppized module_io_wrf.fppized module_wrf_error.fppized module_io.fppized)
+$(addsuffix $(OBJ), $(basename wrf_io.f90)): wrf_io.f90 $(addsuffix $(OBJ),$(basename ) )
+$(addsuffix $(OBJ), wrf_auxinput4in.fppized): wrf_auxinput4in.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_bc_time_utilities.fppized module_date_time.fppized module_io_wrf.fppized module_io.fppized module_configure.fppized module_state_description.fppized module_domain.fppized)
+$(addsuffix $(OBJ), internal_header_util.fppized): internal_header_util.fppized.f90 $(addsuffix $(OBJ),$(basename ) )
+$(addsuffix $(OBJ), module_bc_time_utilities.fppized): module_bc_time_utilities.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized)
+$(addsuffix $(OBJ), module_surface_driver.fppized): module_surface_driver.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_sf_sfcdiags.fppized module_sf_slab.fppized module_sf_ruclsm.fppized module_sf_noahlsm.fppized module_sf_myjsfc.fppized module_sf_sfclay.fppized module_model_constants.fppized module_state_description.fppized module_bc.fppized)
+$(addsuffix $(OBJ), module_tiles.fppized): module_tiles.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_wrf_error.fppized module_machine.fppized module_driver_constants.fppized module_domain.fppized)
+$(addsuffix $(OBJ), module_radiation_driver.fppized): module_radiation_driver.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_ra_gfdleta.fppized module_ra_rrtm.fppized module_ra_gsfcsw.fppized module_ra_sw.fppized module_wrf_error.fppized module_model_constants.fppized module_state_description.fppized module_bc.fppized)
+$(addsuffix $(OBJ), wrf_auxhist4in.fppized): wrf_auxhist4in.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_bc_time_utilities.fppized module_date_time.fppized module_io_wrf.fppized module_io.fppized module_configure.fppized module_state_description.fppized module_domain.fppized)
+$(addsuffix $(OBJ), module_cu_bmj.fppized): module_cu_bmj.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_model_constants.fppized)
+$(addsuffix $(OBJ), module_bl_myjpbl.fppized): module_bl_myjpbl.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_model_constants.fppized)
+$(addsuffix $(OBJ), init_modules_em.fppized): init_modules_em.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_big_step_utilities_em.fppized)
+$(addsuffix $(OBJ), module_cu_kfeta.fppized): module_cu_kfeta.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_wrf_error.fppized)
+$(addsuffix $(OBJ), wrf_auxinput4out.fppized): wrf_auxinput4out.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_configure.fppized module_state_description.fppized module_domain.fppized module_io_wrf.fppized module_wrf_error.fppized module_io.fppized)
+$(addsuffix $(OBJ), mediation_wrfmain.fppized): mediation_wrfmain.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_bc_time_utilities.fppized module_timing.fppized module_io_domain.fppized module_configure.fppized module_domain.fppized)
+$(addsuffix $(OBJ), module_mp_lin.fppized): module_mp_lin.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_wrf_error.fppized)
+$(addsuffix $(OBJ), wrf_auxhist4out.fppized): wrf_auxhist4out.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_configure.fppized module_state_description.fppized module_domain.fppized module_io_wrf.fppized module_wrf_error.fppized module_io.fppized)
+$(addsuffix $(OBJ), wrf_inputin.fppized): wrf_inputin.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_bc_time_utilities.fppized module_date_time.fppized module_io_wrf.fppized module_io.fppized module_configure.fppized module_state_description.fppized module_domain.fppized)
+$(addsuffix $(OBJ), wrf_auxhist2out.fppized): wrf_auxhist2out.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_configure.fppized module_state_description.fppized module_domain.fppized module_io_wrf.fppized module_wrf_error.fppized module_io.fppized)
+$(addsuffix $(OBJ), module_pbl_driver.fppized): module_pbl_driver.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_bl_mrf.fppized module_bl_ysu.fppized module_bl_myjpbl.fppized module_model_constants.fppized module_state_description.fppized module_bc.fppized)
+$(addsuffix $(OBJ), module_date_time.fppized): module_date_time.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_wrf_error.fppized)
+$(addsuffix $(OBJ), module_dm_stubs.fppized): module_dm_stubs.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_domain.fppized)
+$(addsuffix $(OBJ), wrf_auxhist5out.fppized): wrf_auxhist5out.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_configure.fppized module_state_description.fppized module_domain.fppized module_io_wrf.fppized module_wrf_error.fppized module_io.fppized)
+$(addsuffix $(OBJ), module_cu_kf.fppized): module_cu_kf.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_wrf_error.fppized)
+$(addsuffix $(OBJ), mediation_feedback_domain.fppized): mediation_feedback_domain.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_configure.fppized module_domain.fppized)
+$(addsuffix $(OBJ), module_io.fppized): module_io.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_driver_constants.fppized module_state_description.fppized)
+$(addsuffix $(OBJ), wrf_auxhist3out.fppized): wrf_auxhist3out.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_configure.fppized module_state_description.fppized module_domain.fppized module_io_wrf.fppized module_wrf_error.fppized module_io.fppized)
+$(addsuffix $(OBJ), module_cumulus_driver.fppized): module_cumulus_driver.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_cu_gd.fppized module_cu_kfeta.fppized module_cu_bmj.fppized module_cu_kf.fppized module_model_constants.fppized module_state_description.fppized module_bc.fppized)
+$(addsuffix $(OBJ), wrf_histout.fppized): wrf_histout.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_configure.fppized module_state_description.fppized module_domain.fppized module_io_wrf.fppized module_wrf_error.fppized module_io.fppized)
+$(addsuffix $(OBJ), ESMF_Alarm.fppized): ESMF_Alarm.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Time.fppized ESMF_TimeInterval.fppized ESMF_Base.fppized)
+$(addsuffix $(OBJ), wrf_auxinput3out.fppized): wrf_auxinput3out.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_configure.fppized module_state_description.fppized module_domain.fppized module_io_wrf.fppized module_wrf_error.fppized module_io.fppized)
+$(addsuffix $(OBJ), wrf_restartout.fppized): wrf_restartout.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_configure.fppized module_state_description.fppized module_domain.fppized module_io_wrf.fppized module_wrf_error.fppized module_io.fppized)
+$(addsuffix $(OBJ), mediation_force_domain.fppized): mediation_force_domain.fppized.f90 $(addsuffix $(OBJ),$(basename ) module_configure.fppized module_domain.fppized)
+$(addsuffix $(OBJ), module_integrate.fppized): module_integrate.fppized.f90 $(addsuffix $(OBJ),$(basename ) ESMF_Mod.fppized module_timing.fppized module_configure.fppized module_nesting.fppized module_driver_constants.fppized module_domain.fppized)
+$(addsuffix $(OBJ), $(basename wrf_io.f90)): wrf_io.f90 wrf_status_codes.h
+$(addsuffix $(OBJ), $(basename io_int.F90)): io_int.F90 wrf_status_codes.h wrf_io_flags.h intio_tags.h
+$(addsuffix $(OBJ), $(basename mediation_integrate.F90)): mediation_integrate.F90 deref_kludge.h
+$(addsuffix $(OBJ), $(basename internal_header_util.F90)): internal_header_util.F90 intio_tags.h
+$(addsuffix $(OBJ), $(basename module_io.F90)): module_io.F90 wrf_io_flags.h
+$(addsuffix $(OBJ), $(basename mediation_interp_domain.F90)): mediation_interp_domain.F90 em_actual_args.inc deref_kludge.h em_dummy_args.inc
+$(addsuffix $(OBJ), $(basename mediation_feedback_domain.F90)): mediation_feedback_domain.F90 deref_kludge.h em_dummy_args.inc
+$(addsuffix $(OBJ), $(basename interp_domain_em.F90)): interp_domain_em.F90 em_nest_interpdown_interp.inc em_dummy_args.inc
+$(addsuffix $(OBJ), $(basename module_quilt_outbuf_ops.F90)): module_quilt_outbuf_ops.F90 wrf_io_flags.h
+$(addsuffix $(OBJ), $(basename solve_em.F90)): solve_em.F90 em_dummy_args.inc
+$(addsuffix $(OBJ), $(basename field_routines.f90)): field_routines.f90 wrf_status_codes.h
+$(addsuffix $(OBJ), $(basename start_domain.F90)): start_domain.F90 deref_kludge.h
+$(addsuffix $(OBJ), $(basename module_io_quilt.F90)): module_io_quilt.F90 wrf_io_flags.h intio_tags.h
+$(addsuffix $(OBJ), $(basename solve_interface.F90)): solve_interface.F90 deref_kludge.h
+$(addsuffix $(OBJ), $(basename couple_or_uncouple_em.F90)): couple_or_uncouple_em.F90 em_dummy_args.inc
+$(addsuffix $(OBJ), $(basename mediation_force_domain.F90)): mediation_force_domain.F90 deref_kludge.h em_dummy_args.inc
+# End dependencies
+Wrote to makefile '/home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/build_base_amd64-m64-gcc42-nn.0000/Makefile.spec':
+TUNE=base
+EXT=amd64-m64-gcc42-nn
+NUMBER=481
+NAME=wrf
+SOURCES= wrf_num_bytes_between.c pack_utils.c module_driver_constants.F90 \
+	 module_domain.F90 module_integrate.F90 module_timing.F90 \
+	 module_configure.F90 module_tiles.F90 module_machine.F90 \
+	 module_nesting.F90 module_wrf_error.F90 module_state_description.F90 \
+	 module_sm.F90 module_io.F90 module_dm_stubs.F90 \
+	 module_quilt_outbuf_ops.F90 module_io_quilt.F90 module_bc.F90 \
+	 module_io_wrf.F90 module_date_time.F90 module_io_domain.F90 \
+	 module_bc_time_utilities.F90 module_model_constants.F90 \
+	 module_soil_pre.F90 module_bl_mrf.F90 module_sf_myjsfc.F90 \
+	 module_bl_myjpbl.F90 module_bl_ysu.F90 module_cu_bmj.F90 \
+	 module_mp_kessler.F90 module_mp_ncloud5.F90 module_ra_sw.F90 \
+	 module_sf_sfclay.F90 module_cu_kf.F90 module_cu_kfeta.F90 \
+	 module_mp_lin.F90 module_mp_wsm3.F90 module_mp_wsm5.F90 \
+	 module_mp_wsm6.F90 module_surface_driver.F90 module_cu_gd.F90 \
+	 module_sf_sfcdiags.F90 module_ra_gsfcsw.F90 module_sf_slab.F90 \
+	 module_sf_noahlsm.F90 module_sf_ruclsm.F90 module_mp_ncloud3.F90 \
+	 module_mp_etanew.F90 module_ra_rrtm.F90 module_ra_gfdleta.F90 \
+	 module_physics_init.F90 module_physics_addtendc.F90 \
+	 module_solvedebug_em.F90 module_bc_em.F90 module_advect_em.F90 \
+	 module_diffusion_em.F90 module_small_step_em.F90 \
+	 module_big_step_utilities_em.F90 module_em.F90 module_init_utilities.F90 \
+	 module_optional_si_input.F90 ESMF_Alarm.F90 ESMF_Base.F90 \
+	 ESMF_BaseTime.F90 ESMF_Calendar.F90 ESMF_Clock.F90 ESMF_Fraction.F90 \
+	 ESMF_Mod.F90 ESMF_Time.F90 ESMF_TimeInterval.F90 Meat.F90 \
+	 wrf_shutdown.F90 collect_on_comm.c mediation_integrate.F90 \
+	 mediation_feedback_domain.F90 mediation_force_domain.F90 \
+	 mediation_interp_domain.F90 mediation_wrfmain.F90 wrf_auxhist1in.F90 \
+	 wrf_auxhist1out.F90 wrf_auxhist2in.F90 wrf_auxhist2out.F90 \
+	 wrf_auxhist3in.F90 wrf_auxhist3out.F90 wrf_auxhist4in.F90 \
+	 wrf_auxhist4out.F90 wrf_auxhist5in.F90 wrf_auxhist5out.F90 \
+	 wrf_auxinput1in.F90 wrf_auxinput1out.F90 wrf_auxinput2in.F90 \
+	 wrf_auxinput2out.F90 wrf_auxinput3in.F90 wrf_auxinput3out.F90 \
+	 wrf_auxinput4in.F90 wrf_auxinput4out.F90 wrf_auxinput5in.F90 \
+	 wrf_auxinput5out.F90 wrf_bdyin.F90 wrf_bdyout.F90 wrf_histin.F90 \
+	 wrf_histout.F90 wrf_inputin.F90 wrf_inputout.F90 wrf_restartin.F90 \
+	 wrf_restartout.F90 couple_or_uncouple_em.F90 interp_domain_em.F90 \
+	 interp_fcn.F90 nest_init_utils.F90 set_timekeeping.F90 sint.F90 \
+	 solve_interface.F90 start_domain.F90 module_pbl_driver.F90 \
+	 module_radiation_driver.F90 module_cumulus_driver.F90 \
+	 module_microphysics_driver.F90 solve_em.F90 start_em.F90 \
+	 internal_header_util.F90 io_int.F90 init_modules_em.F90 init_modules.F90 \
+	 wrf_io.f90 field_routines.f90 wrf.F90 netcdf/attr.c netcdf/dim.c \
+	 netcdf/error.c netcdf/fort-attio.c netcdf/fort-control.c \
+	 netcdf/fort-dim.c netcdf/fort-genatt.c netcdf/fort-geninq.c \
+	 netcdf/fort-genvar.c netcdf/fort-lib.c netcdf/fort-misc.c \
+	 netcdf/fort-v2compat.c netcdf/fort-var1io.c netcdf/fort-varaio.c \
+	 netcdf/fort-vario.c netcdf/fort-varmio.c netcdf/fort-varsio.c \
+	 netcdf/libvers.c netcdf/nc.c netcdf/ncx.c netcdf/posixio.c \
+	 netcdf/putget.c netcdf/string.c netcdf/v1hpg.c netcdf/v2i.c netcdf/var.c \
+	 netcdf/typeSizes.f90 netcdf/netcdf.f90
+EXEBASE=wrf
+NEED_MATH=
+BENCHLANG=F C
+ONESTEP=
+FONESTEP=
+
+BENCH_FLAGS      = -I. -I./netcdf/include
+BENCH_FPPFLAGS   = -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT
+CC               = /usr/bin/gcc
+COPTIMIZE        = -O3 -march=native
+CPORTABILITY     = -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX
+CXX              = /usr/bin/g++
+CXXOPTIMIZE      = -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations
+FC               = /usr/bin/gfortran
+FOPTIMIZE        = -O3 -march=native -std=legacy
+FPBASE           = yes
+OS               = unix
+PORTABILITY      = -DSPEC_CPU_LP64
+abstol           = 0.01
+action           = validate
+allow_extension_override = 0
+backup_config    = 1
+baseexe          = wrf
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 481.wrf
+binary           = 
+bindir           = exe
+calctol          = 0
+changedmd5       = 0
+check_integrity  = 1
+check_md5        = 1
+check_version    = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = wrf_base.amd64-m64-gcc42-nn
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = /home/ricardo/SPECcpu2006/config/ricardo-linux.cfg
+copies           = 1
+datadir          = data
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 12345678
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+expid            = 
+ext              = amd64-m64-gcc42-nn
+fake             = 0
+feedback         = 1
+flag_url_base    = http://www.spec.org/auto/cpu2006/flags/
+floatcompare     = 
+help             = 0
+http_proxy       = 
+http_timeout     = 30
+hw_avail         = Dec-9999
+hw_cpu_char      = 
+hw_cpu_mhz       = 3000
+hw_cpu_name      = AMD Opteron 256
+hw_disk          = SATA
+hw_fpu           = Integrated
+hw_memory        = 2 GB (2 x 1GB DDR333 CL2.5)
+hw_model         = Tyan Thunder KKQS Pro (S4882)
+hw_nchips        = 1
+hw_ncores        = 1
+hw_ncoresperchip = 1
+hw_ncpuorder     = 1 chip
+hw_nthreadspercore = 1
+hw_ocache        = None
+hw_pcache        = 64 KB I + 64 KB D on chip per chip
+hw_scache        = 1 MB I+D on chip per chip
+hw_tcache        = None
+hw_vendor        = Tyan
+ignore_errors    = yes
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+iteration        = -1
+iterations       = 1
+license_num      = 9999
+line_width       = 0
+locking          = 1
+log              = CPU2006
+log_line_width   = 0
+logname          = /home/ricardo/SPECcpu2006/result/CPU2006.014.log
+lognum           = 014
+mach             = default
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = wrf
+nc               = 0
+need_math        = 
+no_input_handler = close
+no_monitor       = 
+notes0100        =  C base flags: -O3 -march=native
+notes0110        =  C++ base flags: -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations
+notes0120        =  Fortran base flags: -O3 -march=native -std=legacy
+notes25          =  PORTABILITY=-DSPEC_CPU_LP64 is applied to all benchmarks in base.
+notes_wrap_columns = 0
+notes_wrap_indent =     
+num              = 481
+obiwan           = 
+os_exe_ext       = 
+output           = asc
+output_format    = asc, pdf, Screen
+output_root      = 
+outputdir        = output
+path             = /home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf
+plain_train      = 1
+prefix           = 
+prepared_by      = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+realuser         = your name here
+rebuild          = 0
+reftime          = reftime
+reltol           = 0.05
+reportable       = 0
+resultdir        = result
+review           = 0
+run              = all
+runspec          = /home/ricardo/SPECcpu2006/bin/runspec --config=ricardo-linux.cfg --action=run size=test --noreportable --tune=base --iterations=1 wrf
+safe_eval        = 1
+section_specifier_fatal = 1
+sendmail         = /usr/sbin/sendmail
+setpgrp_enabled  = 1
+setprocgroup     = 1
+shrate           = 0
+sigint           = 2
+size             = ref
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specmake         = Makefile.YYYtArGeTYYYspec
+specrun          = specinvoke
+speed            = 0
+srcalt           = 
+srcdir           = src
+stagger          = 10
+strict_rundir_verify = 1
+subworkdir       = work
+sw_auto_parallel = No
+sw_avail         = Dec-9999
+sw_base_ptrsize  = 64-bit
+sw_compiler      = gcc , g++ & gfortran 4.2.0325 (for AMD64)
+sw_file          = ext3
+sw_os            = SUSE SLES9 (for AMD64)
+sw_other         = None
+sw_peak_ptrsize  = Not Applicable
+sw_state         = runlevel 3
+sysinfo_program  = 
+table            = 1
+teeout           = yes
+teerunout        = yes
+test_date        = Dec-9999
+test_sponsor     = Turbo Computers
+tester           = 
+top              = /home/ricardo/SPECcpu2006
+tune             = base
+uid              = 1001
+unbuffer         = 1
+update-flags     = 0
+use_submit_for_speed = 0
+username         = ricardo
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+version_url      = http://www.spec.org/auto/cpu2006/current_version
+workdir          = run
+worklist         = list
+wrf_data_header_size = 8
+  Compile for '481.wrf' started at: Mon Oct 14 19:15:15 2019 (1571073315)
+Issuing make.clean command 'specmake clean'
+Start make.clean command: Mon Oct 14 19:15:15 2019 (1571073315)
+rm -rf wrf wrf.exe *.o  *.fppized.f*
+find . \( -name \*.o -o -name '*.fppized.f*' \) -print | xargs rm -rf
+rm -rf core 
+Stop make.clean command: Mon Oct 14 19:15:16 2019 (1571073316)
+Elapsed time for make.clean command: 00:00:01 (1)
+Issuing make command 'specmake build'
+Start make command: Mon Oct 14 19:15:16 2019 (1571073316)
+/usr/bin/gcc -c -o wrf_num_bytes_between.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        wrf_num_bytes_between.c
+wrf_num_bytes_between.c:17:33: warning: return type defaults to 'int' [-Wimplicit-int]
+ #  define WRF_NUM_BYTES_BETWEEN wrf_num_bytes_between_
+                                 ^~~~~~~~~~~~~~~~~~~~~~
+wrf_num_bytes_between.c:26:1: note: in expansion of macro 'WRF_NUM_BYTES_BETWEEN'
+ WRF_NUM_BYTES_BETWEEN ( a , b , n )
+ ^~~~~~~~~~~~~~~~~~~~~
+wrf_num_bytes_between.c:18:34: warning: return type defaults to 'int' [-Wimplicit-int]
+ #  define GET_INITIAL_DATA_VALUE get_initial_data_value_
+                                  ^~~~~~~~~~~~~~~~~~~~~~~
+wrf_num_bytes_between.c:43:1: note: in expansion of macro 'GET_INITIAL_DATA_VALUE'
+ GET_INITIAL_DATA_VALUE ( n )
+ ^~~~~~~~~~~~~~~~~~~~~~
+wrf_num_bytes_between.c:19:26: warning: return type defaults to 'int' [-Wimplicit-int]
+ #  define WHAT_IS_A_NAN  what_is_a_nan_
+                          ^~~~~~~~~~~~~~
+wrf_num_bytes_between.c:50:1: note: in expansion of macro 'WHAT_IS_A_NAN'
+ WHAT_IS_A_NAN ( n )
+ ^~~~~~~~~~~~~
+wrf_num_bytes_between.c:20:25: warning: return type defaults to 'int' [-Wimplicit-int]
+ #  define WRF_MEM_COPY  wrf_mem_copy_
+                         ^~~~~~~~~~~~~
+wrf_num_bytes_between.c:70:1: note: in expansion of macro 'WRF_MEM_COPY'
+ WRF_MEM_COPY ( a , b, n )
+ ^~~~~~~~~~~~
+/usr/bin/gcc -c -o pack_utils.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        pack_utils.c
+pack_utils.c:27:30: warning: return type defaults to 'int' [-Wimplicit-int]
+ #      define INT_PACK_DATA  int_pack_data_
+                              ^~~~~~~~~~~~~~
+pack_utils.c:42:1: note: in expansion of macro 'INT_PACK_DATA'
+ INT_PACK_DATA ( unsigned char *buf , int *ninbytes , unsigned char *obuf, int *cursor )
+ ^~~~~~~~~~~~~
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_driver_constants.F90 -o module_driver_constants.fppized.f90
+/usr/bin/gfortran -c -o module_driver_constants.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_driver_constants.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_domain.F90 -o module_domain.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_configure.F90 -o module_configure.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_wrf_error.F90 -o module_wrf_error.fppized.f90
+/usr/bin/gfortran -c -o module_wrf_error.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_wrf_error.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_state_description.F90 -o module_state_description.fppized.f90
+/usr/bin/gfortran -c -o module_state_description.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_state_description.fppized.f90
+/usr/bin/gfortran -c -o module_configure.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_configure.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   ESMF_Mod.F90 -o ESMF_Mod.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   Meat.F90 -o Meat.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   ESMF_Time.F90 -o ESMF_Time.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   ESMF_Calendar.F90 -o ESMF_Calendar.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   ESMF_BaseTime.F90 -o ESMF_BaseTime.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   ESMF_Base.F90 -o ESMF_Base.fppized.f90
+/usr/bin/gfortran -c -o ESMF_Base.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         ESMF_Base.fppized.f90
+/usr/bin/gfortran -c -o ESMF_BaseTime.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         ESMF_BaseTime.fppized.f90
+/usr/bin/gfortran -c -o ESMF_Calendar.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         ESMF_Calendar.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   ESMF_TimeInterval.F90 -o ESMF_TimeInterval.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   ESMF_Fraction.F90 -o ESMF_Fraction.fppized.f90
+/usr/bin/gfortran -c -o ESMF_Fraction.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         ESMF_Fraction.fppized.f90
+/usr/bin/gfortran -c -o ESMF_TimeInterval.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         ESMF_TimeInterval.fppized.f90
+/usr/bin/gfortran -c -o ESMF_Time.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         ESMF_Time.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   ESMF_Clock.F90 -o ESMF_Clock.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   ESMF_Alarm.F90 -o ESMF_Alarm.fppized.f90
+/usr/bin/gfortran -c -o ESMF_Alarm.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         ESMF_Alarm.fppized.f90
+/usr/bin/gfortran -c -o ESMF_Clock.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         ESMF_Clock.fppized.f90
+/usr/bin/gfortran -c -o Meat.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         Meat.fppized.f90
+/usr/bin/gfortran -c -o ESMF_Mod.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         ESMF_Mod.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_machine.F90 -o module_machine.fppized.f90
+/usr/bin/gfortran -c -o module_machine.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_machine.fppized.f90
+/usr/bin/gfortran -c -o module_domain.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_domain.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_integrate.F90 -o module_integrate.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_timing.F90 -o module_timing.fppized.f90
+/usr/bin/gfortran -c -o module_timing.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_timing.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_nesting.F90 -o module_nesting.fppized.f90
+/usr/bin/gfortran -c -o module_nesting.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_nesting.fppized.f90
+/usr/bin/gfortran -c -o module_integrate.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_integrate.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_tiles.F90 -o module_tiles.fppized.f90
+/usr/bin/gfortran -c -o module_tiles.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_tiles.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_sm.F90 -o module_sm.fppized.f90
+/usr/bin/gfortran -c -o module_sm.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_sm.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_io.F90 -o module_io.fppized.f90
+/usr/bin/gfortran -c -o module_io.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_io.fppized.f90
+module_io.fppized.f90:18437:23:
+
+                Status )
+                       1
+Warning: Type mismatch in argument 'field' at (1); passed INTEGER(4) to REAL(4) [-Wargument-mismatch]
+module_io.fppized.f90:18530:45:
+
+                                      Status )
+                                             1
+Warning: Type mismatch in argument 'globbuf' at (1); passed INTEGER(4) to REAL(4) [-Wargument-mismatch]
+module_io.fppized.f90:18703:23:
+
+                Status )
+                       1
+Warning: Type mismatch in argument 'field' at (1); passed INTEGER(4) to REAL(4) [-Wargument-mismatch]
+module_io.fppized.f90:18790:45:
+
+                                      Status )
+                                             1
+Warning: Type mismatch in argument 'globbuf' at (1); passed INTEGER(4) to REAL(4) [-Wargument-mismatch]
+module_io.fppized.f90:18713:23:
+
+                Status )
+                       1
+Warning: Type mismatch in argument 'field' at (1); passed INTEGER(4) to REAL(4) [-Wargument-mismatch]
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_dm_stubs.F90 -o module_dm_stubs.fppized.f90
+/usr/bin/gfortran -c -o module_dm_stubs.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_dm_stubs.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_quilt_outbuf_ops.F90 -o module_quilt_outbuf_ops.fppized.f90
+/usr/bin/gfortran -c -o module_quilt_outbuf_ops.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_quilt_outbuf_ops.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_io_quilt.F90 -o module_io_quilt.fppized.f90
+/usr/bin/gfortran -c -o module_io_quilt.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_io_quilt.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_bc.F90 -o module_bc.fppized.f90
+/usr/bin/gfortran -c -o module_bc.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_bc.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_io_wrf.F90 -o module_io_wrf.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_bc_time_utilities.F90 -o module_bc_time_utilities.fppized.f90
+/usr/bin/gfortran -c -o module_bc_time_utilities.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_bc_time_utilities.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_date_time.F90 -o module_date_time.fppized.f90
+/usr/bin/gfortran -c -o module_date_time.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_date_time.fppized.f90
+/usr/bin/gfortran -c -o module_io_wrf.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_io_wrf.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_io_domain.F90 -o module_io_domain.fppized.f90
+/usr/bin/gfortran -c -o module_io_domain.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_io_domain.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_model_constants.F90 -o module_model_constants.fppized.f90
+/usr/bin/gfortran -c -o module_model_constants.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_model_constants.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_soil_pre.F90 -o module_soil_pre.fppized.f90
+/usr/bin/gfortran -c -o module_soil_pre.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_soil_pre.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_bl_mrf.F90 -o module_bl_mrf.fppized.f90
+/usr/bin/gfortran -c -o module_bl_mrf.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_bl_mrf.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_sf_myjsfc.F90 -o module_sf_myjsfc.fppized.f90
+/usr/bin/gfortran -c -o module_sf_myjsfc.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_sf_myjsfc.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_bl_myjpbl.F90 -o module_bl_myjpbl.fppized.f90
+/usr/bin/gfortran -c -o module_bl_myjpbl.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_bl_myjpbl.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_bl_ysu.F90 -o module_bl_ysu.fppized.f90
+/usr/bin/gfortran -c -o module_bl_ysu.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_bl_ysu.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_cu_bmj.F90 -o module_cu_bmj.fppized.f90
+/usr/bin/gfortran -c -o module_cu_bmj.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_cu_bmj.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_mp_kessler.F90 -o module_mp_kessler.fppized.f90
+/usr/bin/gfortran -c -o module_mp_kessler.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_mp_kessler.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_mp_ncloud5.F90 -o module_mp_ncloud5.fppized.f90
+/usr/bin/gfortran -c -o module_mp_ncloud5.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_mp_ncloud5.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_ra_sw.F90 -o module_ra_sw.fppized.f90
+/usr/bin/gfortran -c -o module_ra_sw.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_ra_sw.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_sf_sfclay.F90 -o module_sf_sfclay.fppized.f90
+/usr/bin/gfortran -c -o module_sf_sfclay.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_sf_sfclay.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_cu_kf.F90 -o module_cu_kf.fppized.f90
+/usr/bin/gfortran -c -o module_cu_kf.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_cu_kf.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_cu_kfeta.F90 -o module_cu_kfeta.fppized.f90
+/usr/bin/gfortran -c -o module_cu_kfeta.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_cu_kfeta.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_mp_lin.F90 -o module_mp_lin.fppized.f90
+/usr/bin/gfortran -c -o module_mp_lin.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_mp_lin.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_mp_wsm3.F90 -o module_mp_wsm3.fppized.f90
+/usr/bin/gfortran -c -o module_mp_wsm3.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_mp_wsm3.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_mp_wsm5.F90 -o module_mp_wsm5.fppized.f90
+/usr/bin/gfortran -c -o module_mp_wsm5.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_mp_wsm5.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_mp_wsm6.F90 -o module_mp_wsm6.fppized.f90
+/usr/bin/gfortran -c -o module_mp_wsm6.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_mp_wsm6.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_surface_driver.F90 -o module_surface_driver.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_sf_sfcdiags.F90 -o module_sf_sfcdiags.fppized.f90
+/usr/bin/gfortran -c -o module_sf_sfcdiags.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_sf_sfcdiags.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_sf_slab.F90 -o module_sf_slab.fppized.f90
+/usr/bin/gfortran -c -o module_sf_slab.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_sf_slab.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_sf_ruclsm.F90 -o module_sf_ruclsm.fppized.f90
+/usr/bin/gfortran -c -o module_sf_ruclsm.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_sf_ruclsm.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_sf_noahlsm.F90 -o module_sf_noahlsm.fppized.f90
+/usr/bin/gfortran -c -o module_sf_noahlsm.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_sf_noahlsm.fppized.f90
+/usr/bin/gfortran -c -o module_surface_driver.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_surface_driver.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_cu_gd.F90 -o module_cu_gd.fppized.f90
+/usr/bin/gfortran -c -o module_cu_gd.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_cu_gd.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_ra_gsfcsw.F90 -o module_ra_gsfcsw.fppized.f90
+/usr/bin/gfortran -c -o module_ra_gsfcsw.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_ra_gsfcsw.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_mp_ncloud3.F90 -o module_mp_ncloud3.fppized.f90
+/usr/bin/gfortran -c -o module_mp_ncloud3.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_mp_ncloud3.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_mp_etanew.F90 -o module_mp_etanew.fppized.f90
+/usr/bin/gfortran -c -o module_mp_etanew.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_mp_etanew.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_ra_rrtm.F90 -o module_ra_rrtm.fppized.f90
+/usr/bin/gfortran -c -o module_ra_rrtm.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_ra_rrtm.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_ra_gfdleta.F90 -o module_ra_gfdleta.fppized.f90
+/usr/bin/gfortran -c -o module_ra_gfdleta.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_ra_gfdleta.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_physics_init.F90 -o module_physics_init.fppized.f90
+/usr/bin/gfortran -c -o module_physics_init.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_physics_init.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_physics_addtendc.F90 -o module_physics_addtendc.fppized.f90
+/usr/bin/gfortran -c -o module_physics_addtendc.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_physics_addtendc.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_solvedebug_em.F90 -o module_solvedebug_em.fppized.f90
+/usr/bin/gfortran -c -o module_solvedebug_em.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_solvedebug_em.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_bc_em.F90 -o module_bc_em.fppized.f90
+/usr/bin/gfortran -c -o module_bc_em.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_bc_em.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_advect_em.F90 -o module_advect_em.fppized.f90
+/usr/bin/gfortran -c -o module_advect_em.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_advect_em.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_diffusion_em.F90 -o module_diffusion_em.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_big_step_utilities_em.F90 -o module_big_step_utilities_em.fppized.f90
+/usr/bin/gfortran -c -o module_big_step_utilities_em.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_big_step_utilities_em.fppized.f90
+/usr/bin/gfortran -c -o module_diffusion_em.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_diffusion_em.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_small_step_em.F90 -o module_small_step_em.fppized.f90
+/usr/bin/gfortran -c -o module_small_step_em.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_small_step_em.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_em.F90 -o module_em.fppized.f90
+/usr/bin/gfortran -c -o module_em.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_em.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_init_utilities.F90 -o module_init_utilities.fppized.f90
+/usr/bin/gfortran -c -o module_init_utilities.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_init_utilities.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_optional_si_input.F90 -o module_optional_si_input.fppized.f90
+/usr/bin/gfortran -c -o module_optional_si_input.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_optional_si_input.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_shutdown.F90 -o wrf_shutdown.fppized.f90
+/usr/bin/gfortran -c -o wrf_shutdown.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_shutdown.fppized.f90
+/usr/bin/gcc -c -o collect_on_comm.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        collect_on_comm.c
+collect_on_comm.c:26:32: warning: return type defaults to 'int' [-Wimplicit-int]
+ #      define COLLECT_ON_COMM  collect_on_comm_
+                                ^~~~~~~~~~~~~~~~
+collect_on_comm.c:37:1: note: in expansion of macro 'COLLECT_ON_COMM'
+ COLLECT_ON_COMM ( int * comm, int * typesize ,
+ ^~~~~~~~~~~~~~~
+collect_on_comm.c: In function 'collect_on_comm_':
+collect_on_comm.c:40:3: warning: implicit declaration of function 'col_on_comm'; did you mean 'collect_on_comm_'? [-Wimplicit-function-declaration]
+   col_on_comm ( comm, typesize ,
+   ^~~~~~~~~~~
+   collect_on_comm_
+collect_on_comm.c: At top level:
+collect_on_comm.c:27:32: warning: return type defaults to 'int' [-Wimplicit-int]
+ #      define COLLECT_ON_COMM0 collect_on_comm0_
+                                ^~~~~~~~~~~~~~~~~
+collect_on_comm.c:45:1: note: in expansion of macro 'COLLECT_ON_COMM0'
+ COLLECT_ON_COMM0 ( int * comm, int * typesize ,
+ ^~~~~~~~~~~~~~~~
+collect_on_comm.c:52:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ col_on_comm ( int * comm, int * typesize ,
+ ^~~~~~~~~~~
+collect_on_comm.c:28:29: warning: return type defaults to 'int' [-Wimplicit-int]
+ #      define DIST_ON_COMM  dist_on_comm_
+                             ^~~~~~~~~~~~~
+collect_on_comm.c:105:1: note: in expansion of macro 'DIST_ON_COMM'
+ DIST_ON_COMM ( int * comm, int * typesize ,
+ ^~~~~~~~~~~~
+collect_on_comm.c: In function 'dist_on_comm_':
+collect_on_comm.c:108:3: warning: implicit declaration of function 'dst_on_comm'; did you mean 'dist_on_comm_'? [-Wimplicit-function-declaration]
+   dst_on_comm ( comm, typesize ,
+   ^~~~~~~~~~~
+   dist_on_comm_
+collect_on_comm.c: At top level:
+collect_on_comm.c:29:29: warning: return type defaults to 'int' [-Wimplicit-int]
+ #      define DIST_ON_COMM0 dist_on_comm0_
+                             ^~~~~~~~~~~~~~
+collect_on_comm.c:112:1: note: in expansion of macro 'DIST_ON_COMM0'
+ DIST_ON_COMM0 ( int * comm, int * typesize ,
+ ^~~~~~~~~~~~~
+collect_on_comm.c:119:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ dst_on_comm ( int * comm, int * typesize ,
+ ^~~~~~~~~~~
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   mediation_integrate.F90 -o mediation_integrate.fppized.f90
+/usr/bin/gfortran -c -o mediation_integrate.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         mediation_integrate.fppized.f90
+mediation_integrate.fppized.f90:146:33:
+
+      SUBROUTINE med_nest_feedback ( parent , nest , config_flags )
+                                 1
+Warning: Interface mismatch in global procedure 'med_nest_feedback' at (1): INTENT mismatch in argument 'config_flags' [-Wargument-mismatch]
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   mediation_feedback_domain.F90 -o mediation_feedback_domain.fppized.f90
+/usr/bin/gfortran -c -o mediation_feedback_domain.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         mediation_feedback_domain.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   mediation_force_domain.F90 -o mediation_force_domain.fppized.f90
+/usr/bin/gfortran -c -o mediation_force_domain.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         mediation_force_domain.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   mediation_interp_domain.F90 -o mediation_interp_domain.fppized.f90
+/usr/bin/gfortran -c -o mediation_interp_domain.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         mediation_interp_domain.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   mediation_wrfmain.F90 -o mediation_wrfmain.fppized.f90
+/usr/bin/gfortran -c -o mediation_wrfmain.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         mediation_wrfmain.fppized.f90
+mediation_wrfmain.fppized.f90:11:38:
+
+       SUBROUTINE med_initialdata_input ( grid , config_flags )
+                                      1
+Warning: Interface mismatch in global procedure 'med_initialdata_input' at (1): INTENT mismatch in argument 'config_flags' [-Wargument-mismatch]
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxhist1in.F90 -o wrf_auxhist1in.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxhist1in.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxhist1in.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxhist1out.F90 -o wrf_auxhist1out.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxhist1out.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxhist1out.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxhist2in.F90 -o wrf_auxhist2in.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxhist2in.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxhist2in.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxhist2out.F90 -o wrf_auxhist2out.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxhist2out.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxhist2out.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxhist3in.F90 -o wrf_auxhist3in.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxhist3in.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxhist3in.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxhist3out.F90 -o wrf_auxhist3out.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxhist3out.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxhist3out.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxhist4in.F90 -o wrf_auxhist4in.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxhist4in.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxhist4in.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxhist4out.F90 -o wrf_auxhist4out.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxhist4out.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxhist4out.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxhist5in.F90 -o wrf_auxhist5in.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxhist5in.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxhist5in.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxhist5out.F90 -o wrf_auxhist5out.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxhist5out.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxhist5out.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxinput1in.F90 -o wrf_auxinput1in.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxinput1in.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxinput1in.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxinput1out.F90 -o wrf_auxinput1out.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxinput1out.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxinput1out.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxinput2in.F90 -o wrf_auxinput2in.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxinput2in.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxinput2in.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxinput2out.F90 -o wrf_auxinput2out.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxinput2out.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxinput2out.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxinput3in.F90 -o wrf_auxinput3in.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxinput3in.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxinput3in.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxinput3out.F90 -o wrf_auxinput3out.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxinput3out.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxinput3out.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxinput4in.F90 -o wrf_auxinput4in.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxinput4in.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxinput4in.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxinput4out.F90 -o wrf_auxinput4out.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxinput4out.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxinput4out.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxinput5in.F90 -o wrf_auxinput5in.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxinput5in.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxinput5in.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_auxinput5out.F90 -o wrf_auxinput5out.fppized.f90
+/usr/bin/gfortran -c -o wrf_auxinput5out.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_auxinput5out.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_bdyin.F90 -o wrf_bdyin.fppized.f90
+/usr/bin/gfortran -c -o wrf_bdyin.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_bdyin.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_bdyout.F90 -o wrf_bdyout.fppized.f90
+/usr/bin/gfortran -c -o wrf_bdyout.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_bdyout.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_histin.F90 -o wrf_histin.fppized.f90
+/usr/bin/gfortran -c -o wrf_histin.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_histin.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_histout.F90 -o wrf_histout.fppized.f90
+/usr/bin/gfortran -c -o wrf_histout.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_histout.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_inputin.F90 -o wrf_inputin.fppized.f90
+/usr/bin/gfortran -c -o wrf_inputin.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_inputin.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_inputout.F90 -o wrf_inputout.fppized.f90
+/usr/bin/gfortran -c -o wrf_inputout.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_inputout.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_restartin.F90 -o wrf_restartin.fppized.f90
+/usr/bin/gfortran -c -o wrf_restartin.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_restartin.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf_restartout.F90 -o wrf_restartout.fppized.f90
+/usr/bin/gfortran -c -o wrf_restartout.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_restartout.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   couple_or_uncouple_em.F90 -o couple_or_uncouple_em.fppized.f90
+/usr/bin/gfortran -c -o couple_or_uncouple_em.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         couple_or_uncouple_em.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   interp_domain_em.F90 -o interp_domain_em.fppized.f90
+/usr/bin/gfortran -c -o interp_domain_em.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         interp_domain_em.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   interp_fcn.F90 -o interp_fcn.fppized.f90
+/usr/bin/gfortran -c -o interp_fcn.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         interp_fcn.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   nest_init_utils.F90 -o nest_init_utils.fppized.f90
+/usr/bin/gfortran -c -o nest_init_utils.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         nest_init_utils.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   set_timekeeping.F90 -o set_timekeeping.fppized.f90
+/usr/bin/gfortran -c -o set_timekeeping.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         set_timekeeping.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   sint.F90 -o sint.fppized.f90
+/usr/bin/gfortran -c -o sint.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         sint.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   solve_interface.F90 -o solve_interface.fppized.f90
+/usr/bin/gfortran -c -o solve_interface.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         solve_interface.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   start_domain.F90 -o start_domain.fppized.f90
+/usr/bin/gfortran -c -o start_domain.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         start_domain.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_pbl_driver.F90 -o module_pbl_driver.fppized.f90
+/usr/bin/gfortran -c -o module_pbl_driver.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_pbl_driver.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_radiation_driver.F90 -o module_radiation_driver.fppized.f90
+/usr/bin/gfortran -c -o module_radiation_driver.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_radiation_driver.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_cumulus_driver.F90 -o module_cumulus_driver.fppized.f90
+/usr/bin/gfortran -c -o module_cumulus_driver.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_cumulus_driver.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   module_microphysics_driver.F90 -o module_microphysics_driver.fppized.f90
+/usr/bin/gfortran -c -o module_microphysics_driver.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         module_microphysics_driver.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   solve_em.F90 -o solve_em.fppized.f90
+/usr/bin/gfortran -c -o solve_em.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         solve_em.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   start_em.F90 -o start_em.fppized.f90
+/usr/bin/gfortran -c -o start_em.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         start_em.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   internal_header_util.F90 -o internal_header_util.fppized.f90
+/usr/bin/gfortran -c -o internal_header_util.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         internal_header_util.fppized.f90
+internal_header_util.fppized.f90:47:24:
+
+   call int_pack_string( MemoryOrder, hdrbuf(i), n ) ; i = i + n
+                        1
+Warning: Dummy argument 'memoryorder' with INTENT(IN) in variable definition context (actual argument to INTENT = OUT/INOUT) at (1)
+internal_header_util.fppized.f90:48:24:
+
+   call int_pack_string( Stagger,     hdrbuf(i), n ) ; i = i + n
+                        1
+Warning: Dummy argument 'stagger' with INTENT(IN) in variable definition context (actual argument to INTENT = OUT/INOUT) at (1)
+internal_header_util.fppized.f90:49:24:
+
+   call int_pack_string( DimNames(1), hdrbuf(i), n ) ; i = i + n
+                        1
+Warning: Dummy argument 'dimnames' with INTENT(IN) in variable definition context (actual argument to INTENT = OUT/INOUT) at (1)
+internal_header_util.fppized.f90:50:24:
+
+   call int_pack_string( DimNames(2), hdrbuf(i), n ) ; i = i + n
+                        1
+Warning: Dummy argument 'dimnames' with INTENT(IN) in variable definition context (actual argument to INTENT = OUT/INOUT) at (1)
+internal_header_util.fppized.f90:51:24:
+
+   call int_pack_string( DimNames(3), hdrbuf(i), n ) ; i = i + n
+                        1
+Warning: Dummy argument 'dimnames' with INTENT(IN) in variable definition context (actual argument to INTENT = OUT/INOUT) at (1)
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   io_int.F90 -o io_int.fppized.f90
+/usr/bin/gfortran -c -o io_int.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         io_int.fppized.f90
+io_int.fppized.f90:1277:94:
+
+             CALL ifieldread( DataHandle, Field, MemoryStart, MemoryEnd, PatchStart, PatchEnd )
+                                                                                              1
+Warning: Type mismatch in argument 'field' at (1); passed REAL(4) to INTEGER(4) [-Wargument-mismatch]
+io_int.fppized.f90:1368:89:
+
+       CALL ifieldwrite( DataHandle, Field, MemoryStart, MemoryEnd, PatchStart, PatchEnd )
+                                                                                         1
+Warning: Type mismatch in argument 'field' at (1); passed REAL(4) to INTEGER(4) [-Wargument-mismatch]
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   init_modules_em.F90 -o init_modules_em.fppized.f90
+/usr/bin/gfortran -c -o init_modules_em.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         init_modules_em.fppized.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   init_modules.F90 -o init_modules.fppized.f90
+/usr/bin/gfortran -c -o init_modules.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         init_modules.fppized.f90
+/usr/bin/gfortran -c -o wrf_io.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf_io.f90
+/usr/bin/gfortran -c -o field_routines.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         field_routines.f90
+specperl /home/ricardo/SPECcpu2006/bin/specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   wrf.F90 -o wrf.fppized.f90
+/usr/bin/gfortran -c -o wrf.fppized.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         wrf.fppized.f90
+/usr/bin/gcc -c -o netcdf/attr.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/attr.c
+/usr/bin/gcc -c -o netcdf/dim.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/dim.c
+/usr/bin/gcc -c -o netcdf/error.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/error.c
+/usr/bin/gcc -c -o netcdf/fort-attio.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/fort-attio.c
+/usr/bin/gcc -c -o netcdf/fort-control.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/fort-control.c
+/usr/bin/gcc -c -o netcdf/fort-dim.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/fort-dim.c
+/usr/bin/gcc -c -o netcdf/fort-genatt.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/fort-genatt.c
+/usr/bin/gcc -c -o netcdf/fort-geninq.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/fort-geninq.c
+/usr/bin/gcc -c -o netcdf/fort-genvar.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/fort-genvar.c
+/usr/bin/gcc -c -o netcdf/fort-lib.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/fort-lib.c
+/usr/bin/gcc -c -o netcdf/fort-misc.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/fort-misc.c
+/usr/bin/gcc -c -o netcdf/fort-v2compat.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/fort-v2compat.c
+/usr/bin/gcc -c -o netcdf/fort-var1io.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/fort-var1io.c
+/usr/bin/gcc -c -o netcdf/fort-varaio.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/fort-varaio.c
+/usr/bin/gcc -c -o netcdf/fort-vario.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/fort-vario.c
+/usr/bin/gcc -c -o netcdf/fort-varmio.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/fort-varmio.c
+/usr/bin/gcc -c -o netcdf/fort-varsio.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/fort-varsio.c
+/usr/bin/gcc -c -o netcdf/libvers.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/libvers.c
+/usr/bin/gcc -c -o netcdf/nc.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/nc.c
+/usr/bin/gcc -c -o netcdf/ncx.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/ncx.c
+/usr/bin/gcc -c -o netcdf/posixio.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/posixio.c
+/usr/bin/gcc -c -o netcdf/putget.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/putget.c
+/usr/bin/gcc -c -o netcdf/string.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/string.c
+/usr/bin/gcc -c -o netcdf/v1hpg.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/v1hpg.c
+/usr/bin/gcc -c -o netcdf/v2i.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/v2i.c
+/usr/bin/gcc -c -o netcdf/var.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        netcdf/var.c
+/usr/bin/gfortran -c -o netcdf/typeSizes.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         netcdf/typeSizes.f90
+/usr/bin/gfortran -c -o netcdf/netcdf.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         netcdf/netcdf.f90
+/usr/bin/gfortran   -O3 -march=native -std=legacy  -DSPEC_CPU_LP64        wrf_num_bytes_between.o pack_utils.o module_driver_constants.fppized.o module_domain.fppized.o module_integrate.fppized.o module_timing.fppized.o module_configure.fppized.o module_tiles.fppized.o module_machine.fppized.o module_nesting.fppized.o module_wrf_error.fppized.o module_state_description.fppized.o module_sm.fppized.o module_io.fppized.o module_dm_stubs.fppized.o module_quilt_outbuf_ops.fppized.o module_io_quilt.fppized.o module_bc.fppized.o module_io_wrf.fppized.o module_date_time.fppized.o module_io_domain.fppized.o module_bc_time_utilities.fppized.o module_model_constants.fppized.o module_soil_pre.fppized.o module_bl_mrf.fppized.o module_sf_myjsfc.fppized.o module_bl_myjpbl.fppized.o module_bl_ysu.fppized.o module_cu_bmj.fppized.o module_mp_kessler.fppized.o module_mp_ncloud5.fppized.o module_ra_sw.fppized.o module_sf_sfclay.fppized.o module_cu_kf.fppized.o module_cu_kfeta.fppized.o module_mp_lin.fppized.o module_mp_wsm3.fppized.o module_mp_wsm5.fppized.o module_mp_wsm6.fppized.o module_surface_driver.fppized.o module_cu_gd.fppized.o module_sf_sfcdiags.fppized.o module_ra_gsfcsw.fppized.o module_sf_slab.fppized.o module_sf_noahlsm.fppized.o module_sf_ruclsm.fppized.o module_mp_ncloud3.fppized.o module_mp_etanew.fppized.o module_ra_rrtm.fppized.o module_ra_gfdleta.fppized.o module_physics_init.fppized.o module_physics_addtendc.fppized.o module_solvedebug_em.fppized.o module_bc_em.fppized.o module_advect_em.fppized.o module_diffusion_em.fppized.o module_small_step_em.fppized.o module_big_step_utilities_em.fppized.o module_em.fppized.o module_init_utilities.fppized.o module_optional_si_input.fppized.o ESMF_Alarm.fppized.o ESMF_Base.fppized.o ESMF_BaseTime.fppized.o ESMF_Calendar.fppized.o ESMF_Clock.fppized.o ESMF_Fraction.fppized.o ESMF_Mod.fppized.o ESMF_Time.fppized.o ESMF_TimeInterval.fppized.o Meat.fppized.o wrf_shutdown.fppized.o collect_on_comm.o mediation_integrate.fppized.o mediation_feedback_domain.fppized.o mediation_force_domain.fppized.o mediation_interp_domain.fppized.o mediation_wrfmain.fppized.o wrf_auxhist1in.fppized.o wrf_auxhist1out.fppized.o wrf_auxhist2in.fppized.o wrf_auxhist2out.fppized.o wrf_auxhist3in.fppized.o wrf_auxhist3out.fppized.o wrf_auxhist4in.fppized.o wrf_auxhist4out.fppized.o wrf_auxhist5in.fppized.o wrf_auxhist5out.fppized.o wrf_auxinput1in.fppized.o wrf_auxinput1out.fppized.o wrf_auxinput2in.fppized.o wrf_auxinput2out.fppized.o wrf_auxinput3in.fppized.o wrf_auxinput3out.fppized.o wrf_auxinput4in.fppized.o wrf_auxinput4out.fppized.o wrf_auxinput5in.fppized.o wrf_auxinput5out.fppized.o wrf_bdyin.fppized.o wrf_bdyout.fppized.o wrf_histin.fppized.o wrf_histout.fppized.o wrf_inputin.fppized.o wrf_inputout.fppized.o wrf_restartin.fppized.o wrf_restartout.fppized.o couple_or_uncouple_em.fppized.o interp_domain_em.fppized.o interp_fcn.fppized.o nest_init_utils.fppized.o set_timekeeping.fppized.o sint.fppized.o solve_interface.fppized.o start_domain.fppized.o module_pbl_driver.fppized.o module_radiation_driver.fppized.o module_cumulus_driver.fppized.o module_microphysics_driver.fppized.o solve_em.fppized.o start_em.fppized.o internal_header_util.fppized.o io_int.fppized.o init_modules_em.fppized.o init_modules.fppized.o wrf_io.o field_routines.o wrf.fppized.o netcdf/attr.o netcdf/dim.o netcdf/error.o netcdf/fort-attio.o netcdf/fort-control.o netcdf/fort-dim.o netcdf/fort-genatt.o netcdf/fort-geninq.o netcdf/fort-genvar.o netcdf/fort-lib.o netcdf/fort-misc.o netcdf/fort-v2compat.o netcdf/fort-var1io.o netcdf/fort-varaio.o netcdf/fort-vario.o netcdf/fort-varmio.o netcdf/fort-varsio.o netcdf/libvers.o netcdf/nc.o netcdf/ncx.o netcdf/posixio.o netcdf/putget.o netcdf/string.o netcdf/v1hpg.o netcdf/v2i.o netcdf/var.o netcdf/typeSizes.o netcdf/netcdf.o                     -o wrf
+Stop make command: Mon Oct 14 19:17:36 2019 (1571073456)
+Elapsed time for make command: 00:02:20 (140)
+Issuing options command 'specmake options'
+Start options command: Mon Oct 14 19:17:36 2019 (1571073456)
+FPP: specpp  -w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX   <source> -o <source>.fppized.f9x
+P: BENCH_FPPFLAGS="-w -m literal.pm -I. -DINTIO -DIWORDSIZE=4  -DDWORDSIZE=8 -DRWORDSIZE=4 -DLWORDSIZE=4 -DNETCDF  -DTRIEDNTRUE -DLIMIT_ARGS -DEM_CORE=1  -DNMM_CORE=0 -DNMM_MAX_DIM=1000 -DCOAMPS_CORE=0  -DEXP_CORE=0 -DF90_STANDALONE -DCONFIG_BUF_LEN=8192 -DMAX_DOMAINS_F=21 -DNO_NAMELIST_PRINT"
+P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+P: FPORTABILITY=""
+P: CPORTABILITY="-DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX"
+COMP: /usr/bin/gfortran -c -o options.o -I. -I./netcdf/include   -O3 -march=native -std=legacy       -DSPEC_CPU_LP64         <source>
+C: FC="/usr/bin/gfortran"
+C: FOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+P: BENCH_FLAGS="-I. -I./netcdf/include"
+P: BENCH_FFLAGS=""
+O: OPTIMIZE=""
+O: FOPTIMIZE="-O3 -march=native -std=legacy"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+P: FPORTABILITY=""
+O: EXTRA_FFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_FOPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_FPORTABILITY=""
+COMP: /usr/bin/gcc -c -o options.o -DSPEC_CPU -DNDEBUG -I. -I./netcdf/include   -O3 -march=native       -DSPEC_CPU_LP64 -DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX        <source>
+C: CC="/usr/bin/gcc"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+P: BENCH_FLAGS="-I. -I./netcdf/include"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-O3 -march=native"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+P: CPORTABILITY="-DSPEC_CPU_CASE_FLAG -DSPEC_CPU_LINUX"
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CPORTABILITY=""
+LINK: /usr/bin/gfortran   -O3 -march=native -std=legacy  -DSPEC_CPU_LP64        <objects>           -o options
+C: LD="/usr/bin/gfortran"
+O: FOPTIMIZE="-O3 -march=native -std=legacy"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+C: LDOUT="-o options"
+Stop options command: Mon Oct 14 19:17:37 2019 (1571073457)
+Elapsed time for options command: 00:00:01 (1)
+  Compile for '481.wrf' ended at: Mon Oct 14 19:17:37 2019 (1571073457)
+  Elapsed compile for '481.wrf': 00:02:22 (142)
+
+Build successes: 481.wrf(base)
+
+Parsing Flags
+  Looking at 481.wrf base amd64-m64-gcc42-nn default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 481.wrf ref base amd64-m64-gcc42-nn default: created (run_base_ref_amd64-m64-gcc42-nn.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 481.wrf ref base amd64-m64-gcc42-nn default
+Commands to run: 
+    -C /home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/run_base_ref_amd64-m64-gcc42-nn.0000
+    -o rsl.out.0000 -e wrf.err ../run_base_ref_amd64-m64-gcc42-nn.0000/wrf_base.amd64-m64-gcc42-nn
+Specinvoke: /home/ricardo/SPECcpu2006/bin/specinvoke -d /home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/run_base_ref_amd64-m64-gcc42-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/home/ricardo/SPECcpu2006/bin/specinvoke -d /home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/run_base_ref_amd64-m64-gcc42-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Mon Oct 14 19:17:37 2019 (1571073457)
+Stop command: Mon Oct 14 19:17:40 2019 (1571073460)
+Elapsed time for command: 00:00:03 (3)
+
+481.wrf: copy #0 non-zero return code (rc=2, signal=0)
+
+
+****************************************
+Contents of wrf.err
+****************************************
+At line 6744 of file module_ra_rrtm.fppized.f90 (unit = 10, file = 'RRTM_DATA')
+Fortran runtime error: End of file
+
+Error termination. Backtrace:
+#0  0x7fe1644e68da
+#1  0x7fe1644e7395
+#2  0x7fe1644e7b1a
+#3  0x7fe1646dfebb
+#4  0x7fe1646e08df
+#5  0x7fe1646e09dc
+#6  0x7fe1646e306a
+#7  0x558b360ca531
+#8  0x558b3613f44b
+#9  0x558b36141700
+#10  0x558b36385a59
+#11  0x558b3635bb47
+#12  0x558b362b54ca
+#13  0x558b363bd94a
+#14  0x558b35f395ce
+#15  0x7fe16414d09a
+#16  0x558b35f39609
+#17  0xffffffffffffffff
+
+****************************************
+Workload elapsed time (0:1) = 0.148273 seconds
+copy 0 finished @ Mon Oct 14 19:17:38 2019.  Total elapsed time: 0.148273
+comparing files in '/home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/run_base_ref_amd64-m64-gcc42-nn.0000'
+comparing 'rsl.out.0000' with abstol=0.01, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /home/ricardo/SPECcpu2006/bin/specinvoke -E -d /home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/run_base_ref_amd64-m64-gcc42-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/home/ricardo/SPECcpu2006/bin/specinvoke -E -d /home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/run_base_ref_amd64-m64-gcc42-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Mon Oct 14 19:17:40 2019 (1571073460)
+Stop command: Mon Oct 14 19:17:42 2019 (1571073462)
+Elapsed time for command: 00:00:02 (2)
+Error with '/home/ricardo/SPECcpu2006/bin/specinvoke -E -d /home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/run_base_ref_amd64-m64-gcc42-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/run_base_ref_amd64-m64-gcc42-nn.0000/.err'
+*** Miscompare of rsl.out.0000, see /home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/run_base_ref_amd64-m64-gcc42-nn.0000/rsl.out.0000.mis
+'rsl.out.0000' short
+Benchmark Times:
+  Start:    Mon Oct 14 19:17:37 2019 (1571073457)
+  Stop:     Mon Oct 14 19:17:40 2019 (1571073460)
+  Elapsed:  00:00:03 (3)
+  Reported: 0 148321000 0.148321
+ Error 481.wrf base ref ratio=75309.63, runtime=0.148321
+Error: 1x481.wrf
+Producing Reports
+mach: default
+  ext: amd64-m64-gcc42-nn
+    size: ref
+      set: int
+      set: fp
+           Flag reduction took 0.0010428s
+        format: raw -> /home/ricardo/SPECcpu2006/result/CFP2006.014.rsf
+        format: flags -> /home/ricardo/SPECcpu2006/result/CFP2006.014.flags.html
+        format: ASCII -> /home/ricardo/SPECcpu2006/result/CFP2006.014.txt
+        format: PDF -> /home/ricardo/SPECcpu2006/result/CFP2006.014.pdf
+        format: Screen -> 
+The log for this run is in /home/ricardo/SPECcpu2006/result/CPU2006.014.log
+
+runspec finished at Mon Oct 14 19:17:43 2019; 153 total seconds elapsed

@@ -1,0 +1,235 @@
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 450.soplex base did not have enough runs!                                  #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/auto/cpu2006/Docs/runspec.html#flagsurl           #
+# for information about how to get rid of this error.                        #
+# Error 416.gamess: Output miscompare                                        #
+# Error 416.gamess: Output miscompare                                        #
+# Error 416.gamess: Output miscompare                                        #
+# Error 436.cactusADM: 436.cactusADM: copy #0 non-zero return code (rc=139, signal=0) #
+# Error 436.cactusADM: Output miscompare                                     #
+# Error 436.cactusADM: 436.cactusADM: copy #0 non-zero return code (rc=139, signal=0) #
+# Error 436.cactusADM: Output miscompare                                     #
+# Error 436.cactusADM: 436.cactusADM: copy #0 non-zero return code (rc=139, signal=0) #
+# Error 436.cactusADM: Output miscompare                                     #
+# Error 450.soplex: Error with make!                                         #
+# Error 453.povray: Output miscompare                                        #
+# Error 453.povray: Output miscompare                                        #
+# Error 453.povray: Output miscompare                                        #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+                           SPEC(R) CFP2006 Summary
+                      Tyan Tyan Thunder KKQS Pro (S4882)
+                           Tue Oct 15 17:17:22 2019
+
+CPU2006 License #9999  Test date: Dec-9999     Hardware availability: Dec-9999
+Test sponsor: Turbo Computers                  Software availability: Dec-9999
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+410.bwaves      13590    275         49.3   *                                  
+410.bwaves      13590    276         49.3   S                                  
+410.bwaves      13590    273         49.9   S                                  
+416.gamess      19580    332                VE                                 
+416.gamess      19580    332                VE                                 
+416.gamess      19580    332                VE                                 
+433.milc         9180    286         32.1   S                                  
+433.milc         9180    287         32.0   S                                  
+433.milc         9180    286         32.1   *                                  
+434.zeusmp       9100    205         44.3   S                                  
+434.zeusmp       9100    205         44.3   *                                  
+434.zeusmp       9100    205         44.5   S                                  
+435.gromacs      7140    305         23.4   *                                  
+435.gromacs      7140    304         23.5   S                                  
+435.gromacs      7140    306         23.4   S                                  
+436.cactusADM   11950      0.074            RE                                 
+436.cactusADM   11950      0.075            RE                                 
+436.cactusADM   11950      0.075            RE                                 
+437.leslie3d     9400    137         68.5   *                                  
+437.leslie3d     9400    137         68.5   S                                  
+437.leslie3d     9400    138         68.2   S                                  
+444.namd         8020    335         24.0   S                                  
+444.namd         8020    335         24.0   S                                  
+444.namd         8020    335         24.0   *                                  
+447.dealII      11440    231         49.6   S                                  
+447.dealII      11440    231         49.6   *                                  
+447.dealII      11440    232         49.3   S                                  
+450.soplex       8340         --            CE                                 
+453.povray       5320    142                VE                                 
+453.povray       5320    144                VE                                 
+453.povray       5320    143                VE                                 
+454.calculix     8250    629         13.1   S                                  
+454.calculix     8250    631         13.1   S                                  
+454.calculix     8250    630         13.1   *                                  
+459.GemsFDTD    10610    323         32.9   S                                  
+459.GemsFDTD    10610    323         32.8   *                                  
+459.GemsFDTD    10610    323         32.8   S                                  
+465.tonto        9840    400         24.6   S                                  
+465.tonto        9840    401         24.6   S                                  
+465.tonto        9840    401         24.6   *                                  
+470.lbm         13740    241         57.0   S                                  
+470.lbm         13740    241         57.0   *                                  
+470.lbm         13740    241         57.0   S                                  
+481.wrf         11170    209         53.5   *                                  
+481.wrf         11170    209         53.4   S                                  
+481.wrf         11170    209         53.6   S                                  
+482.sphinx3     19490    328         59.4   S                                  
+482.sphinx3     19490    331         58.9   *                                  
+482.sphinx3     19490    333         58.5   S                                  
+==============================================================================
+410.bwaves      13590    275         49.3   *                                  
+416.gamess                                  NR                                 
+433.milc         9180    286         32.1   *                                  
+434.zeusmp       9100    205         44.3   *                                  
+435.gromacs      7140    305         23.4   *                                  
+436.cactusADM                               NR                                 
+437.leslie3d     9400    137         68.5   *                                  
+444.namd         8020    335         24.0   *                                  
+447.dealII      11440    231         49.6   *                                  
+450.soplex                                  NR                                 
+453.povray                                  NR                                 
+454.calculix     8250    630         13.1   *                                  
+459.GemsFDTD    10610    323         32.8   *                                  
+465.tonto        9840    401         24.6   *                                  
+470.lbm         13740    241         57.0   *                                  
+481.wrf         11170    209         53.5   *                                  
+482.sphinx3     19490    331         58.9   *                                  
+ Est. SPECfp(R)_base2006                 --
+ Est. SPECfp2006                                                    Not Run
+
+
+                                   HARDWARE
+                                   --------
+            CPU Name: AMD Opteron 256
+ CPU Characteristics:  
+             CPU MHz: 3000
+                 FPU: Integrated
+      CPU(s) enabled: 1 core, 1 chip, 1 core/chip
+    CPU(s) orderable: 1 chip
+       Primary Cache: 64 KB I + 64 KB D on chip per chip
+     Secondary Cache: 1 MB I+D on chip per chip
+            L3 Cache: None
+         Other Cache: None
+              Memory: 2 GB (2 x 1GB DDR333 CL2.5)
+      Disk Subsystem: SATA
+      Other Hardware: --
+
+
+                                   SOFTWARE
+                                   --------
+    Operating System: SUSE SLES9 (for AMD64)
+            Compiler: gcc , g++ & gfortran 4.2.0325 (for AMD64)
+       Auto Parallel: No
+         File System: ext3
+        System State: runlevel 3
+       Base Pointers: 64-bit
+       Peak Pointers: Not Applicable
+      Other Software: None
+
+
+                                General Notes
+                                -------------
+     PORTABILITY=-DSPEC_CPU_LP64 is applied to all benchmarks in base.
+     C base flags: -O3 -march=native -m32
+     C++ base flags: -O3 -march=native -m32 -fpermissive -Wdeprecated -Wdeprecated-declarations
+     Fortran base flags: -O3 -march=native -m32 -std=legacy
+
+                              Base Unknown Flags
+                              ------------------
+    410.bwaves: "/usr/bin/gfortran" (in FC) "/usr/bin/gfortran" (in LD)
+                "-O3 -march=native -m32 -std=legacy" (in FOPTIMIZE)
+
+    416.gamess: "/usr/bin/gfortran" (in FC) "/usr/bin/gfortran" (in LD)
+                "-O3 -march=native -m32 -std=legacy" (in FOPTIMIZE)
+
+      433.milc: "/usr/bin/gcc" (in CC) "/usr/bin/gcc" (in LD)
+                "-O3 -march=native -m32" (in COPTIMIZE)
+
+    434.zeusmp: "/usr/bin/gfortran" (in FC) "/usr/bin/gfortran" (in LD)
+                "-O3 -march=native -m32 -std=legacy" (in FOPTIMIZE)
+
+   435.gromacs: "/usr/bin/gfortran" (in FC) "/usr/bin/gcc" (in CC)
+                "/usr/bin/gfortran" (in LD)
+                "-O3 -march=native -m32 -std=legacy" (in FOPTIMIZE)
+                "-O3 -march=native -m32" (in COPTIMIZE)
+
+ 436.cactusADM: "/usr/bin/gfortran" (in FC) "/usr/bin/gcc" (in CC)
+                "/usr/bin/gfortran" (in LD)
+                "-O3 -march=native -m32 -std=legacy" (in FOPTIMIZE)
+                "-O3 -march=native -m32" (in COPTIMIZE)
+
+  437.leslie3d: "/usr/bin/gfortran" (in FC) "/usr/bin/gfortran" (in LD)
+                "-O3 -march=native -m32 -std=legacy" (in FOPTIMIZE)
+
+      444.namd: "/usr/bin/g++" (in CXX) "/usr/bin/g++" (in LD)
+                "-O3 -march=native -m32 -fpermissive -Wdeprecated -Wdeprecated-declarations" (in CXXOPTIMIZE)
+
+    447.dealII: "/usr/bin/g++" (in CXX) "/usr/bin/g++" (in LD)
+                "-include cstring" (in CXXPORTABILITY)
+                "-O3 -march=native -m32 -fpermissive -Wdeprecated -Wdeprecated-declarations" (in CXXOPTIMIZE)
+
+    453.povray: "/usr/bin/g++" (in CXX) "/usr/bin/g++" (in LD)
+                "-O3 -march=native -m32 -fpermissive -Wdeprecated -Wdeprecated-declarations" (in CXXOPTIMIZE)
+
+  454.calculix: "/usr/bin/gfortran" (in FC) "/usr/bin/gcc" (in CC)
+                "/usr/bin/gfortran" (in LD)
+                "-O3 -march=native -m32 -std=legacy" (in FOPTIMIZE)
+                "-O3 -march=native -m32" (in COPTIMIZE)
+
+  459.GemsFDTD: "/usr/bin/gfortran" (in FC) "/usr/bin/gfortran" (in LD)
+                "-O3 -march=native -m32 -std=legacy" (in FOPTIMIZE)
+
+     465.tonto: "/usr/bin/gfortran" (in FC) "/usr/bin/gfortran" (in LD)
+                "-O3 -march=native -m32 -std=legacy" (in FOPTIMIZE)
+
+       470.lbm: "/usr/bin/gcc" (in CC) "/usr/bin/gcc" (in LD)
+                "-O3 -march=native -m32" (in COPTIMIZE)
+
+       481.wrf: "/usr/bin/gfortran" (in FC) "/usr/bin/gcc" (in CC)
+                "/usr/bin/gfortran" (in LD)
+                "-O3 -march=native -m32 -std=legacy" (in FOPTIMIZE)
+                "-O3 -march=native -m32" (in COPTIMIZE)
+
+   482.sphinx3: "/usr/bin/gcc" (in CC) "/usr/bin/gcc" (in LD)
+                "-O3 -march=native -m32" (in COPTIMIZE)
+
+
+    SPEC and SPECfp are registered trademarks of the Standard Performance
+    Evaluation Corporation.  All other brand and product names appearing
+    in this result are trademarks or registered trademarks of their
+    respective holders.
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 450.soplex base did not have enough runs!                                  #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/auto/cpu2006/Docs/runspec.html#flagsurl           #
+# for information about how to get rid of this error.                        #
+# Error 416.gamess: Output miscompare                                        #
+# Error 416.gamess: Output miscompare                                        #
+# Error 416.gamess: Output miscompare                                        #
+# Error 436.cactusADM: 436.cactusADM: copy #0 non-zero return code (rc=139, signal=0) #
+# Error 436.cactusADM: Output miscompare                                     #
+# Error 436.cactusADM: 436.cactusADM: copy #0 non-zero return code (rc=139, signal=0) #
+# Error 436.cactusADM: Output miscompare                                     #
+# Error 436.cactusADM: 436.cactusADM: copy #0 non-zero return code (rc=139, signal=0) #
+# Error 436.cactusADM: Output miscompare                                     #
+# Error 450.soplex: Error with make!                                         #
+# Error 453.povray: Output miscompare                                        #
+# Error 453.povray: Output miscompare                                        #
+# Error 453.povray: Output miscompare                                        #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+-----------------------------------------------------------------------------
+For questions about this result, please contact the tester.
+For other inquiries, please contact webmaster@spec.org.
+Copyright 2006 Standard Performance Evaluation Corporation
+Generated on Tue Oct 15 23:40:22 2019 by SPEC CPU2006 ASCII formatter v4626

@@ -1,0 +1,77 @@
+runspec started at Tue Oct  8 16:13:31 2019 on "debian"
+runspec is: /home/ricardo/SPECcpu2006/bin/runspec
+runspec: runspec --config=ricardo-linux.cfg --size=test --noreportable --tune=base --iterations=1 bzip2
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/home/ricardo/SPECcpu2006/config/ricardo-linux.cfg'
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = amd64-m64-gcc42-nn
+Size      = test
+Machine   = default
+benchmarks= 401.bzip2
+outputs   = raw,flags,ASCII,PDF,Screen
+username  = ricardo
+Benchmarks selected: 401.bzip2
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 401.bzip2 test base amd64-m64-gcc42-nn default
+
+
+Parsing Flags
+  Looking at 401.bzip2 base amd64-m64-gcc42-nn default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 401.bzip2 test base amd64-m64-gcc42-nn default: created (run_base_test_amd64-m64-gcc42-nn.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 401.bzip2 test base amd64-m64-gcc42-nn default
+Commands to run: 
+    -C /home/ricardo/SPECcpu2006/benchspec/CPU2006/401.bzip2/run/run_base_test_amd64-m64-gcc42-nn.0000
+    -o input.program.out -e input.program.err ../run_base_test_amd64-m64-gcc42-nn.0000/bzip2_base.amd64-m64-gcc42-nn input.program 5
+    -o dryer.jpg.out -e dryer.jpg.err ../run_base_test_amd64-m64-gcc42-nn.0000/bzip2_base.amd64-m64-gcc42-nn dryer.jpg 2
+Specinvoke: /home/ricardo/SPECcpu2006/bin/specinvoke -d /home/ricardo/SPECcpu2006/benchspec/CPU2006/401.bzip2/run/run_base_test_amd64-m64-gcc42-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/home/ricardo/SPECcpu2006/bin/specinvoke -d /home/ricardo/SPECcpu2006/benchspec/CPU2006/401.bzip2/run/run_base_test_amd64-m64-gcc42-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Tue Oct  8 16:13:35 2019 (1570544015)
+Stop command: Tue Oct  8 16:13:47 2019 (1570544027)
+Elapsed time for command: 00:00:12 (12)
+Workload elapsed time (0:1) = 1.305719 seconds
+Workload elapsed time (0:2) = 1.959081 seconds
+copy 0 finished @ Tue Oct  8 16:13:39 2019.  Total elapsed time: 3.2648
+comparing files in '/home/ricardo/SPECcpu2006/benchspec/CPU2006/401.bzip2/run/run_base_test_amd64-m64-gcc42-nn.0000'
+comparing 'dryer.jpg.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'input.program.out' with abstol=, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /home/ricardo/SPECcpu2006/bin/specinvoke -E -d /home/ricardo/SPECcpu2006/benchspec/CPU2006/401.bzip2/run/run_base_test_amd64-m64-gcc42-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/home/ricardo/SPECcpu2006/bin/specinvoke -E -d /home/ricardo/SPECcpu2006/benchspec/CPU2006/401.bzip2/run/run_base_test_amd64-m64-gcc42-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Tue Oct  8 16:13:47 2019 (1570544027)
+Stop command: Tue Oct  8 16:13:49 2019 (1570544029)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Tue Oct  8 16:13:35 2019 (1570544015)
+  Stop:     Tue Oct  8 16:13:47 2019 (1570544027)
+  Elapsed:  00:00:12 (12)
+  Reported: 3 264853000 3.264853
+ Success 401.bzip2 base test ratio=-0.00, runtime=3.264853
+Success: 1x401.bzip2
+Producing Reports
+mach: default
+  ext: amd64-m64-gcc42-nn
+    size: test
+      set: int
+           Flag reduction took 0.0004761s
+        format: raw -> /home/ricardo/SPECcpu2006/result/CINT2006.003.test.rsf
+        format: flags -> /home/ricardo/SPECcpu2006/result/CINT2006.003.test.flags.html
+        format: ASCII -> /home/ricardo/SPECcpu2006/result/CINT2006.003.test.txt
+        format: PDF -> /home/ricardo/SPECcpu2006/result/CINT2006.003.test.pdf
+        format: Screen ->       set: fp
+
+The log for this run is in /home/ricardo/SPECcpu2006/result/CPU2006.003.log
+
+runspec finished at Tue Oct  8 16:13:50 2019; 19 total seconds elapsed

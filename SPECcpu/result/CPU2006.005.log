@@ -1,0 +1,15 @@
+runspec started at Tue Oct  8 16:43:14 2019 on "debian"
+runspec is: /home/ricardo/SPECcpu2006/bin/runspec
+runspec: runspec --config=ricardo-linux.cfg --action=build --tune=base 4xalancbmk
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/home/ricardo/SPECcpu2006/config/ricardo-linux.cfg'
+Can't find benchmark '4xalancbmk'
+Can't parse '4xalancbmk' into a benchmark
+
+No benchmarks specified!
+
+The log for this run is in /home/ricardo/SPECcpu2006/result/CPU2006.005.log
+
+runspec finished at Tue Oct  8 16:43:18 2019; 4 total seconds elapsed

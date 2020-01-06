@@ -1,0 +1,108 @@
+runspec started at Mon Oct 14 19:18:59 2019 on "debian"
+runspec is: /home/ricardo/SPECcpu2006/bin/runspec
+runspec: runspec --config=ricardo-linux.cfg -a run --size=test --noreportable --tune=base --iterations=1 wrf
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/home/ricardo/SPECcpu2006/config/ricardo-linux.cfg'
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = amd64-m64-gcc42-nn
+Size      = test
+Machine   = default
+benchmarks= 481.wrf
+outputs   = raw,flags,ASCII,PDF,Screen
+username  = ricardo
+Benchmarks selected: 481.wrf
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 481.wrf test base amd64-m64-gcc42-nn default
+
+
+Parsing Flags
+  Looking at 481.wrf base amd64-m64-gcc42-nn default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 481.wrf test base amd64-m64-gcc42-nn default: created (run_base_test_amd64-m64-gcc42-nn.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 481.wrf test base amd64-m64-gcc42-nn default
+Commands to run: 
+    -C /home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/run_base_test_amd64-m64-gcc42-nn.0000
+    -o rsl.out.0000 -e wrf.err ../run_base_test_amd64-m64-gcc42-nn.0000/wrf_base.amd64-m64-gcc42-nn
+Specinvoke: /home/ricardo/SPECcpu2006/bin/specinvoke -d /home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/run_base_test_amd64-m64-gcc42-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/home/ricardo/SPECcpu2006/bin/specinvoke -d /home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/run_base_test_amd64-m64-gcc42-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Mon Oct 14 19:19:03 2019 (1571073543)
+Stop command: Mon Oct 14 19:19:06 2019 (1571073546)
+Elapsed time for command: 00:00:03 (3)
+
+481.wrf: copy #0 non-zero return code (rc=2, signal=0)
+
+
+****************************************
+Contents of wrf.err
+****************************************
+At line 6744 of file module_ra_rrtm.fppized.f90 (unit = 10, file = 'RRTM_DATA')
+Fortran runtime error: End of file
+
+Error termination. Backtrace:
+#0  0x7f6718de18da
+#1  0x7f6718de2395
+#2  0x7f6718de2b1a
+#3  0x7f6718fdaebb
+#4  0x7f6718fdb8df
+#5  0x7f6718fdb9dc
+#6  0x7f6718fde06a
+#7  0x5634c4cfe531
+#8  0x5634c4d7344b
+#9  0x5634c4d75700
+#10  0x5634c4fb9a59
+#11  0x5634c4f8fb47
+#12  0x5634c4ee94ca
+#13  0x5634c4ff194a
+#14  0x5634c4b6d5ce
+#15  0x7f6718a4809a
+#16  0x5634c4b6d609
+#17  0xffffffffffffffff
+
+****************************************
+Workload elapsed time (0:1) = 0.052748 seconds
+copy 0 finished @ Mon Oct 14 19:19:04 2019.  Total elapsed time: 0.052748
+comparing files in '/home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/run_base_test_amd64-m64-gcc42-nn.0000'
+comparing 'rsl.out.0000' with abstol=0.01, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.05, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /home/ricardo/SPECcpu2006/bin/specinvoke -E -d /home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/run_base_test_amd64-m64-gcc42-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/home/ricardo/SPECcpu2006/bin/specinvoke -E -d /home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/run_base_test_amd64-m64-gcc42-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Mon Oct 14 19:19:06 2019 (1571073546)
+Stop command: Mon Oct 14 19:19:08 2019 (1571073548)
+Elapsed time for command: 00:00:02 (2)
+Error with '/home/ricardo/SPECcpu2006/bin/specinvoke -E -d /home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/run_base_test_amd64-m64-gcc42-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd': check file '/home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/run_base_test_amd64-m64-gcc42-nn.0000/.err'
+*** Miscompare of rsl.out.0000, see /home/ricardo/SPECcpu2006/benchspec/CPU2006/481.wrf/run/run_base_test_amd64-m64-gcc42-nn.0000/rsl.out.0000.mis
+'rsl.out.0000' short
+Benchmark Times:
+  Start:    Mon Oct 14 19:19:03 2019 (1571073543)
+  Stop:     Mon Oct 14 19:19:06 2019 (1571073546)
+  Elapsed:  00:00:03 (3)
+  Reported: 0 52796000 0.052796
+ Error 481.wrf base test ratio=-0.00, runtime=0.052796
+Error: 1x481.wrf
+Producing Reports
+mach: default
+  ext: amd64-m64-gcc42-nn
+    size: test
+      set: int
+      set: fp
+           Flag reduction took 0.0011230s
+        format: raw -> /home/ricardo/SPECcpu2006/result/CFP2006.015.test.rsf
+        format: flags -> /home/ricardo/SPECcpu2006/result/CFP2006.015.test.flags.html
+        format: ASCII -> /home/ricardo/SPECcpu2006/result/CFP2006.015.test.txt
+        format: PDF -> /home/ricardo/SPECcpu2006/result/CFP2006.015.test.pdf
+        format: Screen -> 
+The log for this run is in /home/ricardo/SPECcpu2006/result/CPU2006.015.log
+
+runspec finished at Mon Oct 14 19:19:09 2019; 10 total seconds elapsed
