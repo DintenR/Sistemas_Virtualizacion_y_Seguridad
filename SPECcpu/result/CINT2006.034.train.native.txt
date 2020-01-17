@@ -1,0 +1,172 @@
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 471.omnetpp base did not have enough runs!                                 #
+# 456.hmmer base did not have enough runs!                                   #
+# 445.gobmk base did not have enough runs!                                   #
+# 458.sjeng base did not have enough runs!                                   #
+# 429.mcf base did not have enough runs!                                     #
+# 473.astar base did not have enough runs!                                   #
+# 483.xalancbmk base did not have enough runs!                               #
+# 400.perlbench base did not have enough runs!                               #
+# 464.h264ref base did not have enough runs!                                 #
+# 462.libquantum base did not have enough runs!                              #
+# 401.bzip2 base did not have enough runs!                                   #
+# 403.gcc base did not have enough runs!                                     #
+# Input set must be 'ref' for a valid run (set to 'train' for this run)      #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/auto/cpu2006/Docs/runspec.html#flagsurl           #
+# for information about how to get rid of this error.                        #
+# Error 400.perlbench: Error with make!                                      #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+                           SPEC(R) CINT2006 Summary
+                      Tyan Tyan Thunder KKQS Pro (S4882)
+                           Fri Jan 17 18:35:42 2020
+
+CPU2006 License #9999  Test date: Dec-9999     Hardware availability: Dec-9999
+Test sponsor: Turbo Computers                  Software availability: Dec-9999
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+400.perlbench     586         --            CE                                 
+401.bzip2          --     26.5           -- S                                  
+403.gcc            --      0.467         -- S                                  
+429.mcf            --      8.53          -- S                                  
+445.gobmk          --     63.1           -- S                                  
+456.hmmer          --     11.8           -- S                                  
+458.sjeng          --     73.7           -- S                                  
+462.libquantum     --      0.731         -- S                                  
+464.h264ref        --     39.8           -- S                                  
+471.omnetpp        --     30.0           -- S                                  
+473.astar          --     61.0           -- S                                  
+483.xalancbmk      --     27.4           -- S                                  
+==============================================================================
+400.perlbench                               NR                                 
+401.bzip2          --     26.5           -- S                                  
+403.gcc            --      0.467         -- S                                  
+429.mcf            --      8.53          -- S                                  
+445.gobmk          --     63.1           -- S                                  
+456.hmmer          --     11.8           -- S                                  
+458.sjeng          --     73.7           -- S                                  
+462.libquantum     --      0.731         -- S                                  
+464.h264ref        --     39.8           -- S                                  
+471.omnetpp        --     30.0           -- S                                  
+473.astar          --     61.0           -- S                                  
+483.xalancbmk      --     27.4           -- S                                  
+ Est. SPECint(R)_base2006                --
+ Est. SPECint2006                                                   Not Run
+
+
+                                   HARDWARE
+                                   --------
+            CPU Name: AMD Opteron 256
+ CPU Characteristics:  
+             CPU MHz: 3000
+                 FPU: Integrated
+      CPU(s) enabled: 1 core, 1 chip, 1 core/chip
+    CPU(s) orderable: 1 chip
+       Primary Cache: 64 KB I + 64 KB D on chip per chip
+     Secondary Cache: 1 MB I+D on chip per chip
+            L3 Cache: None
+         Other Cache: None
+              Memory: 2 GB (2 x 1GB DDR333 CL2.5)
+      Disk Subsystem: SATA
+      Other Hardware: --
+
+
+                                   SOFTWARE
+                                   --------
+    Operating System: SUSE SLES9 (for AMD64)
+            Compiler: gcc , g++ & gfortran 4.2.0325 (for AMD64)
+       Auto Parallel: No
+         File System: ext3
+        System State: runlevel 3
+       Base Pointers: 64-bit
+       Peak Pointers: Not Applicable
+      Other Software: None
+
+
+                                General Notes
+                                -------------
+     PORTABILITY=-DSPEC_CPU_LP64 is applied to all benchmarks in base.
+     400.perlbench: -DSPEC_CPU_LINUX_X64
+     462.libquantum: -DSPEC_CPU_LINUX
+     C base flags: -O3 -march=native
+     C++ base flags: -O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations
+     Fortran base flags: -O3 -march=native -std=legacy
+
+                              Base Unknown Flags
+                              ------------------
+      401.bzip2: "/usr/bin/gcc" (in CC) "/usr/bin/gcc" (in LD)
+                 "-O3 -march=native" (in COPTIMIZE)
+
+        403.gcc: "/usr/bin/gcc" (in CC) "/usr/bin/gcc" (in LD)
+                 "-O3 -march=native" (in COPTIMIZE)
+
+        429.mcf: "/usr/bin/gcc" (in CC) "/usr/bin/gcc" (in LD)
+                 "-O3 -march=native" (in COPTIMIZE)
+
+      445.gobmk: "/usr/bin/gcc" (in CC) "/usr/bin/gcc" (in LD)
+                 "-O3 -march=native" (in COPTIMIZE)
+
+      456.hmmer: "/usr/bin/gcc" (in CC) "/usr/bin/gcc" (in LD)
+                 "-O3 -march=native" (in COPTIMIZE)
+
+      458.sjeng: "/usr/bin/gcc" (in CC) "/usr/bin/gcc" (in LD)
+                 "-O3 -march=native" (in COPTIMIZE)
+
+ 462.libquantum: "/usr/bin/gcc" (in CC) "/usr/bin/gcc" (in LD)
+                 "-O3 -march=native" (in COPTIMIZE)
+
+    464.h264ref: "/usr/bin/gcc" (in CC) "/usr/bin/gcc" (in LD)
+                 "-O3 -march=native" (in COPTIMIZE)
+
+    471.omnetpp: "/usr/bin/g++" (in CXX) "/usr/bin/g++" (in LD)
+                 "-O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations" (in CXXOPTIMIZE)
+
+      473.astar: "/usr/bin/g++" (in CXX) "/usr/bin/g++" (in LD)
+                 "-O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations" (in CXXOPTIMIZE)
+
+  483.xalancbmk: "/usr/bin/g++" (in CXX) "/usr/bin/g++" (in LD)
+                 "-include cstdlib -include cstring" (in CXXPORTABILITY)
+                 "-O3 -march=native -fpermissive -Wdeprecated -Wdeprecated-declarations" (in CXXOPTIMIZE)
+
+
+    SPEC and SPECint are registered trademarks of the Standard Performance
+    Evaluation Corporation.  All other brand and product names appearing
+    in this result are trademarks or registered trademarks of their
+    respective holders.
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 471.omnetpp base did not have enough runs!                                 #
+# 456.hmmer base did not have enough runs!                                   #
+# 445.gobmk base did not have enough runs!                                   #
+# 458.sjeng base did not have enough runs!                                   #
+# 429.mcf base did not have enough runs!                                     #
+# 473.astar base did not have enough runs!                                   #
+# 483.xalancbmk base did not have enough runs!                               #
+# 400.perlbench base did not have enough runs!                               #
+# 464.h264ref base did not have enough runs!                                 #
+# 462.libquantum base did not have enough runs!                              #
+# 401.bzip2 base did not have enough runs!                                   #
+# 403.gcc base did not have enough runs!                                     #
+# Input set must be 'ref' for a valid run (set to 'train' for this run)      #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/auto/cpu2006/Docs/runspec.html#flagsurl           #
+# for information about how to get rid of this error.                        #
+# Error 400.perlbench: Error with make!                                      #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+-----------------------------------------------------------------------------
+For questions about this result, please contact the tester.
+For other inquiries, please contact webmaster@spec.org.
+Copyright 2006 Standard Performance Evaluation Corporation
+Generated on Fri Jan 17 18:43:42 2020 by SPEC CPU2006 ASCII formatter v4626
