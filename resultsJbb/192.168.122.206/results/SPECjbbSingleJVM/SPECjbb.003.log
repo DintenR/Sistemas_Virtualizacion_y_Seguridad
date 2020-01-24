@@ -1,0 +1,71 @@
+Jan 24, 2020 12:09:47 PM spec.jbb.JBBmain main -> INFO: Logging started
+Jan 24, 2020 12:09:47 PM spec.jbb.Company primeWithDummyData -> INFO: Loading Warehouse 1...
+Jan 24, 2020 12:09:47 PM spec.jbb.JBBmain DoARun -> INFO: Start User Threads
+Jan 24, 2020 12:09:47 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 1
+Jan 24, 2020 12:09:47 PM spec.jbb.Company displayResultTotals -> INFO: Timing Measurement began Fri Jan 24 12:09:47 UTC 2020 for 0.5 minutes
+Jan 24, 2020 12:10:17 PM spec.jbb.Company displayResultTotals -> INFO: Timing Measurement ended Fri Jan 24 12:10:17 UTC 2020
+Jan 24, 2020 12:10:17 PM spec.jbb.Company primeWithDummyData -> INFO: Loading Warehouse 2...
+Jan 24, 2020 12:10:18 PM spec.jbb.JBBmain DoARun -> INFO: Start User Threads
+Jan 24, 2020 12:10:18 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 1
+Jan 24, 2020 12:10:18 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 2
+Jan 24, 2020 12:10:18 PM spec.jbb.Company displayResultTotals -> INFO: Timing Measurement began Fri Jan 24 12:10:18 UTC 2020 for 0.5 minutes
+Jan 24, 2020 12:10:48 PM spec.jbb.Company displayResultTotals -> INFO: Timing Measurement ended Fri Jan 24 12:10:48 UTC 2020
+Jan 24, 2020 12:10:48 PM spec.jbb.Company primeWithDummyData -> INFO: Loading Warehouse 3...
+Jan 24, 2020 12:10:48 PM spec.jbb.JBBmain DoARun -> INFO: Start User Threads
+Jan 24, 2020 12:10:48 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 1
+Jan 24, 2020 12:10:48 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 2
+Jan 24, 2020 12:10:48 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 3
+Jan 24, 2020 12:10:48 PM spec.jbb.Company displayResultTotals -> INFO: Timing Measurement began Fri Jan 24 12:10:48 UTC 2020 for 0.5 minutes
+Jan 24, 2020 12:11:18 PM spec.jbb.Company displayResultTotals -> INFO: Timing Measurement ended Fri Jan 24 12:11:18 UTC 2020
+Jan 24, 2020 12:11:18 PM spec.jbb.Company primeWithDummyData -> INFO: Loading Warehouse 4...
+Jan 24, 2020 12:11:18 PM spec.jbb.JBBmain DoARun -> INFO: Start User Threads
+Jan 24, 2020 12:11:18 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 1
+Jan 24, 2020 12:11:18 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 2
+Jan 24, 2020 12:11:18 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 3
+Jan 24, 2020 12:11:18 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 4
+Jan 24, 2020 12:11:18 PM spec.jbb.Company displayResultTotals -> INFO: Timing Measurement began Fri Jan 24 12:11:18 UTC 2020 for 4 minutes
+Jan 24, 2020 12:15:18 PM spec.jbb.Company displayResultTotals -> INFO: Timing Measurement ended Fri Jan 24 12:15:18 UTC 2020
+Jan 24, 2020 12:15:18 PM spec.jbb.Company primeWithDummyData -> INFO: Loading Warehouse 5...
+Jan 24, 2020 12:15:18 PM spec.jbb.JBBmain DoARun -> INFO: Start User Threads
+Jan 24, 2020 12:15:18 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 1
+Jan 24, 2020 12:15:18 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 2
+Jan 24, 2020 12:15:18 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 3
+Jan 24, 2020 12:15:18 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 4
+Jan 24, 2020 12:15:18 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 5
+Jan 24, 2020 12:15:18 PM spec.jbb.Company displayResultTotals -> INFO: Timing Measurement began Fri Jan 24 12:15:18 UTC 2020 for 4 minutes
+Jan 24, 2020 12:19:18 PM spec.jbb.Company displayResultTotals -> INFO: Timing Measurement ended Fri Jan 24 12:19:18 UTC 2020
+Jan 24, 2020 12:19:18 PM spec.jbb.Company primeWithDummyData -> INFO: Loading Warehouse 6...
+Jan 24, 2020 12:19:18 PM spec.jbb.JBBmain DoARun -> INFO: Start User Threads
+Jan 24, 2020 12:19:18 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 1
+Jan 24, 2020 12:19:18 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 2
+Jan 24, 2020 12:19:18 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 3
+Jan 24, 2020 12:19:18 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 4
+Jan 24, 2020 12:19:18 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 5
+Jan 24, 2020 12:19:18 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 6
+Jan 24, 2020 12:19:18 PM spec.jbb.Company displayResultTotals -> INFO: Timing Measurement began Fri Jan 24 12:19:18 UTC 2020 for 4 minutes
+Jan 24, 2020 12:23:18 PM spec.jbb.Company displayResultTotals -> INFO: Timing Measurement ended Fri Jan 24 12:23:18 UTC 2020
+Jan 24, 2020 12:23:19 PM spec.jbb.Company primeWithDummyData -> INFO: Loading Warehouse 7...
+Jan 24, 2020 12:23:19 PM spec.jbb.JBBmain DoARun -> INFO: Start User Threads
+Jan 24, 2020 12:23:19 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 1
+Jan 24, 2020 12:23:19 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 2
+Jan 24, 2020 12:23:19 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 3
+Jan 24, 2020 12:23:19 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 4
+Jan 24, 2020 12:23:19 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 5
+Jan 24, 2020 12:23:19 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 6
+Jan 24, 2020 12:23:19 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 7
+Jan 24, 2020 12:23:19 PM spec.jbb.Company displayResultTotals -> INFO: Timing Measurement began Fri Jan 24 12:23:19 UTC 2020 for 4 minutes
+Jan 24, 2020 12:27:19 PM spec.jbb.Company displayResultTotals -> INFO: Timing Measurement ended Fri Jan 24 12:27:19 UTC 2020
+Jan 24, 2020 12:27:19 PM spec.jbb.Company primeWithDummyData -> INFO: Loading Warehouse 8...
+Jan 24, 2020 12:27:19 PM spec.jbb.JBBmain DoARun -> INFO: Start User Threads
+Jan 24, 2020 12:27:19 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 1
+Jan 24, 2020 12:27:19 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 2
+Jan 24, 2020 12:27:19 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 3
+Jan 24, 2020 12:27:19 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 4
+Jan 24, 2020 12:27:19 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 5
+Jan 24, 2020 12:27:19 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 6
+Jan 24, 2020 12:27:19 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 7
+Jan 24, 2020 12:27:19 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 8
+Jan 24, 2020 12:27:19 PM spec.jbb.Company displayResultTotals -> INFO: Timing Measurement began Fri Jan 24 12:27:19 UTC 2020 for 4 minutes
+Jan 24, 2020 12:31:20 PM spec.jbb.Company displayResultTotals -> INFO: Timing Measurement ended Fri Jan 24 12:31:20 UTC 2020
+Jan 24, 2020 12:31:20 PM spec.jbb.JBBmain callReporter -> INFO: Calling Reporter
+Jan 24, 2020 12:31:20 PM spec.jbb.JBBmain main -> INFO: Logging ended

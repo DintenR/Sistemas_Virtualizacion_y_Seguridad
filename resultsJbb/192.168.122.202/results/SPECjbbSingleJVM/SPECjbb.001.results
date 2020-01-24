@@ -1,0 +1,213 @@
+Opened results/SPECjbbSingleJVM/SPECjbb.001.results
+Opened results/SPECjbbSingleJVM/SPECjbb.001.raw
+
+Licensed Materials - Property of SPEC
+SPECjbb2005
+Copyright (c) 2005 Standard Performance Evaluation Corporation (SPEC),All rights reserved,
+
+Benchmark SPECjbb2005 1.04 now Opening
+
+jar validity is true
+
+
+Checking whether run will be valid
+
+Run will be COMPLIANT
+
+Constructing the company now   Hang....on
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Loading Warehouse 1...
+
+
+Start User Threads
+  started user thread for Warehouse 1
+Timing Measurement began Fri Jan 17 19:19:54 CET 2020 for 0.5 minutes
+Timing Measurement ended Fri Jan 17 19:20:24 CET 2020
+
+
+Calculating results
+
+Minimum transactions by a warehouse = 2967888
+Maximum transactions by a warehouse = 2967888
+Difference (thread spread) = 0 (0%)
+
+===============================================================================
+TOTALS FOR: COMPANY with 1 warehouses                                   
+................. SPECjbb2005 1.04 Results (time in seconds) .................
+                   Count     Total    Min     Max     Avg    Heap Space
+    New Order:   1304085     10.12   0.000   0.032   0.000   total      253.0MB
+      Payment:    899359      3.72   0.000   0.018   0.000    used       80.7MB
+  OrderStatus:     89936      0.48   0.000   0.012   0.000
+     Delivery:     89935      7.07   0.000   0.002   0.000
+  Stock Level:     89936      0.75   0.000   0.002   0.000
+  Cust Report:    494637      6.96   0.000   0.027   0.000
+
+           throughput =      98929.60 bops       
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Loading Warehouse 2...
+
+
+Start User Threads
+  started user thread for Warehouse 1
+  started user thread for Warehouse 2
+Timing Measurement began Fri Jan 17 19:20:24 CET 2020 for 0.5 minutes
+Timing Measurement ended Fri Jan 17 19:20:54 CET 2020
+
+
+Calculating results
+
+Minimum transactions by a warehouse = 2608700
+Maximum transactions by a warehouse = 2698326
+Difference (thread spread) = 89626 (3.32%)
+
+===============================================================================
+TOTALS FOR: COMPANY with 2 warehouses                                   
+................. SPECjbb2005 1.04 Results (time in seconds) .................
+                   Count     Total    Min     Max     Avg    Heap Space
+    New Order:   2331602     20.38   0.000   0.090   0.000   total      251.0MB
+      Payment:   1608189      7.74   0.000   0.004   0.000    used      161.4MB
+  OrderStatus:    160819      1.09   0.000   0.003   0.000
+     Delivery:    160819     14.74   0.000   0.006   0.000
+  Stock Level:    160819      1.45   0.000   0.003   0.000
+  Cust Report:    884778     12.93   0.000   0.022   0.000
+
+           throughput =     176900.87 bops       
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Loading Warehouse 3...
+
+
+Start User Threads
+  started user thread for Warehouse 1
+  started user thread for Warehouse 2
+  started user thread for Warehouse 3
+Timing Measurement began Fri Jan 17 19:20:54 CET 2020 for 0.5 minutes
+Timing Measurement ended Fri Jan 17 19:21:24 CET 2020
+
+
+Calculating results
+
+Minimum transactions by a warehouse = 2049194
+Maximum transactions by a warehouse = 2135075
+Difference (thread spread) = 85881 (4.02%)
+
+===============================================================================
+TOTALS FOR: COMPANY with 3 warehouses                                   
+................. SPECjbb2005 1.04 Results (time in seconds) .................
+                   Count     Total    Min     Max     Avg    Heap Space
+    New Order:   2774728     27.75   0.000   0.063   0.000   total      249.0MB
+      Payment:   1913109     10.46   0.000   0.063   0.000    used      185.9MB
+  OrderStatus:    191313      1.50   0.000   0.008   0.000
+     Delivery:    191312     28.77   0.000   0.057   0.000
+  Stock Level:    191312      2.30   0.000   0.005   0.000
+  Cust Report:   1051495     17.38   0.000   0.063   0.000
+
+           throughput =     210435.29 bops       
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Loading Warehouse 4...
+
+
+Start User Threads
+  started user thread for Warehouse 1
+  started user thread for Warehouse 2
+  started user thread for Warehouse 3
+  started user thread for Warehouse 4
+Timing Measurement began Fri Jan 17 19:21:24 CET 2020 for 4 minutes
+Timing Measurement ended Fri Jan 17 19:25:24 CET 2020
+
+
+Calculating results
+
+Minimum transactions by a warehouse = 12366241
+Maximum transactions by a warehouse = 13197385
+Difference (thread spread) = 831144 (6.3%)
+
+===============================================================================
+TOTALS FOR: COMPANY with 4 warehouses                                   
+................. SPECjbb2005 1.04 Results (time in seconds) .................
+                   Count     Total    Min     Max     Avg    Heap Space
+    New Order:  22417035    273.53   0.000   0.123   0.000   total      248.0MB
+      Payment:  15459812     99.57   0.000   0.123   0.000    used      174.9MB
+  OrderStatus:   1545981     15.18   0.000   0.074   0.000
+     Delivery:   1545979    361.54   0.000   0.123   0.000
+  Stock Level:   1545980     27.03   0.000   0.076   0.000
+  Cust Report:   8502585    165.97   0.000   0.123   0.000
+
+           throughput =     212572.38 bops       
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Loading Warehouse 5...
+
+
+Start User Threads
+  started user thread for Warehouse 1
+  started user thread for Warehouse 2
+  started user thread for Warehouse 3
+  started user thread for Warehouse 4
+  started user thread for Warehouse 5
+Timing Measurement began Fri Jan 17 19:25:24 CET 2020 for 4 minutes
+Timing Measurement ended Fri Jan 17 19:29:24 CET 2020
+
+
+Calculating results
+
+Minimum transactions by a warehouse = 9594024
+Maximum transactions by a warehouse = 10419102
+Difference (thread spread) = 825078 (7.92%)
+
+===============================================================================
+TOTALS FOR: COMPANY with 5 warehouses                                   
+................. SPECjbb2005 1.04 Results (time in seconds) .................
+                   Count     Total    Min     Max     Avg    Heap Space
+    New Order:  21804495    347.65   0.000   0.135   0.000   total      243.0MB
+      Payment:  15037478    130.69   0.000   0.135   0.000    used      194.9MB
+  OrderStatus:   1503747     19.22   0.000   0.078   0.000
+     Delivery:   1503748    441.43   0.000   0.145   0.000
+  Stock Level:   1503747     33.09   0.000   0.095   0.000
+  Cust Report:   8270453    207.22   0.000   0.146   0.000
+
+           throughput =     206765.28 bops       
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Loading Warehouse 6...
+
+
+Start User Threads
+  started user thread for Warehouse 1
+  started user thread for Warehouse 2
+  started user thread for Warehouse 3
+  started user thread for Warehouse 4
+  started user thread for Warehouse 5
+  started user thread for Warehouse 6
+Timing Measurement began Fri Jan 17 19:29:24 CET 2020 for 4 minutes
+Timing Measurement ended Fri Jan 17 19:33:24 CET 2020
+
+
+Calculating results
+
+Minimum transactions by a warehouse = 5716606
+Maximum transactions by a warehouse = 6369273
+Difference (thread spread) = 652667 (10.25%)
+
+===============================================================================
+TOTALS FOR: COMPANY with 6 warehouses                                   
+................. SPECjbb2005 1.04 Results (time in seconds) .................
+                   Count     Total    Min     Max     Avg    Heap Space
+    New Order:  16013300    427.20   0.000   0.138   0.000   total      238.5MB
+      Payment:  11042718    169.07   0.000   0.148   0.000    used      192.6MB
+  OrderStatus:   1104272     23.97   0.000   0.122   0.000
+     Delivery:   1104270    515.08   0.000   0.136   0.000
+  Stock Level:   1104272     38.79   0.000   0.120   0.000
+  Cust Report:   6072142    243.23   0.000   0.132   0.000
+
+           throughput =     151837.39 bops       

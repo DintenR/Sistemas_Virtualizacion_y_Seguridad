@@ -1,0 +1,119 @@
+SPECjbb2005                     23473 bops
+
+Neptune Ocean King Systems TurboBlaster 2
+Phobos Ltd Phobic Java 1.5.0
+SPEC license # 50,  Tested by: Neptune Corp.,  Test date: Jan 24, 2020
+
+Validity
+No errors.  Valid run.
+
+                   SPEC scores                                                                                        
+     Warehouses               Thrput
+            * 1                24499
+            * 2                22446
+              3                23677
+              4                23719
+              5                18363
+              6                19205
+              7                20425
+              8                19598
+                                    
+Throughput      23473               
+
+HARDWARE                                            | SOFTWARE                                                         
+Vendor                    Neptune Ocean King        | Vendor               Phobos Ltd                                  
+                          Systems                   | Vendor URL           http://www.phobos.uk.co                     
+Vendor URL                http://www.neptune.com    | JVM Version          Phobic Java 1.5.0                           
+Model                     TurboBlaster 2            | Command Line         java -ms256m -mx1024m -spec.jbb.JBBmain     
+Processor                 ARM                       |                      -propfile Test1                             
+MHz                       300                       | Initial Heap Mem     256                                         
+# of Chips                1                         | (MB)                                     
+# of Cores                2                         | Max Heap Mem (MB)    1024                                        
+# of Cores/Chip           2                         | JVM addressing bits  32                                          
+HW Threading Enabled      No                        | JVM CLASSPATH        ./jbb.jar:./chek.jar:./jbb.jar:./check.jar: 
+Procs avail to Java       1                         | JVM BOOTCLASSPATH    /root/jdk1.5.0_22/jre/lib/amd64/server:/root
+Memory (MB)               4096                      |                      /jdk1.5.0_22/jre/lib/amd64:/root/jdk1.5.0_22
+Memory Details            punch cards               |                      /jre/../lib/amd64                           
+L1 Cache                  4KBI+4KBD                 | OS Version           Phobos DOS V33.333 patch-level 78           
+L2 Cache                  64KB(I+D) off chip        | Other S/W            Neptune JIT Accelerator 2.3b6               
+Other Cache                                         |                                                                  
+Filesystem                UFS                       | AOT Compilation Details                                          
+Disks                     1 x 4GB SCSI (classes) 1  | <p>precompiled code                                              
+                          x 12GB SCSI (OS)          | for<ul><li>Deliverytransaction.process</li><li>TransactionManager
+Other H/W                 AT&T Rotary Telephone     | .go</li></ul>loaded at startup</p>                               
+                                                    |                                                                  
+                                                    | TUNING AND NOTES                                                 
+                                                    | Operating system                                                 
+                                                    | tunings<UL><LI>bufcache=1024</LI><LI>maxthreads_per_user=65536</L
+                                                    | I></UL>                                                          
+                                                    | "Notes here"                                                     
+                                                    |                                                                  
+                                                                                                                       
+TEST INFORMATION                     
+Tested by          Neptune Corp.     
+SPEC License       50                
+Test Location      Santa Monica, CA  
+Test Date          Jan 24, 2020      
+JVM available      Jan-2000          
+H/w available      Jan-2000          
+OS available       May-2000          
+Other s/w          Feb-2000          
+available                            
+
+* Details of Runs
+
+  Wh.   Score     Tot.     Used  Thread elapsed Trans.           Count Resp. Time (s)
+                  Heap     Heap  spread  > 120s Type                   total max     
+                  (MB)     (MB)%       %                                             
+    1   24499      495      156   <0.01   <0.01 new_order      2583991 80.0  .082    
+                                                payment        1781763 24.9  .067    
+                                                order_status    178176 3.50  .061    
+                                                delivery        178176 76.4  .108    
+                                                stock_level     178176 5.34  .066    
+                                                cust_report     979531 39.2  .086    
+    2   22446      495      109    .530   <0.01 new_order      2367322 164   .175    
+                                                payment        1632457 51.4  .175    
+                                                order_status    163246 6.61  .182    
+                                                delivery        163246 148   .165    
+                                                stock_level     163245 10.1  .186    
+                                                cust_report     897593 78.7  .175    
+    3   23677      495      179    1.46   <0.01 new_order      2496944 253   .245    
+                                                payment        1721965 78.7  .230    
+                                                order_status    172196 10.8  .191    
+                                                delivery        172197 212   .252    
+                                                stock_level     172197 14.7  .185    
+                                                cust_report     946997 117   .237    
+    4   23719      495      322    1.16   <0.01 new_order      2501361 341   .487    
+                                                payment        1725049 111   .459    
+                                                order_status    172505 14.1  .167    
+                                                delivery        172503 271   .365    
+                                                stock_level     172504 20.9  .249    
+                                                cust_report     948739 154   .442    
+    5   18363      495      266    2.40   <0.01 new_order      1936324 446   .558    
+                                                payment        1335526 148   .428    
+                                                order_status    133553 20.1  .422    
+                                                delivery        133553 307   .572    
+                                                stock_level     133552 26.5  .484    
+                                                cust_report     734728 197   .521    
+    6   19205      495      262    1.13    .018 new_order      2025302 595   .559    
+                                                payment        1396989 198   .669    
+                                                order_status    139697 22.3  .417    
+                                                delivery        139700 269   .662    
+                                                stock_level     139699 31.2  .611    
+                                                cust_report     768679 260   .561    
+    7   20425      495      328    .533   <0.01 new_order      2153963 696   .289    
+                                                payment        1485486 237   .280    
+                                                order_status    148546 25.3  .260    
+                                                delivery        148549 294   .281    
+                                                stock_level     148549 31.1  .258    
+                                                cust_report     817000 307   .281    
+    8   19598      495      391    1.01   <0.01 new_order      2066658 801   .337    
+                                                payment        1425316 264   .324    
+                                                order_status    142532 30.6  .292    
+                                                delivery        142531 323   .314    
+                                                stock_level     142532 35.2  .288    
+                                                cust_report     783988 360   .332    
+
+SPECjbb2005 Version: [SPECjbb2005 1.04, June 13, 2005]
+Reporting page (C) Copyright SPEC, 2005. All rights reserved
+
