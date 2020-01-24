@@ -1,0 +1,73 @@
+runspec started at Thu Jan 16 17:26:37 2020 on "prueba"
+runspec is: /root/SPECcpu/SPECcpu2006/bin/runspec
+runspec: runspec --config=ricardo.cfg --size=ref --noreportable --tune=base --iterations=1 calculix
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/root/SPECcpu/SPECcpu2006/config/ricardo.cfg'
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = amd64-m64-gcc41-nn
+Size      = ref
+Machine   = default
+benchmarks= 454.calculix
+outputs   = raw,ASCII
+username  = root
+Benchmarks selected: 454.calculix
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 454.calculix ref base amd64-m64-gcc41-nn default
+
+
+Parsing Flags
+  Looking at 454.calculix base amd64-m64-gcc41-nn default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 454.calculix ref base amd64-m64-gcc41-nn default: created (run_base_ref_amd64-m64-gcc41-nn.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 454.calculix ref base amd64-m64-gcc41-nn default
+Commands to run: 
+    -C /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/454.calculix/run/run_base_ref_amd64-m64-gcc41-nn.0000
+    -o hyperviscoplastic.log -e hyperviscoplastic.err ../run_base_ref_amd64-m64-gcc41-nn.0000/calculix_base.amd64-m64-gcc41-nn -i  hyperviscoplastic
+Specinvoke: /root/SPECcpu/SPECcpu2006/bin/specinvoke -d /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/454.calculix/run/run_base_ref_amd64-m64-gcc41-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/SPECcpu/SPECcpu2006/bin/specinvoke -d /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/454.calculix/run/run_base_ref_amd64-m64-gcc41-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jan 16 17:26:40 2020 (1579195600)
+Stop command: Thu Jan 16 17:35:57 2020 (1579196157)
+Elapsed time for command: 00:09:17 (557)
+Workload elapsed time (0:1) = 548.256789 seconds
+copy 0 finished @ Thu Jan 16 17:35:49 2020.  Total elapsed time: 548.256789
+comparing files in '/root/SPECcpu/SPECcpu2006/benchspec/CPU2006/454.calculix/run/run_base_ref_amd64-m64-gcc41-nn.0000'
+comparing 'SPECtestformatmodifier_z.txt' with abstol=1e-09, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=1e-09, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'hyperviscoplastic.dat' with abstol=1e-09, binary=, calctol=0, cw=, floatcompare=, ignorecase=, obiwan=1, reltol=1e-09, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/SPECcpu/SPECcpu2006/bin/specinvoke -E -d /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/454.calculix/run/run_base_ref_amd64-m64-gcc41-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/SPECcpu/SPECcpu2006/bin/specinvoke -E -d /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/454.calculix/run/run_base_ref_amd64-m64-gcc41-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Thu Jan 16 17:35:57 2020 (1579196157)
+Stop command: Thu Jan 16 17:35:59 2020 (1579196159)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Thu Jan 16 17:26:40 2020 (1579195600)
+  Stop:     Thu Jan 16 17:35:57 2020 (1579196157)
+  Elapsed:  00:09:17 (557)
+  Reported: 548 256841000 548.256841
+ Success 454.calculix base ref ratio=15.05, runtime=548.256841
+Success: 1x454.calculix
+Producing Reports
+mach: default
+  ext: amd64-m64-gcc41-nn
+    size: ref
+      set: int
+      set: fp
+           Flag reduction took 0.0006011s
+        format: raw -> /root/SPECcpu/SPECcpu2006/result/CFP2006.008.rsf
+        format: ASCII -> /root/SPECcpu/SPECcpu2006/result/CFP2006.008.txt
+
+The log for this run is in /root/SPECcpu/SPECcpu2006/result/CPU2006.008.log
+
+runspec finished at Thu Jan 16 17:35:59 2020; 562 total seconds elapsed

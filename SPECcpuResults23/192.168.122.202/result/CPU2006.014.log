@@ -1,0 +1,58 @@
+runspec started at Thu Jan 23 19:00:20 2020 on "prueba"
+runspec is: /root/SPECcpu/SPECcpu2006/bin/runspec
+runspec: runspec --config=ricardo.cfg --tune=base --size=ref --iterations=1 --noreportable h264ref
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/root/SPECcpu/SPECcpu2006/config/ricardo.cfg'
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = amd64-m64-gcc41-nn
+Size      = ref
+Machine   = default
+benchmarks= 464.h264ref
+outputs   = raw,ASCII
+username  = root
+Benchmarks selected: 464.h264ref
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 464.h264ref ref base amd64-m64-gcc41-nn default
+
+
+Parsing Flags
+  Looking at 464.h264ref base amd64-m64-gcc41-nn default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 464.h264ref ref base amd64-m64-gcc41-nn default: existing (run_base_ref_amd64-m64-gcc41-nn.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 464.h264ref ref base amd64-m64-gcc41-nn default
+Commands to run: 
+    -C /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_amd64-m64-gcc41-nn.0000
+    -o foreman_ref_baseline_encodelog.out -e foreman_ref_baseline_encodelog.err ../run_base_ref_amd64-m64-gcc41-nn.0000/h264ref_base.amd64-m64-gcc41-nn -d foreman_ref_encoder_baseline.cfg
+    -o foreman_ref_main_encodelog.out -e foreman_ref_main_encodelog.err ../run_base_ref_amd64-m64-gcc41-nn.0000/h264ref_base.amd64-m64-gcc41-nn -d foreman_ref_encoder_main.cfg
+    -o sss_main_encodelog.out -e sss_main_encodelog.err ../run_base_ref_amd64-m64-gcc41-nn.0000/h264ref_base.amd64-m64-gcc41-nn -d sss_encoder_main.cfg
+Specinvoke: /root/SPECcpu/SPECcpu2006/bin/specinvoke -d /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_amd64-m64-gcc41-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/SPECcpu/SPECcpu2006/bin/specinvoke -d /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_amd64-m64-gcc41-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Thu Jan 23 19:00:31 2020 (1579806031)
+Stop command: Thu Jan 23 19:09:35 2020 (1579806575)
+Elapsed time for command: 00:09:04 (544)
+Workload elapsed time (0:1) = 45.873966 seconds
+Workload elapsed time (0:2) = 33.116384 seconds
+Workload elapsed time (0:3) = 457.774525 seconds
+copy 0 finished @ Thu Jan 23 19:09:27 2020.  Total elapsed time: 536.764875
+comparing files in '/root/SPECcpu/SPECcpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_amd64-m64-gcc41-nn.0000'
+comparing 'foreman_ref_baseline_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_baseline_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_ref_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'sss_main_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/SPECcpu/SPECcpu2006/bin/specinvoke -E -d /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_amd64-m64-gcc41-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/SPECcpu/SPECcpu2006/bin/specinvoke -E -d /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/464.h264ref/run/run_base_ref_amd64-m64-gcc41-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'

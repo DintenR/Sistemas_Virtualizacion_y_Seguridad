@@ -1,0 +1,15 @@
+runspec started at Thu Jan 16 16:59:38 2020 on "prueba"
+runspec is: /root/SPECcpu/SPECcpu2006/bin/runspec
+runspec: runspec --config=ricardo.cfg --action=build --tune=base h246
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/root/SPECcpu/SPECcpu2006/config/ricardo.cfg'
+Can't find benchmark 'h246'
+Can't parse 'h246' into a benchmark
+
+No benchmarks specified!
+
+The log for this run is in /root/SPECcpu/SPECcpu2006/result/CPU2006.002.log
+
+runspec finished at Thu Jan 16 16:59:42 2020; 4 total seconds elapsed

@@ -1,0 +1,73 @@
+runspec started at Tue Jan 21 16:25:02 2020 on "prueba"
+runspec is: /root/SPECcpu/SPECcpu2006/bin/runspec
+runspec: runspec --config=ricardo.cfg --size=test --noreportable --tune=base --iterations=1 h264ref
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/root/SPECcpu/SPECcpu2006/config/ricardo.cfg'
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = amd64-m64-gcc41-nn
+Size      = test
+Machine   = default
+benchmarks= 464.h264ref
+outputs   = raw,ASCII
+username  = root
+Benchmarks selected: 464.h264ref
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 464.h264ref test base amd64-m64-gcc41-nn default
+
+
+Parsing Flags
+  Looking at 464.h264ref base amd64-m64-gcc41-nn default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 464.h264ref test base amd64-m64-gcc41-nn default: existing (run_base_test_amd64-m64-gcc41-nn.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 464.h264ref test base amd64-m64-gcc41-nn default
+Commands to run: 
+    -C /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/464.h264ref/run/run_base_test_amd64-m64-gcc41-nn.0000
+    -o foreman_test_baseline_encodelog.out -e foreman_test_baseline_encodelog.err ../run_base_test_amd64-m64-gcc41-nn.0000/h264ref_base.amd64-m64-gcc41-nn -d foreman_test_encoder_baseline.cfg
+Specinvoke: /root/SPECcpu/SPECcpu2006/bin/specinvoke -d /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/464.h264ref/run/run_base_test_amd64-m64-gcc41-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+Issuing command '/root/SPECcpu/SPECcpu2006/bin/specinvoke -d /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/464.h264ref/run/run_base_test_amd64-m64-gcc41-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C'
+Start command: Tue Jan 21 16:25:08 2020 (1579623908)
+Stop command: Tue Jan 21 16:25:24 2020 (1579623924)
+Elapsed time for command: 00:00:16 (16)
+Workload elapsed time (0:1) = 7.847029 seconds
+copy 0 finished @ Tue Jan 21 16:25:16 2020.  Total elapsed time: 7.847029
+comparing files in '/root/SPECcpu/SPECcpu2006/benchspec/CPU2006/464.h264ref/run/run_base_test_amd64-m64-gcc41-nn.0000'
+comparing 'foreman_test_baseline_encodelog.out' with abstol=, binary=, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'foreman_test_baseline_leakybucketparam.cfg' with abstol=, binary=1, calctol=0, cw=1, floatcompare=1, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /root/SPECcpu/SPECcpu2006/bin/specinvoke -E -d /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/464.h264ref/run/run_base_test_amd64-m64-gcc41-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Issuing command '/root/SPECcpu/SPECcpu2006/bin/specinvoke -E -d /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/464.h264ref/run/run_base_test_amd64-m64-gcc41-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd'
+Start command: Tue Jan 21 16:25:24 2020 (1579623924)
+Stop command: Tue Jan 21 16:25:26 2020 (1579623926)
+Elapsed time for command: 00:00:02 (2)
+Benchmark Times:
+  Start:    Tue Jan 21 16:25:08 2020 (1579623908)
+  Stop:     Tue Jan 21 16:25:24 2020 (1579623924)
+  Elapsed:  00:00:16 (16)
+  Reported: 7 847108000 7.847108
+ Success 464.h264ref base test ratio=-0.00, runtime=7.847108
+Success: 1x464.h264ref
+Producing Reports
+mach: default
+  ext: amd64-m64-gcc41-nn
+    size: test
+      set: int
+           Flag reduction took 0.0006309s
+        format: raw -> /root/SPECcpu/SPECcpu2006/result/CINT2006.011.test.rsf
+        format: ASCII -> /root/SPECcpu/SPECcpu2006/result/CINT2006.011.test.txt
+      set: fp
+
+The log for this run is in /root/SPECcpu/SPECcpu2006/result/CPU2006.011.log
+
+runspec finished at Tue Jan 21 16:25:26 2020; 24 total seconds elapsed

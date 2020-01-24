@@ -1,0 +1,355 @@
+runspec started at Thu Jan 16 17:00:59 2020 on "prueba"
+runspec is: /root/SPECcpu/SPECcpu2006/bin/runspec
+runspec: runspec --config=ricardo.cfg --action=build --tune=base h264ref
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/root/SPECcpu/SPECcpu2006/config/ricardo.cfg'
+Loading "http://www.spec.org/auto/cpu2006/current_version" for version check: OK
+
+NOTICE: There is a newer version of the suite available from SPEC.
+  Version 1.200 was released on Wed Aug 17 01:10:33 2011
+
+                       ----------------------------------
+                       The run will continue in 5 seconds
+                       ----------------------------------
+Verbosity = 5
+Action    = build
+Tune      = base
+Ext       = amd64-m64-gcc41-nn
+Size      = ref
+Machine   = default
+benchmarks= 464.h264ref
+outputs   = raw,ASCII
+username  = root
+Benchmarks selected: 464.h264ref
+Compiling Binaries
+
+------------------------------------------------------------------------
+When checking options for /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/464.h264ref/exe/h264ref_base.amd64-m64-gcc41-nn, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  Building 464.h264ref ref base amd64-m64-gcc41-nn default: (build_base_amd64-m64-gcc41-nn.0000)
+Wrote to makefile '/root/SPECcpu/SPECcpu2006/benchspec/CPU2006/464.h264ref/run/build_base_amd64-m64-gcc41-nn.0000/Makefile.deps':
+
+# These are the build dependencies
+
+# End dependencies
+Wrote to makefile '/root/SPECcpu/SPECcpu2006/benchspec/CPU2006/464.h264ref/run/build_base_amd64-m64-gcc41-nn.0000/Makefile.spec':
+TUNE=base
+EXT=amd64-m64-gcc41-nn
+NUMBER=464
+NAME=h264ref
+SOURCES= annexb.c biariencode.c block.c cabac.c configfile.c context_ini.c \
+	 decoder.c explicit_gop.c fast_me.c filehandle.c fmo.c header.c image.c \
+	 intrarefresh.c leaky_bucket.c lencod.c loopFilter.c macroblock.c \
+	 mb_access.c mbuffer.c memalloc.c mv-search.c nal.c nalu.c nalucommon.c \
+	 output.c parset.c parsetcommon.c q_matrix.c q_offsets.c ratectl.c \
+	 rdopt.c rdopt_coding_state.c rdpicdecision.c refbuf.c rtp.c sei.c \
+	 slice.c transform8x8.c vlc.c weighted_prediction.c specrand.c
+EXEBASE=h264ref
+NEED_MATH=1
+BENCHLANG=C
+ONESTEP=
+CONESTEP=
+
+CC               = /usr/bin/gcc
+COPTIMIZE        = -O3 -march=native 
+CXX              = /usr/bin/g++
+CXXOPTIMIZE      = -O3 -march=native 
+FC               = /usr/bin/gfortran
+FOPTIMIZE        = -O3 -march=native 
+FPBASE           = yes
+OS               = unix
+PORTABILITY      = -DSPEC_CPU_LP64
+abstol           = 
+action           = build
+allow_extension_override = 0
+backup_config    = 1
+baseexe          = h264ref
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 464.h264ref
+bindir           = exe
+calctol          = 0
+changedmd5       = 0
+check_integrity  = 1
+check_md5        = 1
+check_version    = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = h264ref_base.amd64-m64-gcc41-nn
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 1
+configdir        = config
+configpath       = /root/SPECcpu/SPECcpu2006/config/ricardo.cfg
+copies           = 1
+datadir          = data
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 12345678
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+expid            = 
+ext              = amd64-m64-gcc41-nn
+fake             = 0
+feedback         = 1
+flag_url_base    = http://www.spec.org/auto/cpu2006/flags/
+floatcompare     = 1
+help             = 0
+http_proxy       = 
+http_timeout     = 30
+hw_avail         = Dec-9999
+hw_cpu_char      = 
+hw_cpu_mhz       = 3000
+hw_cpu_name      = AMD Opteron 256
+hw_disk          = SATA
+hw_fpu           = Integrated
+hw_memory        = 2 GB (2 x 1GB DDR333 CL2.5)
+hw_model         = Tyan Thunder KKQS Pro (S4882)
+hw_nchips        = 1
+hw_ncores        = 1
+hw_ncoresperchip = 1
+hw_ncpuorder     = 1 chip
+hw_nthreadspercore = 1
+hw_ocache        = None
+hw_pcache        = 64 KB I + 64 KB D on chip per chip
+hw_scache        = 1 MB I+D on chip per chip
+hw_tcache        = None
+hw_vendor        = Tyan
+ignore_errors    = yes
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+iteration        = -1
+iterations       = 3
+license_num      = 9999
+line_width       = 0
+locking          = 1
+log              = CPU2006
+log_line_width   = 0
+logname          = /root/SPECcpu/SPECcpu2006/result/CPU2006.003.log
+lognum           = 003
+mach             = default
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = h264ref
+nc               = 0
+need_math        = 1
+no_input_handler = close
+no_monitor       = 
+notes0100        =  C base flags: -O2
+notes0110        =  C++ base flags: -O2
+notes0120        =  Fortran base flags: -O2
+notes25          =  PORTABILITY=-DSPEC_CPU_LP64 is applied to all benchmarks in base.
+notes_wrap_columns = 0
+notes_wrap_indent =     
+num              = 464
+obiwan           = 
+os_exe_ext       = 
+output           = asc
+output_format    = asc
+output_root      = 
+outputdir        = output
+path             = /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/464.h264ref
+plain_train      = 1
+prefix           = 
+prepared_by      = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+realuser         = your name here
+rebuild          = 0
+reftime          = reftime
+reltol           = 
+reportable       = 1
+resultdir        = result
+review           = 0
+run              = all
+runspec          = /root/SPECcpu/SPECcpu2006/bin/runspec --config=ricardo.cfg --action=build --tune=base h264ref
+safe_eval        = 1
+section_specifier_fatal = 1
+sendmail         = /usr/sbin/sendmail
+setpgrp_enabled  = 1
+setprocgroup     = 1
+shrate           = 0
+sigint           = 2
+size             = ref
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specmake         = Makefile.YYYtArGeTYYYspec
+specrun          = specinvoke
+speed            = 0
+srcalt           = 
+srcdir           = src
+stagger          = 10
+strict_rundir_verify = 1
+subworkdir       = work
+sw_auto_parallel = No
+sw_avail         = Dec-9999
+sw_base_ptrsize  = 64-bit
+sw_compiler      = gcc , g++ & gfortran 4.1.0 (for AMD64)
+sw_file          = ext3
+sw_os            = SUSE SLES9 (for AMD64)
+sw_other         = None
+sw_peak_ptrsize  = Not Applicable
+sw_state         = runlevel 3
+sysinfo_program  = 
+table            = 1
+teeout           = yes
+teerunout        = yes
+test_date        = Dec-9999
+test_sponsor     = Turbo Computers
+tester           = 
+top              = /root/SPECcpu/SPECcpu2006
+tune             = base
+uid              = 0
+unbuffer         = 1
+update-flags     = 0
+use_submit_for_speed = 0
+username         = root
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+version_url      = http://www.spec.org/auto/cpu2006/current_version
+workdir          = run
+worklist         = list
+  Compile for '464.h264ref' started at: Thu Jan 16 17:01:08 2020 (1579194068)
+Issuing make.clean command 'specmake clean'
+Start make.clean command: Thu Jan 16 17:01:08 2020 (1579194068)
+rm -rf h264ref h264ref.exe *.o  *.fppized.f*
+find . \( -name \*.o -o -name '*.fppized.f*' \) -print | xargs rm -rf
+rm -rf core 
+Stop make.clean command: Thu Jan 16 17:01:09 2020 (1579194069)
+Elapsed time for make.clean command: 00:00:01 (1)
+Issuing make command 'specmake build'
+Start make command: Thu Jan 16 17:01:09 2020 (1579194069)
+/usr/bin/gcc -c -o annexb.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         annexb.c
+/usr/bin/gcc -c -o biariencode.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         biariencode.c
+/usr/bin/gcc -c -o block.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         block.c
+/usr/bin/gcc -c -o cabac.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         cabac.c
+/usr/bin/gcc -c -o configfile.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         configfile.c
+/usr/bin/gcc -c -o context_ini.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         context_ini.c
+/usr/bin/gcc -c -o decoder.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         decoder.c
+/usr/bin/gcc -c -o explicit_gop.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         explicit_gop.c
+/usr/bin/gcc -c -o fast_me.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         fast_me.c
+/usr/bin/gcc -c -o filehandle.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         filehandle.c
+/usr/bin/gcc -c -o fmo.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         fmo.c
+/usr/bin/gcc -c -o header.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         header.c
+/usr/bin/gcc -c -o image.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         image.c
+/usr/bin/gcc -c -o intrarefresh.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         intrarefresh.c
+/usr/bin/gcc -c -o leaky_bucket.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         leaky_bucket.c
+/usr/bin/gcc -c -o lencod.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         lencod.c
+/usr/bin/gcc -c -o loopFilter.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         loopFilter.c
+/usr/bin/gcc -c -o macroblock.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         macroblock.c
+/usr/bin/gcc -c -o mb_access.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         mb_access.c
+/usr/bin/gcc -c -o mbuffer.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         mbuffer.c
+/usr/bin/gcc -c -o memalloc.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         memalloc.c
+/usr/bin/gcc -c -o mv-search.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         mv-search.c
+mv-search.c: In function 'SATD':
+mv-search.c:1093:29: warning: iteration 15 invokes undefined behavior [-Waggressive-loop-optimizations]
+     for (dd=d[k=0]; k<16; dd=d[++k])
+                           ~~^~~~~~~
+mv-search.c:1093:5: note: within this loop
+     for (dd=d[k=0]; k<16; dd=d[++k])
+     ^~~
+/usr/bin/gcc -c -o nal.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         nal.c
+/usr/bin/gcc -c -o nalu.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         nalu.c
+/usr/bin/gcc -c -o nalucommon.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         nalucommon.c
+/usr/bin/gcc -c -o output.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         output.c
+/usr/bin/gcc -c -o parset.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         parset.c
+/usr/bin/gcc -c -o parsetcommon.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         parsetcommon.c
+/usr/bin/gcc -c -o q_matrix.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         q_matrix.c
+q_matrix.c: In function 'Init_QMatrix':
+q_matrix.c:377:15: warning: comparison between pointer and zero character constant [-Wpointer-compare]
+     if(content!='\0')
+               ^~
+q_matrix.c:377:8: note: did you mean to dereference the pointer?
+     if(content!='\0')
+        ^
+/usr/bin/gcc -c -o q_offsets.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         q_offsets.c
+q_offsets.c: In function 'Init_QOffsetMatrix':
+q_offsets.c:302:15: warning: comparison between pointer and zero character constant [-Wpointer-compare]
+     if(content!='\0')
+               ^~
+q_offsets.c:302:8: note: did you mean to dereference the pointer?
+     if(content!='\0')
+        ^
+/usr/bin/gcc -c -o ratectl.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         ratectl.c
+/usr/bin/gcc -c -o rdopt.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         rdopt.c
+/usr/bin/gcc -c -o rdopt_coding_state.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         rdopt_coding_state.c
+/usr/bin/gcc -c -o rdpicdecision.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         rdpicdecision.c
+/usr/bin/gcc -c -o refbuf.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         refbuf.c
+/usr/bin/gcc -c -o rtp.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         rtp.c
+/usr/bin/gcc -c -o sei.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         sei.c
+/usr/bin/gcc -c -o slice.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         slice.c
+/usr/bin/gcc -c -o transform8x8.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         transform8x8.c
+/usr/bin/gcc -c -o vlc.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         vlc.c
+/usr/bin/gcc -c -o weighted_prediction.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         weighted_prediction.c
+/usr/bin/gcc -c -o specrand.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         specrand.c
+/usr/bin/gcc   -O3 -march=native   -DSPEC_CPU_LP64        annexb.o biariencode.o block.o cabac.o configfile.o context_ini.o decoder.o explicit_gop.o fast_me.o filehandle.o fmo.o header.o image.o intrarefresh.o leaky_bucket.o lencod.o loopFilter.o macroblock.o mb_access.o mbuffer.o memalloc.o mv-search.o nal.o nalu.o nalucommon.o output.o parset.o parsetcommon.o q_matrix.o q_offsets.o ratectl.o rdopt.o rdopt_coding_state.o rdpicdecision.o refbuf.o rtp.o sei.o slice.o transform8x8.o vlc.o weighted_prediction.o specrand.o             -lm        -o h264ref
+Stop make command: Thu Jan 16 17:01:29 2020 (1579194089)
+Elapsed time for make command: 00:00:20 (20)
+Issuing options command 'specmake options'
+Start options command: Thu Jan 16 17:01:29 2020 (1579194089)
+COMP: /usr/bin/gcc -c -o options.o -DSPEC_CPU -DNDEBUG    -O3 -march=native        -DSPEC_CPU_LP64         <source>
+C: CC="/usr/bin/gcc"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-O3 -march=native "
+P: PORTABILITY="-DSPEC_CPU_LP64"
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CPORTABILITY=""
+LINK: /usr/bin/gcc   -O3 -march=native   -DSPEC_CPU_LP64        <objects>   -lm        -o options
+C: LD="/usr/bin/gcc"
+O: COPTIMIZE="-O3 -march=native "
+P: PORTABILITY="-DSPEC_CPU_LP64"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+Stop options command: Thu Jan 16 17:01:30 2020 (1579194090)
+Elapsed time for options command: 00:00:01 (1)
+  Compile for '464.h264ref' ended at: Thu Jan 16 17:01:30 2020 (1579194090)
+  Elapsed compile for '464.h264ref': 00:00:22 (22)
+
+Build successes: 464.h264ref(base)
+
+Build Complete
+
+The log for this run is in /root/SPECcpu/SPECcpu2006/result/CPU2006.003.log
+
+runspec finished at Thu Jan 16 17:01:30 2020; 31 total seconds elapsed

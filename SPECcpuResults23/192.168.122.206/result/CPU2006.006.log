@@ -1,0 +1,967 @@
+runspec started at Thu Jan 16 17:23:09 2020 on "prueba"
+runspec is: /root/SPECcpu/SPECcpu2006/bin/runspec
+runspec: runspec --config=ricardo.cfg --action=build --tune=base calculix
+
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/root/SPECcpu/SPECcpu2006/config/ricardo.cfg'
+Loading "http://www.spec.org/auto/cpu2006/current_version" for version check: OK
+
+NOTICE: There is a newer version of the suite available from SPEC.
+  Version 1.200 was released on Wed Aug 17 01:10:33 2011
+
+                       ----------------------------------
+                       The run will continue in 5 seconds
+                       ----------------------------------
+Verbosity = 5
+Action    = build
+Tune      = base
+Ext       = amd64-m64-gcc41-nn
+Size      = ref
+Machine   = default
+benchmarks= 454.calculix
+outputs   = raw,ASCII
+username  = root
+Benchmarks selected: 454.calculix
+Compiling Binaries
+
+------------------------------------------------------------------------
+When checking options for /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/454.calculix/exe/calculix_base.amd64-m64-gcc41-nn, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  Building 454.calculix ref base amd64-m64-gcc41-nn default: (build_base_amd64-m64-gcc41-nn.0000)
+Wrote to makefile '/root/SPECcpu/SPECcpu2006/benchspec/CPU2006/454.calculix/run/build_base_amd64-m64-gcc41-nn.0000/Makefile.deps':
+
+# These are the build dependencies
+
+# End dependencies
+Wrote to makefile '/root/SPECcpu/SPECcpu2006/benchspec/CPU2006/454.calculix/run/build_base_amd64-m64-gcc41-nn.0000/Makefile.spec':
+TUNE=base
+EXT=amd64-m64-gcc41-nn
+NUMBER=454
+NAME=calculix
+SOURCES= CalculiX.c add_pr.f add_sm_ei.f add_sm_st.f allocation.f \
+	 amplitudes.f anisotropic.f beamsections.f bounadd.f boundaries.f \
+	 buckles.f calinput.f cfluxes.f changedepterm.f cloads.f conductivities.f \
+	 controlss.f couptempdisps.f creeps.f cychards.f cycsymmods.f dasol.f \
+	 datest.f datri.f defplasticities.f defplas.f densities.f depvars.f \
+	 deuldlag.f dfluxes.f dgesv.f diamtr.f dloads.f dot.f dredu.f dsort.f \
+	 dynamics.f dynsolv.f el.f elastics.f elements.f elprints.f envtemp.f \
+	 equations.f expansions.f extrapolate.f e_c3d.f e_c3d_th.f e_c3d_rhs.f \
+	 fcrit.f films.f finpro.f forcadd.f frd.F frdclose.f frequencies.f fsub.f \
+	 fsuper.f gen3delem.f genran.f getnewline.f graph.f headings.f \
+	 heattransfers.f hyperel.f hyperelastics.f hyperfoams.f ident.f ident2.f \
+	 include.f incplas.f initialconditions.f inputerror.f isorti.f isortid.f \
+	 isortidc.f isortii.f isortiid.f label.f linel.f lintemp.f lintemp_th.f \
+	 loadadd.f loadaddt.f mafillpr.f mafillsm.f mafillsmcs.f massflowrates.f \
+	 matdata_co.f matdata_he.f matdata_tg.f materialdata.f materials.f \
+	 modaldampings.f modaldynamics.f mpcs.f nident.f nident2.f near2d.f \
+	 noanalysis.f nodalthicknesses.f nodeprints.f nodes.f noelfiles.f \
+	 noelsets.f nonlinmpc.f normals.f norshell.f number.f onf.f op.f \
+	 openfile.f orientations.f orthonl.f orthotropic.f out.f parser.f \
+	 physicalconstants.f planempc.f plastics.f plcopy.f plinterpol.f plmix.f \
+	 polynom.f profil.f radflowload.f radiates.f ranewr.f rearrange.f \
+	 rectcyl.f renumber.f restartread.f restarts.f restartshort.f \
+	 restartwrite.f results.f rhs.f rigidbodies.f rigidmpc.f rootls.f \
+	 rubber.f saxpb.f selcycsymmods.f shape3tri.f shape4q.f shape4tet.f \
+	 shape6tri.f shape6w.f shape8h.f shape8q.f shape10tet.f shape15w.f \
+	 shape20h.f shellsections.f skip.f solidsections.f spcmatch.f \
+	 specificheats.f statics.f steps.f stiff2mat.f stop.f str2mat.f \
+	 straightmpc.f surfaces.f temperatures.f tempload.f ties.f \
+	 transformatrix.f transforms.f ucreep.f uhardening.f umat.f \
+	 umat_aniso_creep.f umat_aniso_plas.f umat_elastic_fiber.f \
+	 umat_ideal_gas.f umat_lin_iso_el.f umat_single_crystal.f \
+	 umat_tension_only.f umat_user.f umpc_mean_rot.f umpc_user.f \
+	 usermaterials.f usermpc.f viscos.f wcoef.f writebv.f writeev.f \
+	 writeevcs.f writempc.f writesummary.f cascade.c frdcyc.c insert.c \
+	 mastruct.c mastructcs.c nonlingeo.c pcgsolver.c preiter.c prespooles.c \
+	 profile.c remastruct.c spooles.c strcmp1.c strcpy1.c u_calloc.c \
+	 SPOOLES/A2/src/A2_IO.c SPOOLES/A2/src/A2_basics.c \
+	 SPOOLES/A2/src/A2_init.c SPOOLES/A2/src/A2_instance.c \
+	 SPOOLES/A2/src/A2_norms.c SPOOLES/A2/src/A2_sort.c \
+	 SPOOLES/A2/src/A2_util.c SPOOLES/BKL/src/BKL_basics.c \
+	 SPOOLES/BKL/src/BKL_evalfcn.c SPOOLES/BKL/src/BKL_exhSearch.c \
+	 SPOOLES/BKL/src/BKL_fidmat.c SPOOLES/BKL/src/BKL_init.c \
+	 SPOOLES/BKL/src/BKL_util.c SPOOLES/BPG/src/BPG_IO.c \
+	 SPOOLES/BPG/src/BPG_basics.c SPOOLES/BPG/src/BPG_init.c \
+	 SPOOLES/BPG/src/BPG_makeGraphs.c SPOOLES/BPG/src/BPG_pseudo.c \
+	 SPOOLES/Chv/src/Chv_IO.c SPOOLES/Chv/src/Chv_assemble.c \
+	 SPOOLES/Chv/src/Chv_basics.c SPOOLES/Chv/src/Chv_copy.c \
+	 SPOOLES/Chv/src/Chv_factor.c SPOOLES/Chv/src/Chv_findPivot.c \
+	 SPOOLES/Chv/src/Chv_init.c SPOOLES/Chv/src/Chv_instance.c \
+	 SPOOLES/Chv/src/Chv_search.c SPOOLES/Chv/src/Chv_swap.c \
+	 SPOOLES/Chv/src/Chv_update.c SPOOLES/Chv/src/Chv_util.c \
+	 SPOOLES/ChvList/src/ChvList_basics.c SPOOLES/ChvList/src/ChvList_init.c \
+	 SPOOLES/ChvList/src/ChvList_util.c \
+	 SPOOLES/ChvManager/src/ChvManager_basics.c \
+	 SPOOLES/ChvManager/src/ChvManager_init.c \
+	 SPOOLES/ChvManager/src/ChvManager_util.c \
+	 SPOOLES/DSTree/src/DSTree_basics.c SPOOLES/DSTree/src/DSTree_init.c \
+	 SPOOLES/DSTree/src/DSTree_instance.c SPOOLES/DSTree/src/DSTree_stages.c \
+	 SPOOLES/DSTree/src/DSTree_util.c SPOOLES/DV/src/DV_IO.c \
+	 SPOOLES/DV/src/DV_basics.c SPOOLES/DV/src/DV_init.c \
+	 SPOOLES/DV/src/DV_instance.c SPOOLES/DV/src/DV_util.c \
+	 SPOOLES/DenseMtx/src/DenseMtx_IO.c \
+	 SPOOLES/DenseMtx/src/DenseMtx_basics.c \
+	 SPOOLES/DenseMtx/src/DenseMtx_init.c \
+	 SPOOLES/DenseMtx/src/DenseMtx_instance.c \
+	 SPOOLES/DenseMtx/src/DenseMtx_permute.c \
+	 SPOOLES/DenseMtx/src/DenseMtx_util.c SPOOLES/Drand/src/Drand_basics.c \
+	 SPOOLES/Drand/src/Drand_init.c SPOOLES/Drand/src/Drand_util.c \
+	 SPOOLES/ETree/src/ETree_IO.c SPOOLES/ETree/src/ETree_basics.c \
+	 SPOOLES/ETree/src/ETree_compress.c SPOOLES/ETree/src/ETree_init.c \
+	 SPOOLES/ETree/src/ETree_instance.c SPOOLES/ETree/src/ETree_permute.c \
+	 SPOOLES/ETree/src/ETree_transform.c SPOOLES/ETree/src/ETree_util.c \
+	 SPOOLES/FrontMtx/src/FrontMtx_IO.c \
+	 SPOOLES/FrontMtx/src/FrontMtx_basics.c \
+	 SPOOLES/FrontMtx/src/FrontMtx_factor.c \
+	 SPOOLES/FrontMtx/src/FrontMtx_factorUtil.c \
+	 SPOOLES/FrontMtx/src/FrontMtx_init.c \
+	 SPOOLES/FrontMtx/src/FrontMtx_instance.c \
+	 SPOOLES/FrontMtx/src/FrontMtx_loadEntries.c \
+	 SPOOLES/FrontMtx/src/FrontMtx_permute.c \
+	 SPOOLES/FrontMtx/src/FrontMtx_postProcess.c \
+	 SPOOLES/FrontMtx/src/FrontMtx_postponed.c \
+	 SPOOLES/FrontMtx/src/FrontMtx_solve.c \
+	 SPOOLES/FrontMtx/src/FrontMtx_solveUtil.c \
+	 SPOOLES/FrontMtx/src/FrontMtx_split.c \
+	 SPOOLES/FrontMtx/src/FrontMtx_storeFront.c \
+	 SPOOLES/FrontMtx/src/FrontMtx_update.c \
+	 SPOOLES/FrontMtx/src/FrontMtx_util.c SPOOLES/GPart/src/GPart_DDsepInfo.c \
+	 SPOOLES/GPart/src/GPart_DDviaFishnet.c \
+	 SPOOLES/GPart/src/GPart_DDviaProjection.c \
+	 SPOOLES/GPart/src/GPart_RBviaDDsep.c \
+	 SPOOLES/GPart/src/GPart_TwoSetViaBKL.c SPOOLES/GPart/src/GPart_basics.c \
+	 SPOOLES/GPart/src/GPart_domSegMap.c \
+	 SPOOLES/GPart/src/GPart_identifyWideSep.c SPOOLES/GPart/src/GPart_init.c \
+	 SPOOLES/GPart/src/GPart_makeYCmap.c \
+	 SPOOLES/GPart/src/GPart_smoothBisector.c \
+	 SPOOLES/GPart/src/GPart_smoothBy2layers.c \
+	 SPOOLES/GPart/src/GPart_smoothYSep.c SPOOLES/GPart/src/GPart_split.c \
+	 SPOOLES/GPart/src/GPart_util.c SPOOLES/Graph/src/Graph_IO.c \
+	 SPOOLES/Graph/src/Graph_basics.c SPOOLES/Graph/src/Graph_compress.c \
+	 SPOOLES/Graph/src/Graph_equivMap.c SPOOLES/Graph/src/Graph_init.c \
+	 SPOOLES/Graph/src/Graph_util.c SPOOLES/I2Ohash/src/I2Ohash_basics.c \
+	 SPOOLES/I2Ohash/src/I2Ohash_init.c SPOOLES/I2Ohash/src/I2Ohash_util.c \
+	 SPOOLES/IIheap/src/IIheap_basics.c SPOOLES/IV/src/IV_IO.c \
+	 SPOOLES/IV/src/IV_basics.c SPOOLES/IV/src/IV_init.c \
+	 SPOOLES/IV/src/IV_instance.c SPOOLES/IV/src/IV_util.c \
+	 SPOOLES/IVL/src/IVL_IO.c SPOOLES/IVL/src/IVL_basics.c \
+	 SPOOLES/IVL/src/IVL_init.c SPOOLES/IVL/src/IVL_instance.c \
+	 SPOOLES/IVL/src/IVL_listmanip.c SPOOLES/IVL/src/IVL_util.c \
+	 SPOOLES/Ideq/src/Ideq_basics.c SPOOLES/Ideq/src/Ideq_resize.c \
+	 SPOOLES/Ideq/src/Ideq_util.c SPOOLES/InpMtx/src/InpMtx_IO.c \
+	 SPOOLES/InpMtx/src/InpMtx_basics.c SPOOLES/InpMtx/src/InpMtx_fullAdj.c \
+	 SPOOLES/InpMtx/src/InpMtx_init.c SPOOLES/InpMtx/src/InpMtx_input.c \
+	 SPOOLES/InpMtx/src/InpMtx_instance.c SPOOLES/InpMtx/src/InpMtx_permute.c \
+	 SPOOLES/InpMtx/src/InpMtx_util.c SPOOLES/Lock/src/Lock_basics.c \
+	 SPOOLES/Lock/src/Lock_init.c SPOOLES/Lock/src/Lock_util.c \
+	 SPOOLES/MSMD/src/MSMD_MSMDinfo.c SPOOLES/MSMD/src/MSMD_MSMDvtx.c \
+	 SPOOLES/MSMD/src/MSMD_basics.c SPOOLES/MSMD/src/MSMD_cleanReachSet.c \
+	 SPOOLES/MSMD/src/MSMD_eliminate.c SPOOLES/MSMD/src/MSMD_findInodes.c \
+	 SPOOLES/MSMD/src/MSMD_frontETree.c SPOOLES/MSMD/src/MSMD_init.c \
+	 SPOOLES/MSMD/src/MSMD_order.c SPOOLES/MSMD/src/MSMD_update.c \
+	 SPOOLES/Network/src/Network_IO.c SPOOLES/Network/src/Network_addArc.c \
+	 SPOOLES/Network/src/Network_augmentPath.c \
+	 SPOOLES/Network/src/Network_basics.c \
+	 SPOOLES/Network/src/Network_findAugmentingPath.c \
+	 SPOOLES/Network/src/Network_findMaxFlow.c \
+	 SPOOLES/Network/src/Network_findMincut.c \
+	 SPOOLES/Network/src/Network_init.c SPOOLES/Pencil/src/Pencil_IO.c \
+	 SPOOLES/Pencil/src/Pencil_basics.c SPOOLES/Pencil/src/Pencil_init.c \
+	 SPOOLES/SubMtx/src/SubMtx_IO.c SPOOLES/SubMtx/src/SubMtx_basics.c \
+	 SPOOLES/SubMtx/src/SubMtx_init.c SPOOLES/SubMtx/src/SubMtx_instance.c \
+	 SPOOLES/SubMtx/src/SubMtx_scalevec.c SPOOLES/SubMtx/src/SubMtx_solve.c \
+	 SPOOLES/SubMtx/src/SubMtx_solveH.c SPOOLES/SubMtx/src/SubMtx_solveT.c \
+	 SPOOLES/SubMtx/src/SubMtx_solveupd.c \
+	 SPOOLES/SubMtx/src/SubMtx_solveupdH.c \
+	 SPOOLES/SubMtx/src/SubMtx_solveupdT.c SPOOLES/SubMtx/src/SubMtx_sort.c \
+	 SPOOLES/SubMtx/src/SubMtx_util.c \
+	 SPOOLES/SubMtxList/src/SubMtxList_util.c \
+	 SPOOLES/SubMtxManager/src/SubMtxManager_basics.c \
+	 SPOOLES/SubMtxManager/src/SubMtxManager_init.c \
+	 SPOOLES/SubMtxManager/src/SubMtxManager_util.c \
+	 SPOOLES/SymbFac/src/SymbFac_symbfac.c SPOOLES/Tree/src/Tree_IO.c \
+	 SPOOLES/Tree/src/Tree_basics.c SPOOLES/Tree/src/Tree_compress.c \
+	 SPOOLES/Tree/src/Tree_init.c SPOOLES/Tree/src/Tree_metrics.c \
+	 SPOOLES/Tree/src/Tree_perms.c SPOOLES/Tree/src/Tree_util.c \
+	 SPOOLES/Utilities/src/Utilities_CV.c \
+	 SPOOLES/Utilities/src/Utilities_DV.c \
+	 SPOOLES/Utilities/src/Utilities_I2OP.c \
+	 SPOOLES/Utilities/src/Utilities_IP.c \
+	 SPOOLES/Utilities/src/Utilities_IV.c \
+	 SPOOLES/Utilities/src/Utilities_PIV.c \
+	 SPOOLES/Utilities/src/Utilities_ZV.c \
+	 SPOOLES/Utilities/src/Utilities_iohb.c \
+	 SPOOLES/Utilities/src/Utilities_newsort.c \
+	 SPOOLES/Utilities/src/Utilities_sortAndCompress.c \
+	 SPOOLES/ZV/src/ZV_basics.c SPOOLES/ZV/src/ZV_init.c \
+	 SPOOLES/ZV/src/ZV_instance.c \
+	 SPOOLES/misc/src/misc_orderViaBestOfNDandMS.c
+EXEBASE=calculix
+NEED_MATH=yes
+BENCHLANG=F C
+ONESTEP=
+FONESTEP=
+
+BENCH_FLAGS      = -ISPOOLES
+CC               = /usr/bin/gcc
+COPTIMIZE        = -O3 -march=native 
+CXX              = /usr/bin/g++
+CXXOPTIMIZE      = -O3 -march=native 
+FC               = /usr/bin/gfortran
+FOPTIMIZE        = -O3 -march=native 
+FPBASE           = yes
+OS               = unix
+PORTABILITY      = -DSPEC_CPU_LP64
+abstol           = 1e-09
+action           = build
+allow_extension_override = 0
+backup_config    = 1
+baseexe          = calculix
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 454.calculix
+binary           = 
+bindir           = exe
+calctol          = 0
+changedmd5       = 0
+check_integrity  = 1
+check_md5        = 1
+check_version    = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = calculix_base.amd64-m64-gcc41-nn
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = /root/SPECcpu/SPECcpu2006/config/ricardo.cfg
+copies           = 1
+datadir          = data
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 12345678
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+expid            = 
+ext              = amd64-m64-gcc41-nn
+fake             = 0
+feedback         = 1
+flag_url_base    = http://www.spec.org/auto/cpu2006/flags/
+floatcompare     = 
+help             = 0
+http_proxy       = 
+http_timeout     = 30
+hw_avail         = Dec-9999
+hw_cpu_char      = 
+hw_cpu_mhz       = 3000
+hw_cpu_name      = AMD Opteron 256
+hw_disk          = SATA
+hw_fpu           = Integrated
+hw_memory        = 2 GB (2 x 1GB DDR333 CL2.5)
+hw_model         = Tyan Thunder KKQS Pro (S4882)
+hw_nchips        = 1
+hw_ncores        = 1
+hw_ncoresperchip = 1
+hw_ncpuorder     = 1 chip
+hw_nthreadspercore = 1
+hw_ocache        = None
+hw_pcache        = 64 KB I + 64 KB D on chip per chip
+hw_scache        = 1 MB I+D on chip per chip
+hw_tcache        = None
+hw_vendor        = Tyan
+ignore_errors    = yes
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+iteration        = -1
+iterations       = 3
+license_num      = 9999
+line_width       = 0
+locking          = 1
+log              = CPU2006
+log_line_width   = 0
+logname          = /root/SPECcpu/SPECcpu2006/result/CPU2006.006.log
+lognum           = 006
+mach             = default
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = calculix
+nc               = 0
+need_math        = yes
+no_input_handler = close
+no_monitor       = 
+notes0100        =  C base flags: -O2
+notes0110        =  C++ base flags: -O2
+notes0120        =  Fortran base flags: -O2
+notes25          =  PORTABILITY=-DSPEC_CPU_LP64 is applied to all benchmarks in base.
+notes_wrap_columns = 0
+notes_wrap_indent =     
+num              = 454
+obiwan           = 1
+os_exe_ext       = 
+output           = asc
+output_format    = asc
+output_root      = 
+outputdir        = output
+path             = /root/SPECcpu/SPECcpu2006/benchspec/CPU2006/454.calculix
+plain_train      = 1
+prefix           = 
+prepared_by      = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+realuser         = your name here
+rebuild          = 0
+reftime          = reftime
+reltol           = 1e-09
+reportable       = 1
+resultdir        = result
+review           = 0
+run              = all
+runspec          = /root/SPECcpu/SPECcpu2006/bin/runspec --config=ricardo.cfg --action=build --tune=base calculix
+safe_eval        = 1
+section_specifier_fatal = 1
+sendmail         = /usr/sbin/sendmail
+setpgrp_enabled  = 1
+setprocgroup     = 1
+shrate           = 0
+sigint           = 2
+size             = ref
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specmake         = Makefile.YYYtArGeTYYYspec
+specrun          = specinvoke
+speed            = 0
+srcalt           = 
+srcdir           = src
+stagger          = 10
+strict_rundir_verify = 1
+subworkdir       = work
+sw_auto_parallel = No
+sw_avail         = Dec-9999
+sw_base_ptrsize  = 64-bit
+sw_compiler      = gcc , g++ & gfortran 4.1.0 (for AMD64)
+sw_file          = ext3
+sw_os            = SUSE SLES9 (for AMD64)
+sw_other         = None
+sw_peak_ptrsize  = Not Applicable
+sw_state         = runlevel 3
+sysinfo_program  = 
+table            = 1
+teeout           = yes
+teerunout        = yes
+test_date        = Dec-9999
+test_sponsor     = Turbo Computers
+tester           = 
+top              = /root/SPECcpu/SPECcpu2006
+tune             = base
+uid              = 0
+unbuffer         = 1
+update-flags     = 0
+use_submit_for_speed = 0
+username         = root
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+version_url      = http://www.spec.org/auto/cpu2006/current_version
+workdir          = run
+worklist         = list
+  Compile for '454.calculix' started at: Thu Jan 16 17:23:19 2020 (1579195399)
+Issuing make.clean command 'specmake clean'
+Start make.clean command: Thu Jan 16 17:23:19 2020 (1579195399)
+rm -rf calculix calculix.exe *.o  *.fppized.f*
+find . \( -name \*.o -o -name '*.fppized.f*' \) -print | xargs rm -rf
+rm -rf core 
+Stop make.clean command: Thu Jan 16 17:23:20 2020 (1579195400)
+Elapsed time for make.clean command: 00:00:01 (1)
+Issuing make command 'specmake build'
+Start make command: Thu Jan 16 17:23:20 2020 (1579195400)
+/usr/bin/gcc -c -o CalculiX.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         CalculiX.c
+/usr/bin/gfortran -c -o add_pr.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         add_pr.f
+/usr/bin/gfortran -c -o add_sm_ei.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         add_sm_ei.f
+/usr/bin/gfortran -c -o add_sm_st.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         add_sm_st.f
+/usr/bin/gfortran -c -o allocation.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         allocation.f
+/usr/bin/gfortran -c -o amplitudes.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         amplitudes.f
+/usr/bin/gfortran -c -o anisotropic.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         anisotropic.f
+/usr/bin/gfortran -c -o beamsections.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         beamsections.f
+/usr/bin/gfortran -c -o bounadd.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         bounadd.f
+/usr/bin/gfortran -c -o boundaries.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         boundaries.f
+/usr/bin/gfortran -c -o buckles.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         buckles.f
+/usr/bin/gfortran -c -o calinput.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         calinput.f
+/usr/bin/gfortran -c -o cfluxes.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         cfluxes.f
+/usr/bin/gfortran -c -o changedepterm.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         changedepterm.f
+/usr/bin/gfortran -c -o cloads.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         cloads.f
+/usr/bin/gfortran -c -o conductivities.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         conductivities.f
+/usr/bin/gfortran -c -o controlss.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         controlss.f
+/usr/bin/gfortran -c -o couptempdisps.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         couptempdisps.f
+/usr/bin/gfortran -c -o creeps.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         creeps.f
+/usr/bin/gfortran -c -o cychards.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         cychards.f
+/usr/bin/gfortran -c -o cycsymmods.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         cycsymmods.f
+/usr/bin/gfortran -c -o dasol.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         dasol.f
+/usr/bin/gfortran -c -o datest.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         datest.f
+/usr/bin/gfortran -c -o datri.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         datri.f
+/usr/bin/gfortran -c -o defplasticities.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         defplasticities.f
+/usr/bin/gfortran -c -o defplas.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         defplas.f
+/usr/bin/gfortran -c -o densities.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         densities.f
+/usr/bin/gfortran -c -o depvars.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         depvars.f
+/usr/bin/gfortran -c -o deuldlag.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         deuldlag.f
+/usr/bin/gfortran -c -o dfluxes.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         dfluxes.f
+/usr/bin/gfortran -c -o dgesv.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         dgesv.f
+/usr/bin/gfortran -c -o diamtr.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         diamtr.f
+/usr/bin/gfortran -c -o dloads.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         dloads.f
+/usr/bin/gfortran -c -o dot.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         dot.f
+/usr/bin/gfortran -c -o dredu.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         dredu.f
+/usr/bin/gfortran -c -o dsort.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         dsort.f
+/usr/bin/gfortran -c -o dynamics.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         dynamics.f
+/usr/bin/gfortran -c -o dynsolv.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         dynsolv.f
+/usr/bin/gfortran -c -o el.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         el.f
+/usr/bin/gfortran -c -o elastics.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         elastics.f
+/usr/bin/gfortran -c -o elements.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         elements.f
+/usr/bin/gfortran -c -o elprints.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         elprints.f
+/usr/bin/gfortran -c -o envtemp.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         envtemp.f
+/usr/bin/gfortran -c -o equations.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         equations.f
+/usr/bin/gfortran -c -o expansions.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         expansions.f
+/usr/bin/gfortran -c -o extrapolate.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         extrapolate.f
+/usr/bin/gfortran -c -o e_c3d.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         e_c3d.f
+/usr/bin/gfortran -c -o e_c3d_th.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         e_c3d_th.f
+/usr/bin/gfortran -c -o e_c3d_rhs.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         e_c3d_rhs.f
+/usr/bin/gfortran -c -o fcrit.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         fcrit.f
+/usr/bin/gfortran -c -o films.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         films.f
+/usr/bin/gfortran -c -o finpro.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         finpro.f
+/usr/bin/gfortran -c -o forcadd.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         forcadd.f
+specperl /root/SPECcpu/SPECcpu2006/bin/specpp   -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64   frd.F -o frd.fppized.f
+/usr/bin/gfortran -c -o frd.fppized.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         frd.fppized.f
+/usr/bin/gfortran -c -o frdclose.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         frdclose.f
+/usr/bin/gfortran -c -o frequencies.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         frequencies.f
+/usr/bin/gfortran -c -o fsub.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         fsub.f
+/usr/bin/gfortran -c -o fsuper.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         fsuper.f
+/usr/bin/gfortran -c -o gen3delem.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         gen3delem.f
+/usr/bin/gfortran -c -o genran.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         genran.f
+/usr/bin/gfortran -c -o getnewline.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         getnewline.f
+/usr/bin/gfortran -c -o graph.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         graph.f
+/usr/bin/gfortran -c -o headings.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         headings.f
+/usr/bin/gfortran -c -o heattransfers.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         heattransfers.f
+/usr/bin/gfortran -c -o hyperel.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         hyperel.f
+/usr/bin/gfortran -c -o hyperelastics.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         hyperelastics.f
+/usr/bin/gfortran -c -o hyperfoams.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         hyperfoams.f
+/usr/bin/gfortran -c -o ident.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         ident.f
+/usr/bin/gfortran -c -o ident2.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         ident2.f
+/usr/bin/gfortran -c -o include.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         include.f
+/usr/bin/gfortran -c -o incplas.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         incplas.f
+/usr/bin/gfortran -c -o initialconditions.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         initialconditions.f
+/usr/bin/gfortran -c -o inputerror.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         inputerror.f
+/usr/bin/gfortran -c -o isorti.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         isorti.f
+/usr/bin/gfortran -c -o isortid.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         isortid.f
+/usr/bin/gfortran -c -o isortidc.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         isortidc.f
+/usr/bin/gfortran -c -o isortii.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         isortii.f
+/usr/bin/gfortran -c -o isortiid.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         isortiid.f
+/usr/bin/gfortran -c -o label.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         label.f
+/usr/bin/gfortran -c -o linel.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         linel.f
+/usr/bin/gfortran -c -o lintemp.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         lintemp.f
+/usr/bin/gfortran -c -o lintemp_th.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         lintemp_th.f
+/usr/bin/gfortran -c -o loadadd.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         loadadd.f
+/usr/bin/gfortran -c -o loadaddt.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         loadaddt.f
+/usr/bin/gfortran -c -o mafillpr.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         mafillpr.f
+/usr/bin/gfortran -c -o mafillsm.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         mafillsm.f
+/usr/bin/gfortran -c -o mafillsmcs.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         mafillsmcs.f
+/usr/bin/gfortran -c -o massflowrates.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         massflowrates.f
+/usr/bin/gfortran -c -o matdata_co.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         matdata_co.f
+/usr/bin/gfortran -c -o matdata_he.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         matdata_he.f
+/usr/bin/gfortran -c -o matdata_tg.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         matdata_tg.f
+/usr/bin/gfortran -c -o materialdata.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         materialdata.f
+/usr/bin/gfortran -c -o materials.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         materials.f
+/usr/bin/gfortran -c -o modaldampings.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         modaldampings.f
+/usr/bin/gfortran -c -o modaldynamics.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         modaldynamics.f
+/usr/bin/gfortran -c -o mpcs.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         mpcs.f
+/usr/bin/gfortran -c -o nident.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         nident.f
+/usr/bin/gfortran -c -o nident2.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         nident2.f
+/usr/bin/gfortran -c -o near2d.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         near2d.f
+/usr/bin/gfortran -c -o noanalysis.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         noanalysis.f
+/usr/bin/gfortran -c -o nodalthicknesses.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         nodalthicknesses.f
+/usr/bin/gfortran -c -o nodeprints.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         nodeprints.f
+/usr/bin/gfortran -c -o nodes.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         nodes.f
+/usr/bin/gfortran -c -o noelfiles.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         noelfiles.f
+/usr/bin/gfortran -c -o noelsets.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         noelsets.f
+/usr/bin/gfortran -c -o nonlinmpc.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         nonlinmpc.f
+/usr/bin/gfortran -c -o normals.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         normals.f
+/usr/bin/gfortran -c -o norshell.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         norshell.f
+/usr/bin/gfortran -c -o number.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         number.f
+/usr/bin/gfortran -c -o onf.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         onf.f
+/usr/bin/gfortran -c -o op.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         op.f
+/usr/bin/gfortran -c -o openfile.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         openfile.f
+/usr/bin/gfortran -c -o orientations.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         orientations.f
+/usr/bin/gfortran -c -o orthonl.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         orthonl.f
+/usr/bin/gfortran -c -o orthotropic.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         orthotropic.f
+/usr/bin/gfortran -c -o out.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         out.f
+/usr/bin/gfortran -c -o parser.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         parser.f
+/usr/bin/gfortran -c -o physicalconstants.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         physicalconstants.f
+/usr/bin/gfortran -c -o planempc.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         planempc.f
+/usr/bin/gfortran -c -o plastics.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         plastics.f
+/usr/bin/gfortran -c -o plcopy.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         plcopy.f
+/usr/bin/gfortran -c -o plinterpol.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         plinterpol.f
+/usr/bin/gfortran -c -o plmix.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         plmix.f
+/usr/bin/gfortran -c -o polynom.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         polynom.f
+/usr/bin/gfortran -c -o profil.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         profil.f
+/usr/bin/gfortran -c -o radflowload.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         radflowload.f
+radflowload.f:390:0:
+
+                covered(iphi,ipsi)=.false.
+ 
+Warning: iteration 30 invokes undefined behavior [-Waggressive-loop-optimizations]
+radflowload.f:388:0:
+
+          do iphi=1,4*ng
+ 
+note: within this loop
+f951: Warning: '__builtin_memset' writing 160 bytes into a region of size 40 overflows the destination [-Wstringop-overflow=]
+/usr/bin/gfortran -c -o radiates.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         radiates.f
+/usr/bin/gfortran -c -o ranewr.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         ranewr.f
+/usr/bin/gfortran -c -o rearrange.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         rearrange.f
+/usr/bin/gfortran -c -o rectcyl.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         rectcyl.f
+/usr/bin/gfortran -c -o renumber.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         renumber.f
+/usr/bin/gfortran -c -o restartread.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         restartread.f
+/usr/bin/gfortran -c -o restarts.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         restarts.f
+/usr/bin/gfortran -c -o restartshort.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         restartshort.f
+/usr/bin/gfortran -c -o restartwrite.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         restartwrite.f
+/usr/bin/gfortran -c -o results.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         results.f
+/usr/bin/gfortran -c -o rhs.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         rhs.f
+/usr/bin/gfortran -c -o rigidbodies.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         rigidbodies.f
+/usr/bin/gfortran -c -o rigidmpc.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         rigidmpc.f
+/usr/bin/gfortran -c -o rootls.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         rootls.f
+/usr/bin/gfortran -c -o rubber.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         rubber.f
+/usr/bin/gfortran -c -o saxpb.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         saxpb.f
+/usr/bin/gfortran -c -o selcycsymmods.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         selcycsymmods.f
+/usr/bin/gfortran -c -o shape3tri.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         shape3tri.f
+/usr/bin/gfortran -c -o shape4q.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         shape4q.f
+/usr/bin/gfortran -c -o shape4tet.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         shape4tet.f
+/usr/bin/gfortran -c -o shape6tri.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         shape6tri.f
+/usr/bin/gfortran -c -o shape6w.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         shape6w.f
+/usr/bin/gfortran -c -o shape8h.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         shape8h.f
+/usr/bin/gfortran -c -o shape8q.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         shape8q.f
+/usr/bin/gfortran -c -o shape10tet.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         shape10tet.f
+/usr/bin/gfortran -c -o shape15w.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         shape15w.f
+/usr/bin/gfortran -c -o shape20h.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         shape20h.f
+/usr/bin/gfortran -c -o shellsections.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         shellsections.f
+/usr/bin/gfortran -c -o skip.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         skip.f
+/usr/bin/gfortran -c -o solidsections.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         solidsections.f
+/usr/bin/gfortran -c -o spcmatch.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         spcmatch.f
+/usr/bin/gfortran -c -o specificheats.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         specificheats.f
+/usr/bin/gfortran -c -o statics.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         statics.f
+/usr/bin/gfortran -c -o steps.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         steps.f
+/usr/bin/gfortran -c -o stiff2mat.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         stiff2mat.f
+/usr/bin/gfortran -c -o stop.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         stop.f
+/usr/bin/gfortran -c -o str2mat.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         str2mat.f
+/usr/bin/gfortran -c -o straightmpc.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         straightmpc.f
+/usr/bin/gfortran -c -o surfaces.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         surfaces.f
+/usr/bin/gfortran -c -o temperatures.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         temperatures.f
+/usr/bin/gfortran -c -o tempload.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         tempload.f
+/usr/bin/gfortran -c -o ties.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         ties.f
+/usr/bin/gfortran -c -o transformatrix.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         transformatrix.f
+/usr/bin/gfortran -c -o transforms.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         transforms.f
+/usr/bin/gfortran -c -o ucreep.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         ucreep.f
+/usr/bin/gfortran -c -o uhardening.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         uhardening.f
+/usr/bin/gfortran -c -o umat.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         umat.f
+/usr/bin/gfortran -c -o umat_aniso_creep.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         umat_aniso_creep.f
+/usr/bin/gfortran -c -o umat_aniso_plas.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         umat_aniso_plas.f
+/usr/bin/gfortran -c -o umat_elastic_fiber.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         umat_elastic_fiber.f
+/usr/bin/gfortran -c -o umat_ideal_gas.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         umat_ideal_gas.f
+/usr/bin/gfortran -c -o umat_lin_iso_el.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         umat_lin_iso_el.f
+/usr/bin/gfortran -c -o umat_single_crystal.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         umat_single_crystal.f
+/usr/bin/gfortran -c -o umat_tension_only.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         umat_tension_only.f
+/usr/bin/gfortran -c -o umat_user.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         umat_user.f
+/usr/bin/gfortran -c -o umpc_mean_rot.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         umpc_mean_rot.f
+/usr/bin/gfortran -c -o umpc_user.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         umpc_user.f
+/usr/bin/gfortran -c -o usermaterials.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         usermaterials.f
+/usr/bin/gfortran -c -o usermpc.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         usermpc.f
+/usr/bin/gfortran -c -o viscos.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         viscos.f
+/usr/bin/gfortran -c -o wcoef.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         wcoef.f
+/usr/bin/gfortran -c -o writebv.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         writebv.f
+/usr/bin/gfortran -c -o writeev.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         writeev.f
+/usr/bin/gfortran -c -o writeevcs.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         writeevcs.f
+/usr/bin/gfortran -c -o writempc.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         writempc.f
+/usr/bin/gfortran -c -o writesummary.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         writesummary.f
+/usr/bin/gcc -c -o cascade.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         cascade.c
+/usr/bin/gcc -c -o frdcyc.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         frdcyc.c
+/usr/bin/gcc -c -o insert.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         insert.c
+/usr/bin/gcc -c -o mastruct.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         mastruct.c
+/usr/bin/gcc -c -o mastructcs.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         mastructcs.c
+/usr/bin/gcc -c -o nonlingeo.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         nonlingeo.c
+/usr/bin/gcc -c -o pcgsolver.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         pcgsolver.c
+/usr/bin/gcc -c -o preiter.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         preiter.c
+/usr/bin/gcc -c -o prespooles.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         prespooles.c
+/usr/bin/gcc -c -o profile.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         profile.c
+/usr/bin/gcc -c -o remastruct.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         remastruct.c
+/usr/bin/gcc -c -o spooles.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         spooles.c
+/usr/bin/gcc -c -o strcmp1.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         strcmp1.c
+/usr/bin/gcc -c -o strcpy1.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         strcpy1.c
+/usr/bin/gcc -c -o u_calloc.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         u_calloc.c
+/usr/bin/gcc -c -o SPOOLES/A2/src/A2_IO.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/A2/src/A2_IO.c
+/usr/bin/gcc -c -o SPOOLES/A2/src/A2_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/A2/src/A2_basics.c
+/usr/bin/gcc -c -o SPOOLES/A2/src/A2_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/A2/src/A2_init.c
+/usr/bin/gcc -c -o SPOOLES/A2/src/A2_instance.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/A2/src/A2_instance.c
+/usr/bin/gcc -c -o SPOOLES/A2/src/A2_norms.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/A2/src/A2_norms.c
+/usr/bin/gcc -c -o SPOOLES/A2/src/A2_sort.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/A2/src/A2_sort.c
+/usr/bin/gcc -c -o SPOOLES/A2/src/A2_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/A2/src/A2_util.c
+/usr/bin/gcc -c -o SPOOLES/BKL/src/BKL_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/BKL/src/BKL_basics.c
+/usr/bin/gcc -c -o SPOOLES/BKL/src/BKL_evalfcn.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/BKL/src/BKL_evalfcn.c
+/usr/bin/gcc -c -o SPOOLES/BKL/src/BKL_exhSearch.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/BKL/src/BKL_exhSearch.c
+/usr/bin/gcc -c -o SPOOLES/BKL/src/BKL_fidmat.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/BKL/src/BKL_fidmat.c
+/usr/bin/gcc -c -o SPOOLES/BKL/src/BKL_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/BKL/src/BKL_init.c
+/usr/bin/gcc -c -o SPOOLES/BKL/src/BKL_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/BKL/src/BKL_util.c
+/usr/bin/gcc -c -o SPOOLES/BPG/src/BPG_IO.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/BPG/src/BPG_IO.c
+/usr/bin/gcc -c -o SPOOLES/BPG/src/BPG_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/BPG/src/BPG_basics.c
+/usr/bin/gcc -c -o SPOOLES/BPG/src/BPG_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/BPG/src/BPG_init.c
+/usr/bin/gcc -c -o SPOOLES/BPG/src/BPG_makeGraphs.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/BPG/src/BPG_makeGraphs.c
+/usr/bin/gcc -c -o SPOOLES/BPG/src/BPG_pseudo.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/BPG/src/BPG_pseudo.c
+/usr/bin/gcc -c -o SPOOLES/Chv/src/Chv_IO.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Chv/src/Chv_IO.c
+/usr/bin/gcc -c -o SPOOLES/Chv/src/Chv_assemble.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Chv/src/Chv_assemble.c
+/usr/bin/gcc -c -o SPOOLES/Chv/src/Chv_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Chv/src/Chv_basics.c
+/usr/bin/gcc -c -o SPOOLES/Chv/src/Chv_copy.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Chv/src/Chv_copy.c
+/usr/bin/gcc -c -o SPOOLES/Chv/src/Chv_factor.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Chv/src/Chv_factor.c
+/usr/bin/gcc -c -o SPOOLES/Chv/src/Chv_findPivot.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Chv/src/Chv_findPivot.c
+/usr/bin/gcc -c -o SPOOLES/Chv/src/Chv_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Chv/src/Chv_init.c
+/usr/bin/gcc -c -o SPOOLES/Chv/src/Chv_instance.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Chv/src/Chv_instance.c
+/usr/bin/gcc -c -o SPOOLES/Chv/src/Chv_search.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Chv/src/Chv_search.c
+/usr/bin/gcc -c -o SPOOLES/Chv/src/Chv_swap.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Chv/src/Chv_swap.c
+/usr/bin/gcc -c -o SPOOLES/Chv/src/Chv_update.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Chv/src/Chv_update.c
+/usr/bin/gcc -c -o SPOOLES/Chv/src/Chv_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Chv/src/Chv_util.c
+/usr/bin/gcc -c -o SPOOLES/ChvList/src/ChvList_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/ChvList/src/ChvList_basics.c
+/usr/bin/gcc -c -o SPOOLES/ChvList/src/ChvList_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/ChvList/src/ChvList_init.c
+/usr/bin/gcc -c -o SPOOLES/ChvList/src/ChvList_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/ChvList/src/ChvList_util.c
+/usr/bin/gcc -c -o SPOOLES/ChvManager/src/ChvManager_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/ChvManager/src/ChvManager_basics.c
+/usr/bin/gcc -c -o SPOOLES/ChvManager/src/ChvManager_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/ChvManager/src/ChvManager_init.c
+/usr/bin/gcc -c -o SPOOLES/ChvManager/src/ChvManager_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/ChvManager/src/ChvManager_util.c
+/usr/bin/gcc -c -o SPOOLES/DSTree/src/DSTree_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/DSTree/src/DSTree_basics.c
+/usr/bin/gcc -c -o SPOOLES/DSTree/src/DSTree_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/DSTree/src/DSTree_init.c
+/usr/bin/gcc -c -o SPOOLES/DSTree/src/DSTree_instance.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/DSTree/src/DSTree_instance.c
+/usr/bin/gcc -c -o SPOOLES/DSTree/src/DSTree_stages.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/DSTree/src/DSTree_stages.c
+/usr/bin/gcc -c -o SPOOLES/DSTree/src/DSTree_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/DSTree/src/DSTree_util.c
+/usr/bin/gcc -c -o SPOOLES/DV/src/DV_IO.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/DV/src/DV_IO.c
+/usr/bin/gcc -c -o SPOOLES/DV/src/DV_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/DV/src/DV_basics.c
+/usr/bin/gcc -c -o SPOOLES/DV/src/DV_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/DV/src/DV_init.c
+/usr/bin/gcc -c -o SPOOLES/DV/src/DV_instance.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/DV/src/DV_instance.c
+/usr/bin/gcc -c -o SPOOLES/DV/src/DV_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/DV/src/DV_util.c
+/usr/bin/gcc -c -o SPOOLES/DenseMtx/src/DenseMtx_IO.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/DenseMtx/src/DenseMtx_IO.c
+/usr/bin/gcc -c -o SPOOLES/DenseMtx/src/DenseMtx_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/DenseMtx/src/DenseMtx_basics.c
+/usr/bin/gcc -c -o SPOOLES/DenseMtx/src/DenseMtx_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/DenseMtx/src/DenseMtx_init.c
+/usr/bin/gcc -c -o SPOOLES/DenseMtx/src/DenseMtx_instance.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/DenseMtx/src/DenseMtx_instance.c
+/usr/bin/gcc -c -o SPOOLES/DenseMtx/src/DenseMtx_permute.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/DenseMtx/src/DenseMtx_permute.c
+/usr/bin/gcc -c -o SPOOLES/DenseMtx/src/DenseMtx_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/DenseMtx/src/DenseMtx_util.c
+/usr/bin/gcc -c -o SPOOLES/Drand/src/Drand_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Drand/src/Drand_basics.c
+/usr/bin/gcc -c -o SPOOLES/Drand/src/Drand_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Drand/src/Drand_init.c
+/usr/bin/gcc -c -o SPOOLES/Drand/src/Drand_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Drand/src/Drand_util.c
+/usr/bin/gcc -c -o SPOOLES/ETree/src/ETree_IO.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/ETree/src/ETree_IO.c
+/usr/bin/gcc -c -o SPOOLES/ETree/src/ETree_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/ETree/src/ETree_basics.c
+/usr/bin/gcc -c -o SPOOLES/ETree/src/ETree_compress.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/ETree/src/ETree_compress.c
+/usr/bin/gcc -c -o SPOOLES/ETree/src/ETree_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/ETree/src/ETree_init.c
+/usr/bin/gcc -c -o SPOOLES/ETree/src/ETree_instance.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/ETree/src/ETree_instance.c
+/usr/bin/gcc -c -o SPOOLES/ETree/src/ETree_permute.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/ETree/src/ETree_permute.c
+/usr/bin/gcc -c -o SPOOLES/ETree/src/ETree_transform.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/ETree/src/ETree_transform.c
+SPOOLES/ETree/src/ETree_transform.c: In function 'ETree_mergeFrontsOne':
+SPOOLES/ETree/src/ETree_transform.c:294:23: warning: passing argument 2 of 'IVinit' makes integer from pointer without a cast [-Wint-conversion]
+ temp = IVinit(nfront, NULL) ;
+                       ^~~~
+In file included from SPOOLES/ETree/src/../../Utilities/Utilities.h:37,
+                 from SPOOLES/ETree/src/../../cfiles.h:3,
+                 from SPOOLES/ETree/src/../ETree.h:4,
+                 from SPOOLES/ETree/src/ETree_transform.c:3:
+SPOOLES/ETree/src/../../Utilities/IV.h:137:1: note: expected 'int' but argument is of type 'void *'
+ IVinit (
+ ^~~~~~
+SPOOLES/ETree/src/ETree_transform.c: In function 'ETree_mergeFrontsAll':
+SPOOLES/ETree/src/ETree_transform.c:456:23: warning: passing argument 2 of 'IVinit' makes integer from pointer without a cast [-Wint-conversion]
+ temp = IVinit(nfront, NULL) ;
+                       ^~~~
+In file included from SPOOLES/ETree/src/../../Utilities/Utilities.h:37,
+                 from SPOOLES/ETree/src/../../cfiles.h:3,
+                 from SPOOLES/ETree/src/../ETree.h:4,
+                 from SPOOLES/ETree/src/ETree_transform.c:3:
+SPOOLES/ETree/src/../../Utilities/IV.h:137:1: note: expected 'int' but argument is of type 'void *'
+ IVinit (
+ ^~~~~~
+SPOOLES/ETree/src/ETree_transform.c: In function 'ETree_mergeFrontsAny':
+SPOOLES/ETree/src/ETree_transform.c:617:23: warning: passing argument 2 of 'IVinit' makes integer from pointer without a cast [-Wint-conversion]
+ temp = IVinit(nfront, NULL) ;
+                       ^~~~
+In file included from SPOOLES/ETree/src/../../Utilities/Utilities.h:37,
+                 from SPOOLES/ETree/src/../../cfiles.h:3,
+                 from SPOOLES/ETree/src/../ETree.h:4,
+                 from SPOOLES/ETree/src/ETree_transform.c:3:
+SPOOLES/ETree/src/../../Utilities/IV.h:137:1: note: expected 'int' but argument is of type 'void *'
+ IVinit (
+ ^~~~~~
+/usr/bin/gcc -c -o SPOOLES/ETree/src/ETree_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/ETree/src/ETree_util.c
+/usr/bin/gcc -c -o SPOOLES/FrontMtx/src/FrontMtx_IO.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/FrontMtx/src/FrontMtx_IO.c
+/usr/bin/gcc -c -o SPOOLES/FrontMtx/src/FrontMtx_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/FrontMtx/src/FrontMtx_basics.c
+/usr/bin/gcc -c -o SPOOLES/FrontMtx/src/FrontMtx_factor.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/FrontMtx/src/FrontMtx_factor.c
+/usr/bin/gcc -c -o SPOOLES/FrontMtx/src/FrontMtx_factorUtil.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/FrontMtx/src/FrontMtx_factorUtil.c
+/usr/bin/gcc -c -o SPOOLES/FrontMtx/src/FrontMtx_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/FrontMtx/src/FrontMtx_init.c
+/usr/bin/gcc -c -o SPOOLES/FrontMtx/src/FrontMtx_instance.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/FrontMtx/src/FrontMtx_instance.c
+/usr/bin/gcc -c -o SPOOLES/FrontMtx/src/FrontMtx_loadEntries.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/FrontMtx/src/FrontMtx_loadEntries.c
+/usr/bin/gcc -c -o SPOOLES/FrontMtx/src/FrontMtx_permute.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/FrontMtx/src/FrontMtx_permute.c
+/usr/bin/gcc -c -o SPOOLES/FrontMtx/src/FrontMtx_postProcess.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/FrontMtx/src/FrontMtx_postProcess.c
+/usr/bin/gcc -c -o SPOOLES/FrontMtx/src/FrontMtx_postponed.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/FrontMtx/src/FrontMtx_postponed.c
+/usr/bin/gcc -c -o SPOOLES/FrontMtx/src/FrontMtx_solve.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/FrontMtx/src/FrontMtx_solve.c
+/usr/bin/gcc -c -o SPOOLES/FrontMtx/src/FrontMtx_solveUtil.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/FrontMtx/src/FrontMtx_solveUtil.c
+/usr/bin/gcc -c -o SPOOLES/FrontMtx/src/FrontMtx_split.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/FrontMtx/src/FrontMtx_split.c
+/usr/bin/gcc -c -o SPOOLES/FrontMtx/src/FrontMtx_storeFront.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/FrontMtx/src/FrontMtx_storeFront.c
+/usr/bin/gcc -c -o SPOOLES/FrontMtx/src/FrontMtx_update.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/FrontMtx/src/FrontMtx_update.c
+/usr/bin/gcc -c -o SPOOLES/FrontMtx/src/FrontMtx_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/FrontMtx/src/FrontMtx_util.c
+/usr/bin/gcc -c -o SPOOLES/GPart/src/GPart_DDsepInfo.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/GPart/src/GPart_DDsepInfo.c
+/usr/bin/gcc -c -o SPOOLES/GPart/src/GPart_DDviaFishnet.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/GPart/src/GPart_DDviaFishnet.c
+/usr/bin/gcc -c -o SPOOLES/GPart/src/GPart_DDviaProjection.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/GPart/src/GPart_DDviaProjection.c
+/usr/bin/gcc -c -o SPOOLES/GPart/src/GPart_RBviaDDsep.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/GPart/src/GPart_RBviaDDsep.c
+/usr/bin/gcc -c -o SPOOLES/GPart/src/GPart_TwoSetViaBKL.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/GPart/src/GPart_TwoSetViaBKL.c
+/usr/bin/gcc -c -o SPOOLES/GPart/src/GPart_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/GPart/src/GPart_basics.c
+/usr/bin/gcc -c -o SPOOLES/GPart/src/GPart_domSegMap.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/GPart/src/GPart_domSegMap.c
+/usr/bin/gcc -c -o SPOOLES/GPart/src/GPart_identifyWideSep.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/GPart/src/GPart_identifyWideSep.c
+/usr/bin/gcc -c -o SPOOLES/GPart/src/GPart_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/GPart/src/GPart_init.c
+/usr/bin/gcc -c -o SPOOLES/GPart/src/GPart_makeYCmap.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/GPart/src/GPart_makeYCmap.c
+/usr/bin/gcc -c -o SPOOLES/GPart/src/GPart_smoothBisector.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/GPart/src/GPart_smoothBisector.c
+/usr/bin/gcc -c -o SPOOLES/GPart/src/GPart_smoothBy2layers.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/GPart/src/GPart_smoothBy2layers.c
+/usr/bin/gcc -c -o SPOOLES/GPart/src/GPart_smoothYSep.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/GPart/src/GPart_smoothYSep.c
+/usr/bin/gcc -c -o SPOOLES/GPart/src/GPart_split.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/GPart/src/GPart_split.c
+/usr/bin/gcc -c -o SPOOLES/GPart/src/GPart_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/GPart/src/GPart_util.c
+/usr/bin/gcc -c -o SPOOLES/Graph/src/Graph_IO.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Graph/src/Graph_IO.c
+/usr/bin/gcc -c -o SPOOLES/Graph/src/Graph_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Graph/src/Graph_basics.c
+/usr/bin/gcc -c -o SPOOLES/Graph/src/Graph_compress.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Graph/src/Graph_compress.c
+/usr/bin/gcc -c -o SPOOLES/Graph/src/Graph_equivMap.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Graph/src/Graph_equivMap.c
+/usr/bin/gcc -c -o SPOOLES/Graph/src/Graph_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Graph/src/Graph_init.c
+/usr/bin/gcc -c -o SPOOLES/Graph/src/Graph_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Graph/src/Graph_util.c
+/usr/bin/gcc -c -o SPOOLES/I2Ohash/src/I2Ohash_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/I2Ohash/src/I2Ohash_basics.c
+/usr/bin/gcc -c -o SPOOLES/I2Ohash/src/I2Ohash_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/I2Ohash/src/I2Ohash_init.c
+/usr/bin/gcc -c -o SPOOLES/I2Ohash/src/I2Ohash_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/I2Ohash/src/I2Ohash_util.c
+/usr/bin/gcc -c -o SPOOLES/IIheap/src/IIheap_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/IIheap/src/IIheap_basics.c
+/usr/bin/gcc -c -o SPOOLES/IV/src/IV_IO.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/IV/src/IV_IO.c
+/usr/bin/gcc -c -o SPOOLES/IV/src/IV_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/IV/src/IV_basics.c
+/usr/bin/gcc -c -o SPOOLES/IV/src/IV_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/IV/src/IV_init.c
+/usr/bin/gcc -c -o SPOOLES/IV/src/IV_instance.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/IV/src/IV_instance.c
+/usr/bin/gcc -c -o SPOOLES/IV/src/IV_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/IV/src/IV_util.c
+/usr/bin/gcc -c -o SPOOLES/IVL/src/IVL_IO.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/IVL/src/IVL_IO.c
+/usr/bin/gcc -c -o SPOOLES/IVL/src/IVL_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/IVL/src/IVL_basics.c
+/usr/bin/gcc -c -o SPOOLES/IVL/src/IVL_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/IVL/src/IVL_init.c
+/usr/bin/gcc -c -o SPOOLES/IVL/src/IVL_instance.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/IVL/src/IVL_instance.c
+/usr/bin/gcc -c -o SPOOLES/IVL/src/IVL_listmanip.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/IVL/src/IVL_listmanip.c
+/usr/bin/gcc -c -o SPOOLES/IVL/src/IVL_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/IVL/src/IVL_util.c
+/usr/bin/gcc -c -o SPOOLES/Ideq/src/Ideq_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Ideq/src/Ideq_basics.c
+/usr/bin/gcc -c -o SPOOLES/Ideq/src/Ideq_resize.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Ideq/src/Ideq_resize.c
+/usr/bin/gcc -c -o SPOOLES/Ideq/src/Ideq_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Ideq/src/Ideq_util.c
+/usr/bin/gcc -c -o SPOOLES/InpMtx/src/InpMtx_IO.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/InpMtx/src/InpMtx_IO.c
+/usr/bin/gcc -c -o SPOOLES/InpMtx/src/InpMtx_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/InpMtx/src/InpMtx_basics.c
+/usr/bin/gcc -c -o SPOOLES/InpMtx/src/InpMtx_fullAdj.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/InpMtx/src/InpMtx_fullAdj.c
+/usr/bin/gcc -c -o SPOOLES/InpMtx/src/InpMtx_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/InpMtx/src/InpMtx_init.c
+/usr/bin/gcc -c -o SPOOLES/InpMtx/src/InpMtx_input.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/InpMtx/src/InpMtx_input.c
+/usr/bin/gcc -c -o SPOOLES/InpMtx/src/InpMtx_instance.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/InpMtx/src/InpMtx_instance.c
+/usr/bin/gcc -c -o SPOOLES/InpMtx/src/InpMtx_permute.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/InpMtx/src/InpMtx_permute.c
+/usr/bin/gcc -c -o SPOOLES/InpMtx/src/InpMtx_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/InpMtx/src/InpMtx_util.c
+/usr/bin/gcc -c -o SPOOLES/Lock/src/Lock_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Lock/src/Lock_basics.c
+/usr/bin/gcc -c -o SPOOLES/Lock/src/Lock_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Lock/src/Lock_init.c
+/usr/bin/gcc -c -o SPOOLES/Lock/src/Lock_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Lock/src/Lock_util.c
+/usr/bin/gcc -c -o SPOOLES/MSMD/src/MSMD_MSMDinfo.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/MSMD/src/MSMD_MSMDinfo.c
+/usr/bin/gcc -c -o SPOOLES/MSMD/src/MSMD_MSMDvtx.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/MSMD/src/MSMD_MSMDvtx.c
+/usr/bin/gcc -c -o SPOOLES/MSMD/src/MSMD_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/MSMD/src/MSMD_basics.c
+/usr/bin/gcc -c -o SPOOLES/MSMD/src/MSMD_cleanReachSet.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/MSMD/src/MSMD_cleanReachSet.c
+/usr/bin/gcc -c -o SPOOLES/MSMD/src/MSMD_eliminate.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/MSMD/src/MSMD_eliminate.c
+/usr/bin/gcc -c -o SPOOLES/MSMD/src/MSMD_findInodes.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/MSMD/src/MSMD_findInodes.c
+/usr/bin/gcc -c -o SPOOLES/MSMD/src/MSMD_frontETree.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/MSMD/src/MSMD_frontETree.c
+/usr/bin/gcc -c -o SPOOLES/MSMD/src/MSMD_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/MSMD/src/MSMD_init.c
+/usr/bin/gcc -c -o SPOOLES/MSMD/src/MSMD_order.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/MSMD/src/MSMD_order.c
+/usr/bin/gcc -c -o SPOOLES/MSMD/src/MSMD_update.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/MSMD/src/MSMD_update.c
+/usr/bin/gcc -c -o SPOOLES/Network/src/Network_IO.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Network/src/Network_IO.c
+/usr/bin/gcc -c -o SPOOLES/Network/src/Network_addArc.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Network/src/Network_addArc.c
+/usr/bin/gcc -c -o SPOOLES/Network/src/Network_augmentPath.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Network/src/Network_augmentPath.c
+/usr/bin/gcc -c -o SPOOLES/Network/src/Network_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Network/src/Network_basics.c
+/usr/bin/gcc -c -o SPOOLES/Network/src/Network_findAugmentingPath.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Network/src/Network_findAugmentingPath.c
+/usr/bin/gcc -c -o SPOOLES/Network/src/Network_findMaxFlow.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Network/src/Network_findMaxFlow.c
+/usr/bin/gcc -c -o SPOOLES/Network/src/Network_findMincut.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Network/src/Network_findMincut.c
+/usr/bin/gcc -c -o SPOOLES/Network/src/Network_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Network/src/Network_init.c
+/usr/bin/gcc -c -o SPOOLES/Pencil/src/Pencil_IO.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Pencil/src/Pencil_IO.c
+/usr/bin/gcc -c -o SPOOLES/Pencil/src/Pencil_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Pencil/src/Pencil_basics.c
+/usr/bin/gcc -c -o SPOOLES/Pencil/src/Pencil_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Pencil/src/Pencil_init.c
+/usr/bin/gcc -c -o SPOOLES/SubMtx/src/SubMtx_IO.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/SubMtx/src/SubMtx_IO.c
+/usr/bin/gcc -c -o SPOOLES/SubMtx/src/SubMtx_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/SubMtx/src/SubMtx_basics.c
+/usr/bin/gcc -c -o SPOOLES/SubMtx/src/SubMtx_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/SubMtx/src/SubMtx_init.c
+/usr/bin/gcc -c -o SPOOLES/SubMtx/src/SubMtx_instance.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/SubMtx/src/SubMtx_instance.c
+/usr/bin/gcc -c -o SPOOLES/SubMtx/src/SubMtx_scalevec.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/SubMtx/src/SubMtx_scalevec.c
+/usr/bin/gcc -c -o SPOOLES/SubMtx/src/SubMtx_solve.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/SubMtx/src/SubMtx_solve.c
+/usr/bin/gcc -c -o SPOOLES/SubMtx/src/SubMtx_solveH.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/SubMtx/src/SubMtx_solveH.c
+/usr/bin/gcc -c -o SPOOLES/SubMtx/src/SubMtx_solveT.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/SubMtx/src/SubMtx_solveT.c
+/usr/bin/gcc -c -o SPOOLES/SubMtx/src/SubMtx_solveupd.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/SubMtx/src/SubMtx_solveupd.c
+/usr/bin/gcc -c -o SPOOLES/SubMtx/src/SubMtx_solveupdH.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/SubMtx/src/SubMtx_solveupdH.c
+/usr/bin/gcc -c -o SPOOLES/SubMtx/src/SubMtx_solveupdT.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/SubMtx/src/SubMtx_solveupdT.c
+/usr/bin/gcc -c -o SPOOLES/SubMtx/src/SubMtx_sort.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/SubMtx/src/SubMtx_sort.c
+/usr/bin/gcc -c -o SPOOLES/SubMtx/src/SubMtx_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/SubMtx/src/SubMtx_util.c
+/usr/bin/gcc -c -o SPOOLES/SubMtxList/src/SubMtxList_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/SubMtxList/src/SubMtxList_util.c
+/usr/bin/gcc -c -o SPOOLES/SubMtxManager/src/SubMtxManager_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/SubMtxManager/src/SubMtxManager_basics.c
+/usr/bin/gcc -c -o SPOOLES/SubMtxManager/src/SubMtxManager_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/SubMtxManager/src/SubMtxManager_init.c
+/usr/bin/gcc -c -o SPOOLES/SubMtxManager/src/SubMtxManager_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/SubMtxManager/src/SubMtxManager_util.c
+/usr/bin/gcc -c -o SPOOLES/SymbFac/src/SymbFac_symbfac.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/SymbFac/src/SymbFac_symbfac.c
+/usr/bin/gcc -c -o SPOOLES/Tree/src/Tree_IO.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Tree/src/Tree_IO.c
+/usr/bin/gcc -c -o SPOOLES/Tree/src/Tree_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Tree/src/Tree_basics.c
+/usr/bin/gcc -c -o SPOOLES/Tree/src/Tree_compress.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Tree/src/Tree_compress.c
+/usr/bin/gcc -c -o SPOOLES/Tree/src/Tree_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Tree/src/Tree_init.c
+/usr/bin/gcc -c -o SPOOLES/Tree/src/Tree_metrics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Tree/src/Tree_metrics.c
+/usr/bin/gcc -c -o SPOOLES/Tree/src/Tree_perms.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Tree/src/Tree_perms.c
+/usr/bin/gcc -c -o SPOOLES/Tree/src/Tree_util.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Tree/src/Tree_util.c
+/usr/bin/gcc -c -o SPOOLES/Utilities/src/Utilities_CV.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Utilities/src/Utilities_CV.c
+/usr/bin/gcc -c -o SPOOLES/Utilities/src/Utilities_DV.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Utilities/src/Utilities_DV.c
+/usr/bin/gcc -c -o SPOOLES/Utilities/src/Utilities_I2OP.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Utilities/src/Utilities_I2OP.c
+/usr/bin/gcc -c -o SPOOLES/Utilities/src/Utilities_IP.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Utilities/src/Utilities_IP.c
+/usr/bin/gcc -c -o SPOOLES/Utilities/src/Utilities_IV.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Utilities/src/Utilities_IV.c
+/usr/bin/gcc -c -o SPOOLES/Utilities/src/Utilities_PIV.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Utilities/src/Utilities_PIV.c
+/usr/bin/gcc -c -o SPOOLES/Utilities/src/Utilities_ZV.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Utilities/src/Utilities_ZV.c
+/usr/bin/gcc -c -o SPOOLES/Utilities/src/Utilities_iohb.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Utilities/src/Utilities_iohb.c
+SPOOLES/Utilities/src/Utilities_iohb.c: In function 'readHB_info':
+SPOOLES/Utilities/src/Utilities_iohb.c:269:18: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     *(*Type+3) = (char) NULL;
+                  ^
+SPOOLES/Utilities/src/Utilities_iohb.c: In function 'readHB_header':
+SPOOLES/Utilities/src/Utilities_iohb.c:311:16: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     *(Key+8) = (char) NULL;
+                ^
+SPOOLES/Utilities/src/Utilities_iohb.c:312:19: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     *(Title+72) = (char) NULL;
+                   ^
+SPOOLES/Utilities/src/Utilities_iohb.c:347:20: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     *(Ptrfmt+16) = (char) NULL;
+                    ^
+SPOOLES/Utilities/src/Utilities_iohb.c:348:20: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     *(Indfmt+16) = (char) NULL;
+                    ^
+SPOOLES/Utilities/src/Utilities_iohb.c:349:20: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     *(Valfmt+20) = (char) NULL;
+                    ^
+SPOOLES/Utilities/src/Utilities_iohb.c:350:20: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     *(Rhsfmt+20) = (char) NULL;
+                    ^
+SPOOLES/Utilities/src/Utilities_iohb.c: In function 'readHB_mat_double':
+SPOOLES/Utilities/src/Utilities_iohb.c:457:31: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     *(ThisElement+Ptrwidth) = (char) NULL;
+                               ^
+SPOOLES/Utilities/src/Utilities_iohb.c:480:31: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     *(ThisElement+Indwidth) = (char) NULL;
+                               ^
+SPOOLES/Utilities/src/Utilities_iohb.c:508:31: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     *(ThisElement+Valwidth) = (char) NULL;
+                               ^
+SPOOLES/Utilities/src/Utilities_iohb.c: In function 'readHB_aux_double':
+SPOOLES/Utilities/src/Utilities_iohb.c:708:29: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   *(ThisElement+Rhswidth) = (char) NULL;
+                             ^
+SPOOLES/Utilities/src/Utilities_iohb.c: In function 'readHB_mat_char':
+SPOOLES/Utilities/src/Utilities_iohb.c:1021:31: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     *(ThisElement+Ptrwidth) = (char) NULL;
+                               ^
+SPOOLES/Utilities/src/Utilities_iohb.c:1044:31: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     *(ThisElement+Indwidth) = (char) NULL;
+                               ^
+SPOOLES/Utilities/src/Utilities_iohb.c:1072:31: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     *(ThisElement+Valwidth) = (char) NULL;
+                               ^
+SPOOLES/Utilities/src/Utilities_iohb.c: In function 'ParseRfmt':
+SPOOLES/Utilities/src/Utilities_iohb.c:1632:20: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+        *(tmp2+1) = (int) NULL;
+                    ^
+SPOOLES/Utilities/src/Utilities_iohb.c:1642:32: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+         while ( *(tmp2+len) != (int) NULL ) {
+                                ^
+SPOOLES/Utilities/src/Utilities_iohb.c:1646:32: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+         *(strchr(fmt,')')+1) = (int) NULL;
+                                ^
+SPOOLES/Utilities/src/Utilities_iohb.c: In function 'substr':
+SPOOLES/Utilities/src/Utilities_iohb.c:1709:17: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     SubS[len] = (char) NULL;
+                 ^
+/usr/bin/gcc -c -o SPOOLES/Utilities/src/Utilities_newsort.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Utilities/src/Utilities_newsort.c
+/usr/bin/gcc -c -o SPOOLES/Utilities/src/Utilities_sortAndCompress.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/Utilities/src/Utilities_sortAndCompress.c
+/usr/bin/gcc -c -o SPOOLES/ZV/src/ZV_basics.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/ZV/src/ZV_basics.c
+/usr/bin/gcc -c -o SPOOLES/ZV/src/ZV_init.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/ZV/src/ZV_init.c
+/usr/bin/gcc -c -o SPOOLES/ZV/src/ZV_instance.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/ZV/src/ZV_instance.c
+/usr/bin/gcc -c -o SPOOLES/misc/src/misc_orderViaBestOfNDandMS.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         SPOOLES/misc/src/misc_orderViaBestOfNDandMS.c
+/usr/bin/gfortran   -O3 -march=native   -DSPEC_CPU_LP64        CalculiX.o add_pr.o add_sm_ei.o add_sm_st.o allocation.o amplitudes.o anisotropic.o beamsections.o bounadd.o boundaries.o buckles.o calinput.o cfluxes.o changedepterm.o cloads.o conductivities.o controlss.o couptempdisps.o creeps.o cychards.o cycsymmods.o dasol.o datest.o datri.o defplasticities.o defplas.o densities.o depvars.o deuldlag.o dfluxes.o dgesv.o diamtr.o dloads.o dot.o dredu.o dsort.o dynamics.o dynsolv.o el.o elastics.o elements.o elprints.o envtemp.o equations.o expansions.o extrapolate.o e_c3d.o e_c3d_th.o e_c3d_rhs.o fcrit.o films.o finpro.o forcadd.o frd.fppized.o frdclose.o frequencies.o fsub.o fsuper.o gen3delem.o genran.o getnewline.o graph.o headings.o heattransfers.o hyperel.o hyperelastics.o hyperfoams.o ident.o ident2.o include.o incplas.o initialconditions.o inputerror.o isorti.o isortid.o isortidc.o isortii.o isortiid.o label.o linel.o lintemp.o lintemp_th.o loadadd.o loadaddt.o mafillpr.o mafillsm.o mafillsmcs.o massflowrates.o matdata_co.o matdata_he.o matdata_tg.o materialdata.o materials.o modaldampings.o modaldynamics.o mpcs.o nident.o nident2.o near2d.o noanalysis.o nodalthicknesses.o nodeprints.o nodes.o noelfiles.o noelsets.o nonlinmpc.o normals.o norshell.o number.o onf.o op.o openfile.o orientations.o orthonl.o orthotropic.o out.o parser.o physicalconstants.o planempc.o plastics.o plcopy.o plinterpol.o plmix.o polynom.o profil.o radflowload.o radiates.o ranewr.o rearrange.o rectcyl.o renumber.o restartread.o restarts.o restartshort.o restartwrite.o results.o rhs.o rigidbodies.o rigidmpc.o rootls.o rubber.o saxpb.o selcycsymmods.o shape3tri.o shape4q.o shape4tet.o shape6tri.o shape6w.o shape8h.o shape8q.o shape10tet.o shape15w.o shape20h.o shellsections.o skip.o solidsections.o spcmatch.o specificheats.o statics.o steps.o stiff2mat.o stop.o str2mat.o straightmpc.o surfaces.o temperatures.o tempload.o ties.o transformatrix.o transforms.o ucreep.o uhardening.o umat.o umat_aniso_creep.o umat_aniso_plas.o umat_elastic_fiber.o umat_ideal_gas.o umat_lin_iso_el.o umat_single_crystal.o umat_tension_only.o umat_user.o umpc_mean_rot.o umpc_user.o usermaterials.o usermpc.o viscos.o wcoef.o writebv.o writeev.o writeevcs.o writempc.o writesummary.o cascade.o frdcyc.o insert.o mastruct.o mastructcs.o nonlingeo.o pcgsolver.o preiter.o prespooles.o profile.o remastruct.o spooles.o strcmp1.o strcpy1.o u_calloc.o SPOOLES/A2/src/A2_IO.o SPOOLES/A2/src/A2_basics.o SPOOLES/A2/src/A2_init.o SPOOLES/A2/src/A2_instance.o SPOOLES/A2/src/A2_norms.o SPOOLES/A2/src/A2_sort.o SPOOLES/A2/src/A2_util.o SPOOLES/BKL/src/BKL_basics.o SPOOLES/BKL/src/BKL_evalfcn.o SPOOLES/BKL/src/BKL_exhSearch.o SPOOLES/BKL/src/BKL_fidmat.o SPOOLES/BKL/src/BKL_init.o SPOOLES/BKL/src/BKL_util.o SPOOLES/BPG/src/BPG_IO.o SPOOLES/BPG/src/BPG_basics.o SPOOLES/BPG/src/BPG_init.o SPOOLES/BPG/src/BPG_makeGraphs.o SPOOLES/BPG/src/BPG_pseudo.o SPOOLES/Chv/src/Chv_IO.o SPOOLES/Chv/src/Chv_assemble.o SPOOLES/Chv/src/Chv_basics.o SPOOLES/Chv/src/Chv_copy.o SPOOLES/Chv/src/Chv_factor.o SPOOLES/Chv/src/Chv_findPivot.o SPOOLES/Chv/src/Chv_init.o SPOOLES/Chv/src/Chv_instance.o SPOOLES/Chv/src/Chv_search.o SPOOLES/Chv/src/Chv_swap.o SPOOLES/Chv/src/Chv_update.o SPOOLES/Chv/src/Chv_util.o SPOOLES/ChvList/src/ChvList_basics.o SPOOLES/ChvList/src/ChvList_init.o SPOOLES/ChvList/src/ChvList_util.o SPOOLES/ChvManager/src/ChvManager_basics.o SPOOLES/ChvManager/src/ChvManager_init.o SPOOLES/ChvManager/src/ChvManager_util.o SPOOLES/DSTree/src/DSTree_basics.o SPOOLES/DSTree/src/DSTree_init.o SPOOLES/DSTree/src/DSTree_instance.o SPOOLES/DSTree/src/DSTree_stages.o SPOOLES/DSTree/src/DSTree_util.o SPOOLES/DV/src/DV_IO.o SPOOLES/DV/src/DV_basics.o SPOOLES/DV/src/DV_init.o SPOOLES/DV/src/DV_instance.o SPOOLES/DV/src/DV_util.o SPOOLES/DenseMtx/src/DenseMtx_IO.o SPOOLES/DenseMtx/src/DenseMtx_basics.o SPOOLES/DenseMtx/src/DenseMtx_init.o SPOOLES/DenseMtx/src/DenseMtx_instance.o SPOOLES/DenseMtx/src/DenseMtx_permute.o SPOOLES/DenseMtx/src/DenseMtx_util.o SPOOLES/Drand/src/Drand_basics.o SPOOLES/Drand/src/Drand_init.o SPOOLES/Drand/src/Drand_util.o SPOOLES/ETree/src/ETree_IO.o SPOOLES/ETree/src/ETree_basics.o SPOOLES/ETree/src/ETree_compress.o SPOOLES/ETree/src/ETree_init.o SPOOLES/ETree/src/ETree_instance.o SPOOLES/ETree/src/ETree_permute.o SPOOLES/ETree/src/ETree_transform.o SPOOLES/ETree/src/ETree_util.o SPOOLES/FrontMtx/src/FrontMtx_IO.o SPOOLES/FrontMtx/src/FrontMtx_basics.o SPOOLES/FrontMtx/src/FrontMtx_factor.o SPOOLES/FrontMtx/src/FrontMtx_factorUtil.o SPOOLES/FrontMtx/src/FrontMtx_init.o SPOOLES/FrontMtx/src/FrontMtx_instance.o SPOOLES/FrontMtx/src/FrontMtx_loadEntries.o SPOOLES/FrontMtx/src/FrontMtx_permute.o SPOOLES/FrontMtx/src/FrontMtx_postProcess.o SPOOLES/FrontMtx/src/FrontMtx_postponed.o SPOOLES/FrontMtx/src/FrontMtx_solve.o SPOOLES/FrontMtx/src/FrontMtx_solveUtil.o SPOOLES/FrontMtx/src/FrontMtx_split.o SPOOLES/FrontMtx/src/FrontMtx_storeFront.o SPOOLES/FrontMtx/src/FrontMtx_update.o SPOOLES/FrontMtx/src/FrontMtx_util.o SPOOLES/GPart/src/GPart_DDsepInfo.o SPOOLES/GPart/src/GPart_DDviaFishnet.o SPOOLES/GPart/src/GPart_DDviaProjection.o SPOOLES/GPart/src/GPart_RBviaDDsep.o SPOOLES/GPart/src/GPart_TwoSetViaBKL.o SPOOLES/GPart/src/GPart_basics.o SPOOLES/GPart/src/GPart_domSegMap.o SPOOLES/GPart/src/GPart_identifyWideSep.o SPOOLES/GPart/src/GPart_init.o SPOOLES/GPart/src/GPart_makeYCmap.o SPOOLES/GPart/src/GPart_smoothBisector.o SPOOLES/GPart/src/GPart_smoothBy2layers.o SPOOLES/GPart/src/GPart_smoothYSep.o SPOOLES/GPart/src/GPart_split.o SPOOLES/GPart/src/GPart_util.o SPOOLES/Graph/src/Graph_IO.o SPOOLES/Graph/src/Graph_basics.o SPOOLES/Graph/src/Graph_compress.o SPOOLES/Graph/src/Graph_equivMap.o SPOOLES/Graph/src/Graph_init.o SPOOLES/Graph/src/Graph_util.o SPOOLES/I2Ohash/src/I2Ohash_basics.o SPOOLES/I2Ohash/src/I2Ohash_init.o SPOOLES/I2Ohash/src/I2Ohash_util.o SPOOLES/IIheap/src/IIheap_basics.o SPOOLES/IV/src/IV_IO.o SPOOLES/IV/src/IV_basics.o SPOOLES/IV/src/IV_init.o SPOOLES/IV/src/IV_instance.o SPOOLES/IV/src/IV_util.o SPOOLES/IVL/src/IVL_IO.o SPOOLES/IVL/src/IVL_basics.o SPOOLES/IVL/src/IVL_init.o SPOOLES/IVL/src/IVL_instance.o SPOOLES/IVL/src/IVL_listmanip.o SPOOLES/IVL/src/IVL_util.o SPOOLES/Ideq/src/Ideq_basics.o SPOOLES/Ideq/src/Ideq_resize.o SPOOLES/Ideq/src/Ideq_util.o SPOOLES/InpMtx/src/InpMtx_IO.o SPOOLES/InpMtx/src/InpMtx_basics.o SPOOLES/InpMtx/src/InpMtx_fullAdj.o SPOOLES/InpMtx/src/InpMtx_init.o SPOOLES/InpMtx/src/InpMtx_input.o SPOOLES/InpMtx/src/InpMtx_instance.o SPOOLES/InpMtx/src/InpMtx_permute.o SPOOLES/InpMtx/src/InpMtx_util.o SPOOLES/Lock/src/Lock_basics.o SPOOLES/Lock/src/Lock_init.o SPOOLES/Lock/src/Lock_util.o SPOOLES/MSMD/src/MSMD_MSMDinfo.o SPOOLES/MSMD/src/MSMD_MSMDvtx.o SPOOLES/MSMD/src/MSMD_basics.o SPOOLES/MSMD/src/MSMD_cleanReachSet.o SPOOLES/MSMD/src/MSMD_eliminate.o SPOOLES/MSMD/src/MSMD_findInodes.o SPOOLES/MSMD/src/MSMD_frontETree.o SPOOLES/MSMD/src/MSMD_init.o SPOOLES/MSMD/src/MSMD_order.o SPOOLES/MSMD/src/MSMD_update.o SPOOLES/Network/src/Network_IO.o SPOOLES/Network/src/Network_addArc.o SPOOLES/Network/src/Network_augmentPath.o SPOOLES/Network/src/Network_basics.o SPOOLES/Network/src/Network_findAugmentingPath.o SPOOLES/Network/src/Network_findMaxFlow.o SPOOLES/Network/src/Network_findMincut.o SPOOLES/Network/src/Network_init.o SPOOLES/Pencil/src/Pencil_IO.o SPOOLES/Pencil/src/Pencil_basics.o SPOOLES/Pencil/src/Pencil_init.o SPOOLES/SubMtx/src/SubMtx_IO.o SPOOLES/SubMtx/src/SubMtx_basics.o SPOOLES/SubMtx/src/SubMtx_init.o SPOOLES/SubMtx/src/SubMtx_instance.o SPOOLES/SubMtx/src/SubMtx_scalevec.o SPOOLES/SubMtx/src/SubMtx_solve.o SPOOLES/SubMtx/src/SubMtx_solveH.o SPOOLES/SubMtx/src/SubMtx_solveT.o SPOOLES/SubMtx/src/SubMtx_solveupd.o SPOOLES/SubMtx/src/SubMtx_solveupdH.o SPOOLES/SubMtx/src/SubMtx_solveupdT.o SPOOLES/SubMtx/src/SubMtx_sort.o SPOOLES/SubMtx/src/SubMtx_util.o SPOOLES/SubMtxList/src/SubMtxList_util.o SPOOLES/SubMtxManager/src/SubMtxManager_basics.o SPOOLES/SubMtxManager/src/SubMtxManager_init.o SPOOLES/SubMtxManager/src/SubMtxManager_util.o SPOOLES/SymbFac/src/SymbFac_symbfac.o SPOOLES/Tree/src/Tree_IO.o SPOOLES/Tree/src/Tree_basics.o SPOOLES/Tree/src/Tree_compress.o SPOOLES/Tree/src/Tree_init.o SPOOLES/Tree/src/Tree_metrics.o SPOOLES/Tree/src/Tree_perms.o SPOOLES/Tree/src/Tree_util.o SPOOLES/Utilities/src/Utilities_CV.o SPOOLES/Utilities/src/Utilities_DV.o SPOOLES/Utilities/src/Utilities_I2OP.o SPOOLES/Utilities/src/Utilities_IP.o SPOOLES/Utilities/src/Utilities_IV.o SPOOLES/Utilities/src/Utilities_PIV.o SPOOLES/Utilities/src/Utilities_ZV.o SPOOLES/Utilities/src/Utilities_iohb.o SPOOLES/Utilities/src/Utilities_newsort.o SPOOLES/Utilities/src/Utilities_sortAndCompress.o SPOOLES/ZV/src/ZV_basics.o SPOOLES/ZV/src/ZV_init.o SPOOLES/ZV/src/ZV_instance.o SPOOLES/misc/src/misc_orderViaBestOfNDandMS.o             -lm        -o calculix
+Stop make command: Thu Jan 16 17:24:09 2020 (1579195449)
+Elapsed time for make command: 00:00:49 (49)
+Issuing options command 'specmake options'
+Start options command: Thu Jan 16 17:24:09 2020 (1579195449)
+FPP: specpp   -DSPEC_CPU -DNDEBUG -DSPEC_CPU_LP64   <source> -o <source>.fppized.f9x
+P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+P: FPORTABILITY=""
+P: CPORTABILITY=""
+COMP: /usr/bin/gfortran -c -o options.o -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         <source>
+C: FC="/usr/bin/gfortran"
+C: FOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+P: BENCH_FLAGS="-ISPOOLES"
+P: BENCH_FFLAGS=""
+O: OPTIMIZE=""
+O: FOPTIMIZE="-O3 -march=native "
+P: PORTABILITY="-DSPEC_CPU_LP64"
+P: FPORTABILITY=""
+O: EXTRA_FFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_FOPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_FPORTABILITY=""
+COMP: /usr/bin/gcc -c -o options.o -DSPEC_CPU -DNDEBUG -ISPOOLES   -O3 -march=native        -DSPEC_CPU_LP64         <source>
+C: CC="/usr/bin/gcc"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+P: BENCH_FLAGS="-ISPOOLES"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-O3 -march=native "
+P: PORTABILITY="-DSPEC_CPU_LP64"
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CPORTABILITY=""
+LINK: /usr/bin/gfortran   -O3 -march=native   -DSPEC_CPU_LP64        <objects>   -lm        -o options
+C: LD="/usr/bin/gfortran"
+O: FOPTIMIZE="-O3 -march=native "
+P: PORTABILITY="-DSPEC_CPU_LP64"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+Stop options command: Thu Jan 16 17:24:10 2020 (1579195450)
+Elapsed time for options command: 00:00:01 (1)
+  Compile for '454.calculix' ended at: Thu Jan 16 17:24:10 2020 (1579195450)
+  Elapsed compile for '454.calculix': 00:00:51 (51)
+
+Build successes: 454.calculix(base)
+
+Build Complete
+
+The log for this run is in /root/SPECcpu/SPECcpu2006/result/CPU2006.006.log
+
+runspec finished at Thu Jan 16 17:24:10 2020; 61 total seconds elapsed
