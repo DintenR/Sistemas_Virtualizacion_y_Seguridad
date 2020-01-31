@@ -1,0 +1,256 @@
+                           SPECweb2005 Support Result                           
+
+================================================================================
+                                                        ||
+Ultimate Computers: Model 1                             ||     Invalid Run!     
+SoFast Software: WebStreaker v1.0 (23-bit)              ||
+SoFast Software: JSP Servlet Engine v1.0                ||
+                                                        ||
+================================================================================
+
+Submitter: Speedy Systems, Pomona, SPEC License #: 0, Test date: Jan-2020
+
+================================================================================
+
+PERFORMANCE
+
+     | Simultaneous  |   Test    | Aggregate QOS Compliance  | Validation |
+     | User Sessions | Iteration |  Good   Tolerable   Fail  |   Errors   |
+     |---------------|-----------|---------------------------|------------|
+     |      200      |     1     |  2.3%     2.6%     97.4%  |     40     |
+      --------------------------------------------------------------------
+
+================================================================================
+
+CONFIGURATION
+
+                               Availability Dates                               
+--------------------------------------------------------------------------------
+Backend Simulator             Jun-1999                                          
+SUT Hardware                  Jun-1999                                          
+Web Server Software           Dec-2003                                          
+                              Dec-2005                                          
+Operating System              Feb-2000                                          
+Other Components              N/A                                               
+
+                            System Under Test (SUT)                             
+--------------------------------------------------------------------------------
+# of SUTs                     1                                                 
+Vendor                        Ultimate Computers                                
+Model                         Model 1                                           
+Processor                     Celeron                                           
+Processor Speed (MHz)         366                                               
+# Processors                  1 (1 core, 1 chip, 1 core/chip)                   
+Primary Cache                 16KB(I) + 16KB(D) on chip                         
+Secondary Cache               128 KB                                            
+Other Cache                   N/A                                               
+Memory                        128 MB SDRAM                                      
+Disk Subsystem                1 x 10GB SCSI                                     
+Disk Controllers              Onboard LSI SCSI                                  
+Operating System              HURL 6.1 (kernel 2.2.15pre8)                      
+File System                   ext2                                              
+Other Hardware                N/A                                               
+Other Software                N/A                                               
+
+                                 HTTP Software                                  
+--------------------------------------------------------------------------------
+Vendor                        SoFast Software                                   
+Name/Version                  WebStreaker v1.0 (23-bit)                         
+Dynamic Scripts               PHP                                               
+Server Cache                  N/A                                               
+Log Mode                      Common Log Format                                 
+
+                                 Script Engine                                  
+--------------------------------------------------------------------------------
+Vendor                        SoFast Software                                   
+Name/Version                  JSP Servlet Engine v1.0                           
+Dynamic Scripts               JSP                                               
+Server Cache                  N/A                                               
+Log Mode                      Common Log Format                                 
+
+                                  SUT Network                                   
+--------------------------------------------------------------------------------
+# of Controllers              1                                                 
+Network Controllers           Systel FasterNet (embedded)                       
+# of Networks                 1                                                 
+Network Type                  Fast Ethernet                                     
+Network Speed                 100 Mb/s                                          
+MSL (sec)                     30 (Non RFC1122)                                  
+Time-Wait (sec)               60 (Non RFC1122)                                  
+MTU Size                      1500                                              
+
+                                 Client Systems                                 
+--------------------------------------------------------------------------------
+# of Clients                  1                                                 
+Model                         Model 1                                           
+Processor                     Celeron                                           
+Processor Speed (MHz)         366                                               
+# Processors                  1                                                 
+Memory                        128 MB SDRAM                                      
+Network Controller            Systel 10-Speed                                   
+Operating System              HURL 6.1 (kernel 2.2.15pre8)                      
+JVM Version                   Java 2 Runtime Environment, Std Edition (build
+                              1.4.2_01-b06)
+JIT Version                   Java HotSpot Client VM (build 1.4.2_01-b06,
+                              mixed mode)
+Other Hardware                N/A                                               
+Other Software                N/A                                               
+
+                           Backend Simulator (BESIM)                            
+--------------------------------------------------------------------------------
+# of Simulators               1                                                 
+Model                         Model 1                                           
+Processor                     Celeron                                           
+Processor Speed (MHz)         366                                               
+# of Processors               1                                                 
+Memory                        128 MB SDRAM                                      
+Network Controller            Systel 10-Speed                                   
+Operating System              HURL 6.1 (kernel 2.2.15pre8)                      
+File System                   ext2                                              
+Web Server                    New Millenium Webserver v2.000                    
+Server Scripts                SPEC-FCGI v1.0                                    
+Other Hardware                N/A                                               
+Other Software                N/A                                               
+
+================================================================================
+
+NOTES
+
+SUT Notes
+---------
+*  This is my laptop.                                                           
+*  It acts as both web server and load generator.                               
+
+Operating System Notes
+----------------------
+*  No modifications to default OS configuration.                                
+
+HTTP Software Notes
+-------------------
+*  The following tunes made in webserver.conf:                                  
+*  MaxThreads = 10000                                                           
+
+HTTP Script Notes
+-----------------
+*  SPEC-provided PHP scripts used without modification                          
+*  Smarty v2.5.0 used                                                           
+
+Client Notes
+------------
+*  This is my laptop.                                                           
+*  It acts as both web server and load generator.                               
+
+BESIM Notes
+-----------
+*  This is my laptop.                                                           
+*  It acts as both web server and load generator.                               
+
+Other Notes
+-----------
+*  No network switches were used for this result.                               
+*  Result prepared by I.M. Anonymous <anonymous@anonymity.org>                  
+
+================================================================================
+
+DETAILED TEST RESULTS
+
+Iter-|                  |   Total    |                  QOS                   
+ation|   Request Type   |    Reqs    |          Good       Toler      Fail
+-----|------------------|------------|------------------------------------
+     |home              |     69     |             0           0        69
+     |search            |    142     |             0           0       141
+     |catalog           |    175     |             0           0       169
+  1  |product           |    333     |             0           0       326
+     |fileCatalog       |    268     |             0           0       259
+     |file              |    155     |             0           0       149
+     |download          |     58     |            27           3        17
+     |------------------|------------|------------------------------------
+     |      TOTAL       |    1200    |            27           3      1130
+
+Iter-|                  |    Byte    |  Weighted  | Avg Resp | Average  
+ation|   Request Type   |    Rate    |    ABR     |  (sec)   |  Bytes   
+-----|------------------|------------|------------|----------|----------
+     |home              |  2,558.6   |   145.1    |  23.122  |  59162   
+     |search            |  1,246.7   |   129.4    |  20.568  |  25642   
+     |catalog           |  1,563.3   |   196.0    |  20.155  |  31509   
+  1  |product           |  1,973.3   |   769.4    |  32.941  |  65002   
+     |fileCatalog       |  5,217.5   |   960.6    |  19.327  |  100838  
+     |file              |  6,721.6   |   657.5    |  17.755  |  119345  
+     |download          |  92,688.0  |  3,918.6   |  20.507  | 1900804  
+     |------------------|------------|------------|----------|----------
+     |      TOTAL       |     -      |  6,776.6   |  23.445  | 158,877  
+
+Iteration 1: 200 sessions, 1200 requests, 0.03 reqs/sec/session   QOS: 2.3% good, 2.6% tolerable; 40 errors
+
+
+ERRORS
+
+Configuration Errors
+--------------------
+*  WARMUP_SECONDS value is: 30; should be 300                                   
+*  RUN_SECONDS value is: 180; should be 1800                                    
+*  RAMPUP_SECONDS value is: 30; should be 300                                   
+*  RAMPDOWN_SECONDS value is: 30; should be 300                                 
+*  THREAD_RAMPDOWN_SECONDS value is: 30; should be 180                          
+*  THREAD_RAMPUP_SECONDS value is: 30; should be 180                            
+*  ITERATIONS value is: 1; should be 3                                          
+
+
+Quality of Service Errors
+-------------------------
+
+*  Iteration 1       failed 95% TIME GOOD QoS.     Achieved: 2.3%
+
+
+Validation Errors
+-----------------
+
+*  1 Validation Errors for Iteration 1:  localhost - search
+*  6 Validation Errors for Iteration 1:  localhost - catalog
+*  7 Validation Errors for Iteration 1:  localhost - product
+*  9 Validation Errors for Iteration 1:  localhost - fileCatalog
+*  6 Validation Errors for Iteration 1:  localhost - file
+*  11 Validation Errors for Iteration 1:  localhost - download
+
+================================================================================
+
+Request Distribution Errors
+---------------------------
+
+
+*  Weighted percentage difference (2.73%) for home in Iteration 1 is too high.
+   Expected: 104 requests, Actual: 69
+   
+
+*  Weighted percentage difference (1.55%) for search in Iteration 1 is too
+   high. Expected: 161 requests, Actual: 142
+   
+
+*  Weighted percentage difference (-1.93%) for catalog in Iteration 1 is too
+   high. Expected: 150 requests, Actual: 175
+   
+
+*  Weighted percentage difference (-1.17%) for product in Iteration 1 is too
+   high. Expected: 317 requests, Actual: 333
+   
+
+*  Weighted percentage difference (1.64%) for fileCatalog in Iteration 1 is
+   too high. Expected: 289 requests, Actual: 268
+   
+
+*  Weighted percentage difference (1.44%) for file in Iteration 1 is too high.
+   Expected: 173 requests, Actual: 155
+   
+
+*  Weighted percentage difference (2.24%) for download in Iteration 1 is too
+   high. Expected: 86 requests, Actual: 58
+   
+
+*  Sum of weighted percentage difference (6.50%) exceeds 1.5% for Iteration 1   
+
+
+================================================================================
+For questions about this result, please contact the submitter: Speedy Systems,
+Pomona
+
+Copyright (c) 2006 Standard Performance Evaluation Corporation
