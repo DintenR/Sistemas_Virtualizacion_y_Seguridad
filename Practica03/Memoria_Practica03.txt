@@ -1,0 +1,36 @@
+# Practica 3: Máquinas Virtuales: Optimización de rendimiento
+
+## Tarea 1
+
+### Crear una instalación mínima de un DomU HVM 
+
+### Configurar la máquina HVM para tener acceso al disco de la máquina PV (reutilizar /)
+
+
+## Tarea 2: Cargas de trabajo limitadas por CPU
+
+### Comparar el rendimiento de SPECcpu en los siguientes casos
+
+#### Nativo
+
+#### PV sin VT-x
+
+#### PV con VT-x
+
+#### HVM on PV
+
+#### ¿Por qué se produce la perdida de rendimiento en el caso de PV sin VT-x?
+
+## Tarea 3: QoS para SPECjbb 
+
+### Configurar dos DomU para ejecutara SPECjbb
+
+### Ejecutar SPECjbb simultaneamente para intentar alcanzar un 80% del rendimiento nativo en uno de ellos   
+
+## Tarea 4: SPECweb
+
+### Comparar el rendimiento de SPECweb en los siguientes casos
+
+#### Nativo
+
+#### HVM on PV

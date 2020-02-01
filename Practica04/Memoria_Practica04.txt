@@ -1,0 +1,67 @@
+# Practica 4: Contenedores y servicios de cloud publicos
+
+## Tarea 1: LXC
+
+### Repetir la tarea 3 de la practica 3 intentando alcanzar un LSA del 75%
+
+El primer paso que hay que realizar para llevar a cabo esta tarea es instalar lxc. Para ello:
+
+```{bash}
+apt update
+apt install lxc
+```
+
+Lo siguiente es crear dos contenedores debian. Para crear el contenedor utilizo la plantilla que hay disponible en /usr/share/lxc/templates
+
+```{bash}
+lxc-create -t debian -n debian_base
+```
+Con esto se nos genera un directorio en /var/lib/lxc con el nombre debian_base que contiene la configuración y el sistema de ficheros raiz del contendor.
+
+
+También es necesario configurar la red en modo brigde para lo que seguimos los pasos que aparecen en las diapositivas de la asignatura y modificamos el fichero /etc/lxc/default.conf asignando los siguientes parámetros:
+
+```
+lxc.net.0.type = veth 
+lxc.net.0.link = virbr0 
+lxc.net.0.flags = up 
+lxc.apparmor.profile = generated 
+lxc.apparmor.allow_nesting = 1
+
+```
+
+En cada contenedor se introducen java y el benchmark. Se inician los contendores y para intentar que uno alcance una puntuación alta, cercana a la nativa, se modifican dos parametros de los cgroups de los contenedores:
+- En debian_clone para restringirlo a una sola cpu
+- En debian_base dar mayor prioridad al contendor debian
+
+Hay dos alternativas, una temporal para realizarlo con el contendor en ejecución y que al parar el contenedor se reincia y otra estática en la configuración del contenedor.
+
+```
+echo 0 > /sys/fs/cgruops/cpuset/lxc/debian_clone/cpuset.cpus
+echo 64 > /sys/fs/cgruops/cpu/lxc/debian_clone/cpu.shares
+echo 0-3 > /sys/fs/cgruops/cpuset/lxc/debian_base/cpuset.cpus
+echo 1024 > /sys/fs/cgruops/cpu/lxc/debian_base/cpu.shares
+```
+
+```
+#En /var/lib/lxc/debian_clone/config
+lxc.cgroups.cpuset.cpus = 0
+lxc.cgrups.cpu.shares = 64
+#En /var/lib/lxc/debian_base/config
+lxc.cgroups.cpuset.cpus = 0-3
+lxc.cgrups.cpu.shares = 1024
+```
+## Tarea 2: Docker
+
+### Desplegar SPECweb en 3 contenedores Docker (servidor web, cliente y BeSim) usando imagenes incrementales
+
+### Ejecutar y comparar con el mejor Xen
+
+### Subir los contenedos a Dockerhub de manera privada
+
+## Tarea 3: GCE/Amazon EC2 
+
+### Desplegar los contenedores creados en la tarea 2 en AMI separados en Amazon EC2 o  Google Compute Engine
+
+### Medir el rendimiento   
+

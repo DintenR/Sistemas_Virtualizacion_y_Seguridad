@@ -27,38 +27,7 @@ Por último, ocurria un problema también con el test 481.wrf. Este problema se 
 
 ### Resultados
 
-En este apartado se presentan los resultados de las diferentes ejecuciones de SPECcpu, antes de ejecutar el benchmark se ha usado un script obtenido en GitHub y mostrado a continuación que permite desactivar la función TurboBoost, de manera que esta no interfiera con los resultados. 
-```sh
-#!/bin/bash
-
-if [[ -z $(which rdmsr) ]]; then
-    echo "msr-tools is not installed. Run 'sudo apt-get install msr-tools' to install it." >&2
-    exit 1
-fi
-
-if [[ ! -z $1 && $1 != "enable" && $1 != "disable" ]]; then
-    echo "Invalid argument: $1" >&2
-    echo ""
-    echo "Usage: $(basename $0) [disable|enable]"
-    exit 1
-fi
-
-cores=$(cat /proc/cpuinfo | grep processor | awk '{print $3}')
-for core in $cores; do
-    if [[ $1 == "disable" ]]; then
-        sudo wrmsr -p${core} 0x1a0 0x4000850089
-    fi
-    if [[ $1 == "enable" ]]; then
-        sudo wrmsr -p${core} 0x1a0 0x850089
-    fi
-    state=$(sudo rdmsr -p${core} 0x1a0 -f 38:38)
-    if [[ $state -eq 1 ]]; then
-        echo "core ${core}: disabled"
-    else
-        echo "core ${core}: enabled"
-    fi
-done
-```
+En este apartado se presentan los resultados de las diferentes ejecuciones de SPECcpu, antes de ejecutar el benchmark se ha usado un script obtenido en GitHub que permite desactivar la función TurboBoost, de manera que esta no interfiera con los resultados. 
 
 La primera de las ejecuciones ha sido con todos los test y con las opciones indicadas anteriormente. Obteniendo los siguientes resultados:
 
@@ -73,7 +42,7 @@ En este apartado se ejecutará un benchmark de cada suit, es decir, uno de la su
 
 En el primero de los casos se ejecutan los benchmarks usando la información que muestra perf por defecto con los siguientes comandos:
 
-```sh
+```
 #Test de enteros
 perf stat -d runspec --config=ricardo-linux.cfg --tune=base --noreportable --size=ref --iterations=1 h264ref
 
@@ -91,7 +60,7 @@ Como se puede apreciar en las imagenes, en el test de numeros enteros se produce
 
 Para el segundo caso no es suficiente con mostrar los datos básicos de perf. Para poder calcular el malgasto producido por la especulación es necesario recurrir al manual del procesador para encontrar el evento que deseamos analizar y después con `perf list` comprobar el nombre exacto. En este caso necesitamos saber cuantas instrucciones se ejecutan y cuantas se descartan. Estos datos los obtenemos de los contadores `uops.issued` y `uops.retired`. Además, se necesita saber el consumo energético, pero en este procesador no estan soportados esos contadores por tanto el malgasto energético se mostrará en porcentaje. Una vez conocidos los contadores hay que ejecutar los siguientes comandos
 
-```sh
+```
 #Test de enteros
 perf stat -e uops.retired,uops.issued runspec --config=ricardo-linux.cfg --tune=base --noreportable --size=ref --iterations=1 h264ref
 
@@ -125,7 +94,7 @@ Una vez descagardo todo se procedió a a configurar cada una de las piezas que c
 
 Lo primero que se hizo con el sevidor web fue modificar el fichero de configuración del sitio para establecer la raiz en el directorio /var/www en lugar de /var/www/html, que es el directorio por defecto. Además, se copiaron los ficheros del directorio scripts de SPECweb2005 al /var/www
 
-```sh
+```
 #Añadir repositorios con php5.6
 
 apt-get install apt-transport-https lsb-release ca-certificates
@@ -144,7 +113,7 @@ cp -r /tmp/SPECweb2005/scripts/php/* /var/www/
 
 Wafgen es un generador de contenido estático para el benchmark. SPECweb2005 contiene 3 tests diferentes: Support, Banking y E-commerce. Cada uno de ellos necesita una serie de ficheros. Para generarlos hay que definir una serie de propiedades en los ficheros de configuracion wafgen para cada test y luego ejecutar Wafgen. Antes de ejecutar el generador es necesario añadir el directorio /bin del jdk a la variable PATH
 
-```sh
+```
 #Ejemplo para el caso support
 cd /tmp/SPECweb2005/wafgen
 vi  unix/support_image_props.rc (cambiar DOCROOT=/var/www/)
@@ -160,7 +129,7 @@ export PATH=/tmp/jdk1.5.0_22/bin/:$PATH
 #### BeSim
 Para el Backend Simulator es necesario activar el modulo fast-cgi en apache y modificar el fichero de configuración del sitio para añadir la opciones ExecCGI. Una vez hecho esto, se crea el directorio /var/www/besim y desde el directorio del besim que se encuenta dentro de SPECweb2005 se compila besim con las opciones apropiadas. Por último, se da permisos a todos los ficheros en /var/www para que se puedan leer y escribir y se lanza el test de BeSim para comprobar que funciona.
 
-```sh
+```
 apt-get install libapache2-mod-fcgid  libfcgi-dev
 a2enmod  fcgid
 service apache2 restart
@@ -180,24 +149,26 @@ A la hora de ejecutar el cliente hay que fijar una serie de parámetros y escoge
 
 En ambos test, se seguirá el mismo patrón de ejecución para ver cuantas sesiones simultaneas es capaz de soportar el sistema. Se comenzará con 100 sesiones simultaneas y en función de los resultados se irá ajustando el numero de sesiones simultaneas hasta alcanzar el punto en el que comienzan a descartarse peticiones, estableciendo el limite en un 98% de casos correctos.
 
- 
+##### Resultados Support
 
-#### Test Support
+![Resultados Support 100 sesiones simultaneas]()
 
-**Primera ejecución**: 100 sesiones simultaneas -> 100% 
+![Resultados Support 200 sesiones simultaneas]()
 
-**Segunda ejecución**: 120 sesiones simultaneas -> 90%
+![Resultados Support 150 sesiones simultaneas]()
 
-**Tercera ejecución**: 110 sesiones simultaneas -> 98%
+![Resultados Support 125 sesiones simultaneas]()
 
-A la vista de estos resultados podemos determinar que, en Test Support, el benchmark consigue una puntuación de 110.
+![Resultados Support 110 sesiones simultaneas]()
 
-#### Test Banking
+##### Resultados Banking
 
-**Primera ejecución**: 100 sesiones simultaneas -> 100% 
+![Resultados Banking 100 sesiones simultaneas]()
 
-**Segunda ejecución**: 130 sesiones simultaneas -> 97%
+![Resultados Banking 200 sesiones simultaneas]()
 
-**Tercera ejecución**: 125 sesiones simultaneas -> 99%
+![Resultados Banking 150 sesiones simultaneas]()
 
-A la vista de estos resultados podemos determinar que, en Test Banking, el benchmark consigue una puntuación entre 125 y 130.
+![Resultados Banking 125 sesiones simultaneas]()
+
+![Resultados Banking 110 sesiones simultaneas]()

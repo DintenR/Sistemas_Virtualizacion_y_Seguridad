@@ -1,0 +1,43 @@
+En esta versión de xen todos los dominios son gestionados. No existe el new. xl create -p
+
+Boot
+real 0m0.676s
+user 0m0.539s
+sys 0m0.140s
+
+Shutdown
+real 0m0.013
+user 0m0.006
+sys 0m0.007
+
+Checkpoint 
+real 0m13.948s
+user 0m0.019s
+sys 0m1.198s
+
+Restore
+real 0m12.794s
+user 0m0.374s
+sys 0m0.848s
+
+####
+# PV GRUB
+####
+En el Dom0
+	kernel          = /usr/lib/grub-xen/grub-x86_64-xen.bin
+	extra           = '(hd0)/boot/grub/grub.cfg'
+En el DomU
+	mkdir /boot/grub
+	apt-get install linux-image-amd64
+	Install grub2-common, and run update-grub to create /boot/grub/grub.cfg
+
+###
+# Kernel from backports: 
+###
+
+add repository to sources.list
+apt install linux-image-5.....
+
+###
+# Parte final para cuando esten todos los benchmark desplegados
+###

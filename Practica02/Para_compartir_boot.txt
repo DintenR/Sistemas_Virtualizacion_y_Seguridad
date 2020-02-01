@@ -1,0 +1,5 @@
+Introducir el disco en el .cfg
+
+Introducir opción en grub de hvm para que use el boot y luego ponga el root del otro disco por encima con el parametro root=[device del disco PV]
+
+
