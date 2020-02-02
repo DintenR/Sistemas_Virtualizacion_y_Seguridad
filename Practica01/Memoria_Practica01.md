@@ -126,9 +126,9 @@ perf stat -d runspec --config=ricardo-linux.cfg --tune=base --noreportable --siz
 
 Los resultados se muestan en las siguientes imagenes:
 
-![Resultados perf stat para el test de enteros](https://github.com/DintenR/Sistemas_Virtualizacion_y_Seguridad/tree/master/Practica01/Imagenes/SPECcpu_nativo_int_perf.png)
+![Resultados perf stat para el test de enteros](https://github.com/DintenR/Sistemas_Virtualizacion_y_Seguridad/blob/master/Practica01/Imagenes/SPECcpu_nativo_fp_perf.PNG)
 
-![Resultados perf stat para el test de coma flotante](https://github.com/DintenR/Sistemas_Virtualizacion_y_Seguridad/tree/master/Practica01/Imagenes/SPECcpu_nativo_fp_perf.png)
+![Resultados perf stat para el test de coma flotante](https://github.com/DintenR/Sistemas_Virtualizacion_y_Seguridad/blob/master/Practica01/Imagenes/SPECcpu_nativo_fp_perf.PNG)
 
 Como se puede apreciar en las imagenes, en el test de numeros enteros se producen un mayor número de cambios de contexto, fallos de pagina y lectutas de L1, lo que nos indica que esta más limitado por la memoria que el test de coma flotante.
 
@@ -144,9 +144,9 @@ perf stat -e uops_executed.thread,uops_issued.any --config=ricardo-linux.cfg --t
 
 Los resultados son los que se muestran en las imágenes:
 
-![Resultados del análisis de la especulación con perf para el test de enteros](https://github.com/DintenR/Sistemas_Virtualizacion_y_Seguridad/tree/master/Practica01/Imagenes/perf_uops_int.png)
+![Resultados del análisis de la especulación con perf para el test de enteros](https://github.com/DintenR/Sistemas_Virtualizacion_y_Seguridad/blob/master/Practica01/Imagenes/perf_uops_int.png)
 
-![Resultados del análisis de la especulación con perf para el test de coma flotante](https://github.com/DintenR/Sistemas_Virtualizacion_y_Seguridad/tree/master/Practica01/Imagenes/perf_uops_fp.png)
+![Resultados del análisis de la especulación con perf para el test de coma flotante](https://github.com/DintenR/Sistemas_Virtualizacion_y_Seguridad/blob/master/Practica01/Imagenes/perf_uops_fp.png)
 
 Como se puede ver, en el caso de los enteros, el procesador ejecuta un total de 3.511.686.768.719 uops y retira 3.203.017.076.374 uops, por tanto esto supone un malgasto de 8.79 %. En el caso de coma flotante, el procesador ejecuta un total de 3.821.039.136.496 uops y retira 3.481.674.726.732 uops, por tanto esto supone un malgasto de 8.89 %.
 
