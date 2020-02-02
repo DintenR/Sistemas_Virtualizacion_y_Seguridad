@@ -36,9 +36,9 @@ Para este apartado ya contamos con los resultados del benchmark en la máquina n
 
 |Tipo de virtualizacion |h264ref |calculix|
 |---|---|---|
-|Nativo|||
-|PV con VT-x|||
-|HVM on PV|||
+|Nativo|325|490|
+|PV con VT-x|365|550|
+|HVM on PV|556|548|
 
 #### ¿Por qué se produce la perdida de rendimiento en el caso de PV sin VT-x?
 

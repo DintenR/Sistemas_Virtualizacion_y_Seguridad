@@ -165,10 +165,10 @@ En la tabla se mostrarán los resultados de los tres DomU, para comparar los cua
 
 | Caso | debian10 | clone 1 | clone 2|
 |---|---|---| --- |
-|Base||||
-|1 core por DomU||||
-|Cores 2 y 3 para DomU||||
-|Incrementar pero DomU base||||
+|Base|531|533|524|
+|1 core por DomU|369|368|370|
+|Cores 2 y 3 para DomU|504|561|536|
+|Incrementar pero DomU base|378|549|550|
 
 
 ### Limpieza

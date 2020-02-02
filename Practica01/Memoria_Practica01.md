@@ -27,45 +27,88 @@ Por último, ocurria un problema también con el test 481.wrf. Este problema se 
 
 ### Resultados
 
-En este apartado se presentan los resultados de las diferentes ejecuciones de SPECcpu, antes de ejecutar el benchmark se ha usado un script obtenido en GitHub y mostrado a continuación que permite desactivar la función TurboBoost, de manera que esta no interfiera con los resultados. 
-```sh
-#!/bin/bash
-
-if [[ -z $(which rdmsr) ]]; then
-    echo "msr-tools is not installed. Run 'sudo apt-get install msr-tools' to install it." >&2
-    exit 1
-fi
-
-if [[ ! -z $1 && $1 != "enable" && $1 != "disable" ]]; then
-    echo "Invalid argument: $1" >&2
-    echo ""
-    echo "Usage: $(basename $0) [disable|enable]"
-    exit 1
-fi
-
-cores=$(cat /proc/cpuinfo | grep processor | awk '{print $3}')
-for core in $cores; do
-    if [[ $1 == "disable" ]]; then
-        sudo wrmsr -p${core} 0x1a0 0x4000850089
-    fi
-    if [[ $1 == "enable" ]]; then
-        sudo wrmsr -p${core} 0x1a0 0x850089
-    fi
-    state=$(sudo rdmsr -p${core} 0x1a0 -f 38:38)
-    if [[ $state -eq 1 ]]; then
-        echo "core ${core}: disabled"
-    else
-        echo "core ${core}: enabled"
-    fi
-done
-```
+En este apartado se presentan los resultados de las diferentes ejecuciones de SPECcpu, antes de ejecutar el benchmark se ha usado un script obtenido en GitHub que permite desactivar la función TurboBoost, de manera que esta no interfiera con los resultados. 
 
 La primera de las ejecuciones ha sido con todos los test y con las opciones indicadas anteriormente. Obteniendo los siguientes resultados:
 
-INTRODUCIR IMAGEN AQUI
+#### INT
+| Benchmarks   |Base Ref. | Base Run Time  | Ratio |     
+| -------------- | ------ | --------- | ---------  |
+|400.perlbench   | 9770   |      --   |         CE |                                 
+|401.bzip2       | 9650   | 361       |  26.8   *  |                                 
+|403.gcc         | 8050   | 186       |  43.3   *  |                                 
+|429.mcf         | 9120   | 196       |  46.5   *  |                                 
+|445.gobmk       |10490   | 368       |  28.5   *  |                                 
+|456.hmmer       | 9330   | 125       |  74.6   *  |                                 
+|458.sjeng       |12100   | 396       |  30.6   *  |                                 
+|462.libquantum  |20720   | 223       |  93.0   *  |                                 
+|464.h264ref     |22130   | 361       |  61.3   *  |                                 
+|471.omnetpp     | 6250   | 244       |  25.6   *  |                                 
+|473.astar       | 7020   | 318       |  22.1   *  |                                 
+|483.xalancbmk   | 6900   | 145       |  47.4   *  |
+
+#### FP
+                            
+| Benchmarks   |Base Ref. | Base Run Time  | Ratio |     
+| -------------- | ------ | --------- | ---------  |  
+| 410.bwaves     | 13590  |  246      |   55.2   * |                                 
+| 416.gamess     | 19580  |   50.5    |          VE|                                 
+| 433.milc       |  9180  |  234      |   39.2   * |                                 
+| 434.zeusmp     |  9100  |  152      |   60.0   * |                                 
+| 435.gromacs    |  7140  |  213      |   33.5   * |                                 
+| 436.cactusADM  | 11950  |  156      |   76.7   * |                                 
+| 437.leslie3d   |  9400  |  133      |   70.9   * |                                 
+| 444.namd       |  8020  |  251      |   32.0   * |                                 
+| 447.dealII     | 11440  |  219      |   52.3   * |                                 
+| 450.soplex     |  8340  |       --  |          CE|                                 
+| 453.povray     |  5320  |   95.3    |   55.8   * |                                 
+| 454.calculix   |  8250  |  547      |   15.1   * |                                 
+| 459.GemsFDTD   | 10610  |  203      |   52.3   * |                                 
+| 465.tonto      |  9840  |  235      |   42.0   * |                                 
+| 470.lbm        | 13740  |  188      |   73.1   * |                                 
+| 481.wrf        | 11170  |  148      |   75.6   * |                                 
+| 482.sphinx3    | 19490  |  372      |   52.4   * | 
 
 En la segunda de las ejecuciones, se cambió el flag march. En la ejecución anterior se puso -march=native para que la compilación se hiciera de acuerdo con la arquitectura del procesador empleado. En este caso, se trata de un procesado de 64-bits. En esta ejecución se ha modificado ese parámetro para que la compilación se realize pensando en el ISA de un procesador x86 de 32bits. El objetivo es ver como afecta al rendimiento general del sistema el conjunto de intrucciones disponibles a la hora de compilar. Los resultados obtenidos son los siguientes:
 
+#### INT
+| Benchmarks   |Base Ref. | Base Run Time  | Ratio |     
+| -------------- | ------ | --------- | ---------  |
+|400.perlbench   |         |            |       NR  |                 
+|401.bzip2       | 9650    |363         |26.6   *   |                               
+|403.gcc         |         |            |      NR   |      
+|429.mcf         | 9120    |113         |80.8   *   |                               
+|445.gobmk       |10490    |374         |28.1   *   |                               
+|456.hmmer       | 9330    |134         |69.7   *   |                               
+|458.sjeng       |12100    |432         |28.0   *   |                               
+|462.libquantum  |20720    |438         |47.3   *   |                               
+|464.h264ref     |22130    |375         |59.0   *   |                               
+|471.omnetpp     | 6250    |244         |25.6   *   |                               
+|473.astar       | 7020    |330         |21.3   *   |                               
+|483.xalancbmk   | 6900    |149         |46.4   *   |
+
+#### FP
+| Benchmarks   |Base Ref. | Base Run Time  | Ratio |     
+| -------------- | ------ | --------- | ---------  |
+|410.bwaves      |13590   | 275       |  49.3   *  |                                
+|416.gamess      |        |           |         NR |                                
+|433.milc        | 9180   | 286       |  32.1   *  |                                
+|434.zeusmp      | 9100   | 205       |  44.3   *  |                                
+|435.gromacs     | 7140   | 305       |  23.4   *  |                                
+|436.cactusADM   |        |           |         NR |                                
+|437.leslie3d    | 9400   | 137       |  68.5   *  |                                
+|444.namd        | 8020   | 335       |  24.0   *  |                                
+|447.dealII      |11440   | 231       |  49.6   *  |                                
+|450.soplex      |        |           |         NR |                                
+|453.povray      |        |           |         NR |                                
+|454.calculix    | 8250   | 630       |  13.1   *  |                                
+|459.GemsFDTD    |10610   | 323       |  32.8   *  |                                
+|465.tonto       | 9840   | 401       |  24.6   *  |                                
+|470.lbm         |13740   | 241       |  57.0   *  |                                
+|481.wrf         |11170   | 209       |  53.5   *  |                                
+|482.sphinx3     |19490   | 331       |  58.9   *  |
+
+Como podemos ver en las tablas, al recompilar y ejecutar el benchmark con el parámetro `-m32` algunos de los benchmark no compilan correctamente y lo que lo hacen tienen un peor rendimiento al tener un conjunto de instrucciones menor que desaprovecha algunas de las mejoras introducidas con las arquitecturas de 64bits.
 
 ### Perf
 
@@ -83,31 +126,61 @@ perf stat -d runspec --config=ricardo-linux.cfg --tune=base --noreportable --siz
 
 Los resultados se muestan en las siguientes imagenes:
 
-![Resultados perf stat para el test de enteros]()
+![Resultados perf stat para el test de enteros](https://github.com/DintenR/Sistemas_Virtualizacion_y_Seguridad/tree/master/Practica01/Imagenes/SPECcpu_nativo_int_perf.png)
 
-![Resultados perf stat para el test de coma flotante]()
+![Resultados perf stat para el test de coma flotante](https://github.com/DintenR/Sistemas_Virtualizacion_y_Seguridad/tree/master/Practica01/Imagenes/SPECcpu_nativo_fp_perf.png)
 
 Como se puede apreciar en las imagenes, en el test de numeros enteros se producen un mayor número de cambios de contexto, fallos de pagina y lectutas de L1, lo que nos indica que esta más limitado por la memoria que el test de coma flotante.
 
-Para el segundo caso no es suficiente con mostrar los datos básicos de perf. Para poder calcular el malgasto producido por la especulación es necesario recurrir al manual del procesador para encontrar el evento que deseamos analizar y después con `perf list` comprobar el nombre exacto. En este caso necesitamos saber cuantas instrucciones se ejecutan y cuantas se descartan. Estos datos los obtenemos de los contadores `uops.issued` y `uops.retired`. Además, se necesita saber el consumo energético, pero en este procesador no estan soportados esos contadores por tanto el malgasto energético se mostrará en porcentaje. Una vez conocidos los contadores hay que ejecutar los siguientes comandos
+Para el segundo caso no es suficiente con mostrar los datos básicos de perf. Para poder calcular el malgasto producido por la especulación es necesario recurrir al manual del procesador para encontrar el evento que deseamos analizar y después con `perf list` comprobar el nombre exacto. En este caso necesitamos saber cuantas instrucciones se ejecutan y cuantas se descartan. Estos datos los obtenemos de los contadores `uops.exetuted` y `uops.issued`. Además, se necesita saber el consumo energético, pero en este procesador no estan soportados esos contadores por tanto el malgasto energético se mostrará en porcentaje. Una vez conocidos los contadores hay que ejecutar los siguientes comandos
 
 ```sh
 #Test de enteros
-perf stat -e uops.retired,uops.issued runspec --config=ricardo-linux.cfg --tune=base --noreportable --size=ref --iterations=1 h264ref
+perf stat -e uops_executed.thread,uops_issued.any runspec --config=ricardo-linux.cfg --tune=base --noreportable --size=ref --iterations=1 h264ref
 
 #Test de coma flotante
-perf stat -e uops.retired,uops.issued --config=ricardo-linux.cfg --tune=base --noreportable --size=ref --iterations=1 calculix
+perf stat -e uops_executed.thread,uops_issued.any --config=ricardo-linux.cfg --tune=base --noreportable --size=ref --iterations=1 calculix
 ```
 
 Los resultados son los que se muestran en las imágenes:
 
-![Resultados del análisis de la especulación con perf para el test de enteros]()
+![Resultados del análisis de la especulación con perf para el test de enteros](https://github.com/DintenR/Sistemas_Virtualizacion_y_Seguridad/tree/master/Practica01/Imagenes/perf_uops_int.png)
 
-![Resultados del análisis de la especulación con perf para el test de coma flotante]()
+![Resultados del análisis de la especulación con perf para el test de coma flotante](https://github.com/DintenR/Sistemas_Virtualizacion_y_Seguridad/tree/master/Practica01/Imagenes/perf_uops_fp.png)
 
-Como se puede ver, en el caso de los enteros, el procesador ejecuta un total de xxxxx uops y retira xxxx uops, por tanto esto supone un malgasto de xxxx %. En el caso de coma flotante, el procesador ejecuta un total de xxxxx uops y retira xxxx uops, por tanto esto supone un malgasto de xxxx %.
+Como se puede ver, en el caso de los enteros, el procesador ejecuta un total de 3.511.686.768.719 uops y retira 3.203.017.076.374 uops, por tanto esto supone un malgasto de 8.79 %. En el caso de coma flotante, el procesador ejecuta un total de 3.821.039.136.496 uops y retira 3.481.674.726.732 uops, por tanto esto supone un malgasto de 8.89 %.
 
-## Parte 2: SPECweb2005
+## Parte 2.1: SPECjbb2006
+
+En este apartado hay que descargar e instalar el benchmark SPECjbb2006. El proceso es más sencillo que en el caso de SPECcpu y de SPECweb. Solamente hay que descargar, descomprimir y ejecutar. Previamente es necesario instalar una version del jdk de java.
+
+```sh
+# Decargar en instalar jdk
+wget https://www.ce.unican.es/%7evpuente/SVS/jdk-1_5_0_22-linux-amd64.bin
+chmod +x jdk-1_5_0_22-linux-amd64.bin
+./jdk-1_5_0_22-linux-amd64.bin
+export PATH=/home/ricardo/jdk1.5.0_22/bin:$PATH
+
+# Descargar y descomprimir SPECjbb2006
+https://www.ce.unican.es/%7evpuente/SVS/SPECjbb2005.tar.gz
+tar -xvf SPECjbb2005.tar.gz
+```
+### Resultados
+
+Durante la ejecución el benchmark va aumentando el número de warehouses, por defecto, de 1 a 8. Esta configuración es suficiente ya que el procesador cuenta con 4 cores y se puede ver como el rendimiento va aumentando hasta llegar a 4 cores donde alcanza el máximo y comienza a decaer.
+
+| Warehouses    |           Thrput    |
+| ------------- | ------------------- |
+|              1|                57682|
+|              2|                95410|
+|              3|               113135|
+|            * 4|               119574|
+|            * 5|               111684|
+|            * 6|               105852|
+|            * 7|               107408|
+|            * 8|               104757|
+
+## Parte 2.2: SPECweb2005
 
 En este apartado se explicará el proceso seguido para intalar, configurar y ejecutar el benchmark SPECweb y se mostrarán los resultados de su ejecución.
 
@@ -184,17 +257,27 @@ En ambos test, se seguirá el mismo patrón de ejecución para ver cuantas sesio
 
 #### Test Support
 
-**Primera ejecución**: 100 sesiones simultaneas -> 100% 
+**Primera ejecución**: 100 sesiones simultaneas -> 100%
 
-**Segunda ejecución**: 120 sesiones simultaneas -> 90%
+**Segunda ejecución**: 200 sesiones simultáneas -> 1%
 
-**Tercera ejecución**: 110 sesiones simultaneas -> 98%
+**Tercera ejecución**: 150 sesiones simultáneas -> 8%
+
+**Cuarta ejecución** : 125 sesiones simultáneas -> 79%
+
+**Quinta ejecución**: 120 sesiones simultaneas -> 90%
+
+**Sexta ejecución**: 110 sesiones simultaneas -> 98%
 
 A la vista de estos resultados podemos determinar que, en Test Support, el benchmark consigue una puntuación de 110.
 
 #### Test Banking
 
 **Primera ejecución**: 100 sesiones simultaneas -> 100% 
+
+**Segunda ejecución**: 200 sesiones simultáneas -> 0,5%
+
+**Tercera ejecución**: 150 sesiones simultáneas -> 5%
 
 **Segunda ejecución**: 130 sesiones simultaneas -> 97%
 
